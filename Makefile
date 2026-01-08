@@ -4,7 +4,7 @@
 all: hymnbook.pdf
 
 # Compile the main hymn book
-hymnbook.pdf: hymnbook.ly hymns/*.ly
+hymnbook.pdf: hymnbook.ly hymns/*.ly includes/*.ly
 	lilypond -o output/hymnbook hymnbook.ly
 	@mv output/hymnbook.pdf .
 

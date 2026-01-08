@@ -39,7 +39,9 @@
     >>
   >>
   \layout { }
-  \midi { }
+  \midi { 
+    \tempo 4 = 80
+  }
   \header {
     piece = "Hymn 002: What a Friend We Have in Jesus"
     composer = "Charles C. Converse"

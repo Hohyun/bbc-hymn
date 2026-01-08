@@ -66,7 +66,7 @@
     }
   }
   \midi { 
-    \tempo 4 = 100
+    \tempo 4 = 100  % Adjust this value to match the desired tempo
   }
   \header {
     piece = "Hymn XXX: [Title Here]"

@@ -39,7 +39,9 @@
     >>
   >>
   \layout { }
-  \midi { }
+  \midi { 
+    \tempo 4 = 90
+  }
   \header {
     piece = "Hymn 001: Amazing Grace"
     composer = "Traditional"
