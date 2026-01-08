@@ -23,7 +23,7 @@ Download from http://lilypond.org/download.html
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/Hohyun/bbc-hymn.git
+git clone https://github.com/Hohyun/bbc-hymn.git  # Or your fork
 cd bbc-hymn
 ```
 

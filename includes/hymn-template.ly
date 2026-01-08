@@ -66,7 +66,7 @@
     }
   }
   \midi { 
-    \tempo 4 = 100  % Adjust this value to match the desired tempo
+    \tempo 4 = 100  % Adjust to match text tempo (e.g., Moderato=90, Andante=80, Allegro=120)
   }
   \header {
     piece = "Hymn XXX: [Title Here]"
