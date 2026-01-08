@@ -4,3 +4,8 @@
 *.mid
 *.log
 *~
+output/*.pdf
+output/*.ps
+output/*.midi
+output/*.mid
+output/*.log
