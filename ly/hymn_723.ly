@@ -13,14 +13,14 @@ oneOrTwo = #1  % odd page: 1, even page: 2
 global = {
   \key bes \major
   \time 3/4
-  \tempo 4 = 90
+  %\tempo 4 = 90
   \autoBeamOff
   \partial 4
 }
 
 soprano = \relative c' {
 \global
-bes8 c |
+bes8^\markup { \bold "Capo 1" } c |
 d4. cis8 \tuplet 3/2 { d8 g f } |
 d2 c8 bes | g'4. bes8 a g |
 f2
@@ -188,7 +188,8 @@ verseThree = \lyricmode {
 }
 
 myChords = \chordmode {
-  \partial 4 a4 | s2. | s2 a4:7 | d2. | a2  
+  \override ChordName.font-size = #-2
+  \partial 4 s4 | a2. | s2 a4:7 | d2. | a2  
   a4:7 | d2. | a2. | b2.:m | e2.:7
   a2. | s2 a4:7 | d2. | a2 
   a4:7 | d2. | a2. | s2 e4:7 | a2
@@ -219,30 +220,30 @@ myChords = \chordmode {
   
     <<
       \new ChoirStaff <<
-      \new ChordNames \myChords
-      \context Staff = upper {
-        \context Voice = sop {
-          <<
-            \soprano
-            \alto
-          >>
+        \new ChordNames \myChords
+        \context Staff = upper {
+          \context Voice = sop {
+            <<
+              \soprano
+              \alto
+            >>
+          }
         }
-      }
-         
-      \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
-      \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
-      \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
-  
-      \context Staff = lower {
-        \new Voice {
-          \clef bass
-          \accidentalStyle modern-cautionary
-          <<
-            \tenor
-            \bass
-          >>
+           
+        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
+        \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
+        \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
+    
+        \context Staff = lower {
+          \new Voice {
+            \clef bass
+            \accidentalStyle modern-cautionary
+            <<
+              \tenor
+              \bass
+            >>
+          }
         }
-      }
       >>
     >>
     \layout {
