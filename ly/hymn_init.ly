@@ -5,10 +5,10 @@
 \paper {
    #(set-paper-size '(cons (* 155 mm) (* 220 mm)))
    print-all-headers = ##t
-   %print-page-number = ##t
+   print-page-number = ##f
    %print-first-page-number = ##t
-   ragged-bottom = ##f
-   ragged-last-bottom = ##f
+   %ragged-bottom = ##f
+   %ragged-last-bottom = ##f
    % page-breaking = #ly:one-page-breaking
    
    %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
@@ -19,7 +19,10 @@ hymnOddScoreTitleMarkup = \markup {
   \column {
     \fill-line { 
       ""
-      { \huge \larger \larger \bold \fromproperty #'header:title }
+      \center-column { 
+        \huge \larger \larger \bold \fromproperty #'header:title
+        \smallCaps \fromproperty #'header:subtitle
+      }
       { \number \fontsize #5 \fromproperty #'header:opus }
     }
     \fill-line {
@@ -33,7 +36,10 @@ hymnEvenScoreTitleMarkup = \markup {
   \column {
     \fill-line { 
       { \number \fontsize #5 \fromproperty #'header:opus }
-      { \huge \larger \larger \bold \fromproperty #'header:title }
+      \center-column { 
+        \huge \larger \larger \bold \fromproperty #'header:title
+        \smallCaps \fromproperty #'header:subtitle
+      }
       ""
     }
     \fill-line {
@@ -43,8 +49,8 @@ hymnEvenScoreTitleMarkup = \markup {
   }
 }
 
-#(define (hymnScoreTitleMarkup arg) 
-   (if (odd? (string->number arg))
+#(define (hymnScoreTitleMarkup nbr) 
+   (if (odd? nbr)
        hymnOddScoreTitleMarkup
        hymnEvenScoreTitleMarkup))
 

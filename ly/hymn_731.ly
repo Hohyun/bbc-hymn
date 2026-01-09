@@ -8,6 +8,7 @@ engTitle = "Build on the Rock"
 hymnNumber = "731"
 poet = "Mr. C. Rice"
 composer = "Mr. C. Rice"
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key f \major
@@ -147,7 +148,9 @@ verseFour = \lyricmode {
 \bookpart {
   
   \paper {
-    scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
+    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+%     ragged-bottom = ##f
+%     ragged-last-bottom = ##t
   }
   \header {
     tagline = ##f
@@ -156,6 +159,7 @@ verseFour = \lyricmode {
   \score {
     \header {
       title = \korTitle
+      subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
       composer = \composer
@@ -200,12 +204,5 @@ verseFour = \lyricmode {
       }
     }
     \midi {}
-  }
-  
-  \markup { 
-    \fill-line { 
-      ""
-      \smallCaps \engTitle
-    } 
   }
 }

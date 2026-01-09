@@ -18,22 +18,23 @@ global = {
 }
 
 soprano = \relative c'' {
-\global
+  \global
 }
 
 alto = \relative c' {
-\global
+  \global
 }
 
 tenor = \relative c {
-\global
+  \global
 }
 
 bass = \relative c {
-\global
+  \global
 }
 
 verseOne = \lyricmode {
+  \set stanza = "1."
 }
 
 verseTwo = \lyricmode {
@@ -48,10 +49,13 @@ verseFour = \lyricmode {
   \set stanza = "4."
 }
 
+myChords = \chordmode {
+}
+
 \bookpart {
   
   \paper {
-    scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
+    scoreTitleMarkup = #(hymnScoreTitleMarkup 1)
   }
   \header {
     tagline = ##f
@@ -60,6 +64,7 @@ verseFour = \lyricmode {
   \score {
     \header {
       title = \korTitle
+      subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
       composer = \composer
@@ -67,30 +72,31 @@ verseFour = \lyricmode {
   
     <<
       \new ChoirStaff <<
-      \context Staff = upper {
-        \context Voice = sop {
-          <<
-            \soprano
-            \alto
-          >>
+        \new ChordNames \myChords
+        \context Staff = upper {
+          \context Voice = sop {
+            <<
+              \soprano
+              \alto
+            >>
+          }
         }
-      }
-         
-      \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
-      \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
-      \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
-      \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFour }
-  
-      \context Staff = lower {
-        \new Voice {
-          \clef bass
-          \accidentalStyle modern-cautionary
-          <<
-            \tenor
-            \bass
-          >>
+           
+        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
+        \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
+        \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
+        \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFour }
+    
+        \context Staff = lower {
+          \new Voice {
+            \clef bass
+            \accidentalStyle modern-cautionary
+            <<
+              \tenor
+              \bass
+            >>
+          }
         }
-      }
       >>
     >>
     \layout {
@@ -104,13 +110,6 @@ verseFour = \lyricmode {
       }
     }
     \midi {}
-  }
-  
-  \markup { 
-    \fill-line { 
-      ""
-      \smallCaps \engTitle
-    } 
   }
 }
 
