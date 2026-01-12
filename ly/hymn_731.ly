@@ -8,12 +8,13 @@ engTitle = "Build on the Rock"
 hymnNumber = "731"
 poet = "Mr. C. Rice"
 composer = "Mr. C. Rice"
+bibleInfo = "고후 10:2-4"
 oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key f \major
   \time 4/4
-  \tempo 4 = 110
+  %\tempo 4 = 110
   \autoBeamOff
   \partial 4
 }
@@ -159,7 +160,7 @@ verseFour = \lyricmode {
   \score {
     \header {
       title = \korTitle
-      subtitle = \engTitle
+      % subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
       composer = \composer
@@ -204,5 +205,12 @@ verseFour = \lyricmode {
       }
     }
     \midi {}
+  }
+  \noPageBreak
+  \markup {
+    \fill-line {
+      \bibleInfo
+      \smallCaps \smaller \engTitle
+    }
   }
 }

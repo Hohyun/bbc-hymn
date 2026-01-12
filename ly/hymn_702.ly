@@ -8,6 +8,7 @@ engTitle = "Seek for Me"
 hymnNumber = "702"
 poet = "Anonymous"
 composer = "Elliotte E. Hosty"
+bibleInfo = "마 11:28"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
@@ -164,6 +165,8 @@ myChords = \chordmode {
   
   \paper {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+    %     ragged-bottom = ##t
+     ragged-last-bottom = ##t
   }
   \header {
     tagline = ##f
@@ -172,7 +175,7 @@ myChords = \chordmode {
   \score {
     \header {
       title = \korTitle
-      subtitle = \engTitle
+      %subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
       composer = \composer
@@ -181,7 +184,9 @@ myChords = \chordmode {
     <<
       \new ChoirStaff <<
         \new ChordNames \myChords
-        \context Staff = upper {
+        \context Staff = upper \with {
+          \override StaffSymbol.staff-space = #(magstep -0.5)
+        }{
           \context Voice = sop {
             <<
               \soprano
@@ -195,10 +200,12 @@ myChords = \chordmode {
         \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
         \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFour }
     
-        \context Staff = lower {
+        \context Staff = lower \with {
+          \override StaffSymbol.staff-space = #(magstep -0.5)
+        } {
           \new Voice {
             \clef bass
-            \accidentalStyle modern-cautionary
+            %\accidentalStyle modern-cautionary
             <<
               \tenor
               \bass
@@ -218,6 +225,13 @@ myChords = \chordmode {
       }
     }
     \midi {}
+  }
+  \noPageBreak
+  \markup {
+    \fill-line {
+      \smallCaps \smaller \bibleInfo
+      \smallCaps \smaller \engTitle
+    }
   }
 }
 

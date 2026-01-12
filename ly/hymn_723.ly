@@ -8,6 +8,7 @@ engTitle = "I Know Who Holds Tomorrow"
 hymnNumber = "723"
 poet = "Ira F.Stanphill"
 composer = "Ira F.Stanphill"
+bibleInfo = ""
 oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
@@ -20,7 +21,7 @@ global = {
 
 soprano = \relative c' {
 \global
-bes8^\markup { \bold "Capo 1" } c |
+bes8 c |
 d4. cis8 \tuplet 3/2 { d8 g f } |
 d2 c8 bes | g'4. bes8 a g |
 f2
@@ -203,7 +204,7 @@ myChords = \chordmode {
   \paper {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
 %     ragged-bottom = ##t
-%     ragged-last-bottom = ##t
+%     ragged-last-bottom = ##f
   }
   \header {
     tagline = ##f
@@ -212,7 +213,7 @@ myChords = \chordmode {
   \score {
     \header {
       title = \korTitle
-      subtitle = \engTitle
+      %subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
       composer = \composer
@@ -220,7 +221,7 @@ myChords = \chordmode {
   
     <<
       \new ChoirStaff <<
-        \new ChordNames \myChords
+        \new ChordNames { \transpose a bes \myChords }
         \context Staff = upper {
           \context Voice = sop {
             <<
@@ -237,7 +238,6 @@ myChords = \chordmode {
         \context Staff = lower {
           \new Voice {
             \clef bass
-            \accidentalStyle modern-cautionary
             <<
               \tenor
               \bass
@@ -257,6 +257,13 @@ myChords = \chordmode {
       }
     }
     \midi {}
+  }
+  \noPageBreak
+  \markup {
+    \fill-line {
+      \smallCaps \smaller \bibleInfo
+      \smallCaps \smaller \engTitle
+    }
   }
 }
 
