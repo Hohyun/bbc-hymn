@@ -154,9 +154,17 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    scoreTitleMarkup = #(hymnScoreTitleMarkup 1)
-    % ragged-bottom = ##t
-    ragged-last-bottom = ##f
+    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+    ragged-bottom = ##f
+    ragged-last-bottom = ##t
+    oddFooterMarkup = \markup {
+      \if \on-first-page-of-part
+      \fill-line {    
+        \smallCaps \smaller \bibleInfo
+        \smallCaps \smaller \engTitle
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
   }
   \header {
     tagline = ##f
@@ -216,12 +224,12 @@ myChords = \chordmode {
     }
     \midi {}
   }
-  \noPageBreak
-  \markup {
-    \fill-line {
-      \smallCaps \smaller \bibleInfo
-      \smallCaps \smaller \engTitle
-    }
-  }
+%   \noPageBreak
+%   \markup {
+%     \fill-line {
+%       \smallCaps \smaller \bibleInfo
+%       \smallCaps \smaller \engTitle
+%     }
+%   }
 }
 

@@ -35,7 +35,17 @@ soprano = \relative c'' {
   des2 c4 |
   bes4 s bes |
   ees2 des4 |
-  c2 << { c4 } \\ { aes8( g) } >> |
+  c2 
+  % temporary polyphonic passage
+  << 
+    { \voiceOne 
+      c4 
+    }
+    \new Voice {
+      \voiceTwo
+      aes8( g)
+    }
+  >> |
   bes4( aes) bes |
   aes2. \breathe | \break
   
@@ -54,7 +64,16 @@ soprano = \relative c'' {
   bes8[ c des c] bes4 \breathe |
   ees2 ees4 |
   f4( ees) des |
-  c2 << { bes4 } \\ { g8( ees) } >> |
+  c2 
+  << 
+    { \voiceOne 
+      bes4 
+    }
+    \new Voice {
+      \voiceTwo
+      g8( ees)
+    }
+  >> | 
   aes2.\fermata | \bar "|."
 }
 
@@ -218,9 +237,17 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    scoreTitleMarkup = #(hymnScoreTitleMarkup 1)
-    % ragged-bottom = ##t
-    % ragged-last-bottom = ##f
+    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+    ragged-bottom = ##f
+    ragged-last-bottom = ##t
+    oddFooterMarkup = \markup {
+      \if \on-first-page-of-part
+      \fill-line {    
+        \smallCaps \smaller \bibleInfo
+        \smallCaps \smaller \engTitle
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
   }
   \header {
     tagline = ##f
@@ -279,13 +306,6 @@ myChords = \chordmode {
       }
     }
     \midi {}
-  }
-  \noPageBreak
-  \markup {
-    \fill-line {
-      \smallCaps \smaller \bibleInfo
-      \smallCaps \smaller \engTitle
-    }
   }
 }
 

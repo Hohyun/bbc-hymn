@@ -22,23 +22,49 @@ soprano = \relative c'' {
   \global
   d8. c16 b8 b a g |
   a8. g16 e8 e4.   |
-  d8. g16 g8 g a b | \break
+  d8. g16 g8 g a b | %\break
 
-  b8. a16 a8 a4.   |
-  d8. c16 b8 b8. a16 g8 |
-  a8 g e e4.   |
-  d8 g b a4 g8 | \break
-
-  g4.~ g4 r8 |
-  d8 fis a d4 \once \stemUp c8 |
-  b4.( g4) r8 |
-  d8 fis a c4 e8 |
-  d4.( b4) r8 | \break
+  << 
+    { \voiceOne 
+      b8. a16 a8 a4.   |
+      d8. c16 b8 b8. a16 g8 |
+    }
+    \new Voice {
+      \voiceTwo
+      \autoBeamOff 
+      g8. g16 g8 fis4.   |
+      g8. g16 g8 g8. fis16 g8 |
+    }
+  >> 
   
-  d8.^\fermata c16 b8 b8. a16 g8 |
+  a8 g e e4.   |
+  d8 g b a4 g8 | %\break
+  
+  g4.~ g4 b8\rest |
+  
+  % temporary polyphonic passage
+  << 
+    { \voiceOne 
+      d,8^\markup{"(후렴)"} fis a d4 c8 |
+      b4.( g4) s8 |
+      d8 fis a c4 e8 |
+      d4.( b4) b8\rest | %\break
+      d8.^\fermata c16 b8 b8. a16 g8 |
+    }
+    \new Voice {
+      \voiceTwo
+      \autoBeamOff 
+      d8 d fis fis4 r8 |
+      g8 d d b4 r8 |
+      d8 d fis fis4 r8 |
+      g8 g g g4 s8 |
+      g8. g16 g8 g8. fis16 g8 |
+    }
+  >> 
+  
   a8 g e e4.  |
   d8 g b a4 g8 |
-  g4.~ g4 r8  \bar "|."
+  g4.~ g4 b8\rest  \bar "|."
 }
 
 alto = \relative c'' {
@@ -47,21 +73,22 @@ alto = \relative c'' {
   e8. e16 c8 c4.   |
   b8. d16 d8 d d g | 
 
-  g8. g16 g8 fis4.   |
-  g8. g16 g8 g8. fis16 s8 |
+  s2. |
+  s2. |
+  
   e8 e c c4.   |
   b8 d d c4 b8 |
 
-  b4.~ b4 r8 |
-  s8 dis fis fis4 fis8 |
-  g8 d d b4  s8 |
-  s8 d fis fis4 fis8 |
-  g8 g g g4  s8 |
+  b4.~ b4 s8 |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
   
-  g8. g16 g8 g8. fis16 s8 |
+  s2. |
   e8 e c c4.  |
   b8 d d d4 d8 |
-  d4.~ d4 r8  |
+  d4.~ d4 s8  |
 }
 
 tenor = \relative c {
@@ -96,7 +123,7 @@ bass = \relative c {
   a8. a16 a8 d,4.   |
   g,8. g16 g8 g'8. g16 g8 |
   c,8 c c c4.   |
-  d8 d d d4 g8 |
+  d8 d d d4 d8 |
 
   g,4.~ g4 r8 |
   d'8 d d d4 s8 |
@@ -164,9 +191,18 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    %     ragged-bottom = ##t
-     ragged-last-bottom = ##t
+    page-breaking = #ly:one-page-breaking
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    ragged-bottom = ##t
+    ragged-last-bottom = ##f
+    oddFooterMarkup = \markup {
+      \if \on-first-page-of-part
+      \fill-line {    
+        \smallCaps \smaller \bibleInfo
+        \smallCaps \smaller \engTitle
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
   }
   \header {
     tagline = ##f
@@ -185,7 +221,7 @@ myChords = \chordmode {
       \new ChoirStaff <<
         \new ChordNames \myChords
         \context Staff = upper \with {
-          \override StaffSymbol.staff-space = #(magstep -0.5)
+          \override StaffSymbol.staff-space = #(magstep -0.8)
         }{
           \context Voice = sop {
             <<
@@ -225,13 +261,6 @@ myChords = \chordmode {
       }
     }
     \midi {}
-  }
-  \noPageBreak
-  \markup {
-    \fill-line {
-      \smallCaps \smaller \bibleInfo
-      \smallCaps \smaller \engTitle
-    }
   }
 }
 
