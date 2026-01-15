@@ -53,4 +53,3 @@ hymnEvenScoreTitleMarkup = \markup {
    (if (odd? nbr)
        hymnOddScoreTitleMarkup
        hymnEvenScoreTitleMarkup))
-

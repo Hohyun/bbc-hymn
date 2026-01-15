@@ -245,58 +245,6 @@ myChords = \chordmode {
     tagline = ##f
   }
   
-  \score {
-    \header {
-      title = \korTitle
-      %subtitle = \engTitle
-      opus = \hymnNumber
-      poet = \poet
-      composer = \composer
-    } 
   
-    <<
-      \new ChoirStaff <<
-        \new ChordNames \myChords
-        \context Staff = upper \with {
-          %\override StaffSymbol.staff-space = #(magstep -0.5)
-        }{
-          \context Voice = sop {
-            <<
-              \soprano
-              \alto
-            >>
-          }
-        }
-           
-        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
-        \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
-        \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
-        \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFour }
-    
-        \context Staff = lower \with {
-          %\override StaffSymbol.staff-space = #(magstep -0.5)
-        }{
-          \new Voice {
-            \clef bass
-            <<
-              \tenor
-              \bass
-            >>
-          }
-        }
-      >>
-    >>
-    \layout {
-      indent = 0.0
-      page-count = #1
-      \context {
-        \Lyrics
-        % Adjusting font size to fit 4 verses comfortably
-        %\override LyricText.font-size = #-1
-        %\override LyricText.font-family = #'serif
-      }
-    }
-    \midi {}
-  }
 }
 

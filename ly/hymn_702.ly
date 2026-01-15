@@ -191,8 +191,8 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##t
     ragged-last-bottom = ##f
     oddFooterMarkup = \markup {

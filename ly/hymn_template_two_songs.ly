@@ -1,7 +1,10 @@
 \version "2.24.0"
 
+\version "2.24.0"
+
 \include "./hymn_init.ly"
 
+% First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "내 주의 이름이 전보다 더욱 귀하네"
 engTitle = "Still Sweeter Every Day"
@@ -116,7 +119,6 @@ altoRefrain = \relative c' {
   d8 f4. ees4 ees |
   d2. bes'8\rest
 }
-
 
 tenor = \relative c' {
   \global
@@ -263,6 +265,230 @@ verseRefrain = \lyricmode {
 myChords = \chordmode {
 }
 
+
+% Second Song placed on odd page (right page) which will be printed second page.
+% Hymn Info
+korTitleB = "주의 깊은 자비를"
+engTitleB = "Depth of Mercy"
+hymnNumberB = "757"
+poetB = "Charles Wesley, 1707~1788"
+composerB = "Willam B. Bradbury, 1816~1868"
+bibleInfoB = "마 11:28"
+oneOrTwoB = #1  % odd page: 1, even page: 2
+
+globalB = {
+  \key f \major
+  \time 3/4
+  \tempo 4 = 80
+  \set Score.tempoHideNote = ##t
+  \autoBeamOff
+}
+
+sopranoB = \relative c'' {
+  \globalB
+  % temporary polyphonic passage
+  << 
+    { \voiceOne 
+      a4( c) f, |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  g2 g4 |
+  g4( f) g |
+  a2. \breathe |
+  
+  << 
+    { \voiceOne 
+      a4( c) f, |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  g2 g4 |
+  
+  << 
+    { \voiceOne 
+      g4( a) g |
+      f2. \breathe | \break
+    }
+    \new Voice {
+      \voiceTwo
+      e2 e4 |
+      f2. |
+    }
+  >> 
+  
+  bes2 bes4 |
+  a2 a4 |
+  g2 f4 |
+  c'2. \breathe |
+  << 
+    { \voiceOne 
+      c4( a) f |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  g2 g4 |
+  g4( a) g |
+  f2. \bar "|." |
+}
+
+altoB = \relative c' {
+  \globalB
+  s2. |
+  e2 e4 |
+  s2. |
+  f2. |
+  s2. |
+  e2 e4 |
+  s2. |
+  s2. |
+  
+  f2 f4 |
+  f2 f4 |
+  c2 d4 |
+  e2. |
+  s2. |
+  e2 e4 |
+  e2 e4 |
+  c2. |
+}
+
+tenorB = \relative c' {
+  \globalB
+  << 
+    { \voiceOne
+      c4( a) a |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  \stemDown
+  c'2 c4 |
+  c2 c4 |
+  c2. \breathe |
+  
+  << 
+    { \voiceOne
+      c4( a) a |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  \stemDown
+  c'2 c4 |
+  
+  << 
+    { \voiceOne 
+      bes4( c) bes |
+      
+    }
+    \new Voice {
+      \voiceTwo
+      c,2 c4 |
+    }
+  >> 
+  
+  \stemDown
+  a'2. \breathe | \break
+  
+  \stemDown
+  d2 d4 |
+  c2 c4 |
+  c2 b4 |
+  c2. \breathe |
+  << 
+    { \voiceOne
+      a4( c) a |
+    }
+    \new Voice {
+      \voiceTwo
+      f2 f4 |
+    }
+  >> 
+  
+  \stemDown
+  c'2 c4 |
+  << 
+    { \voiceOne
+      bes4( c) bes |
+    }
+    \new Voice {
+      \voiceTwo
+      c,2 c4 |
+    }
+  >> 
+  
+  
+  \stemDown
+  a'2. \bar "|." |
+}
+
+bassB = \relative c {
+  \globalB
+  s2. |
+  c2 c4 |
+  c2 c4 |
+  f2. |
+  s2. |
+  c2 c4 |
+  s2. |
+  f2. |
+  
+  f2 f4 |
+  f2 f4 |
+  e2 d4 |
+  c2. |
+  s2. |
+  c2 c4 |
+  s2. |
+  f2. |
+}
+
+verseOneB = \lyricmode {
+  \set stanza = "1."
+  주 의 깊 은 자 비 를 나 를 위 해 두 셨 나
+  죄 인 괴 수 된 나 를 오 래 참 고 계 셨 네
+}
+
+verseTwoB = \lyricmode {
+  \set stanza = "2."
+  주 의 은 혜 배 반 코 주 께 욕 을 돌 렸 네
+  주 의 부 름 떠 나 서 주 께 슬 픔 돌 렸 네
+}
+
+verseThreeB = \lyricmode {
+  \set stanza = "3."
+  지 금 주 께 돌 아 와 죄 로 슬 퍼 합 니 다
+  주 의 말 씀 따 라 서 믿 고 주 께 옵 니 다
+}
+
+verseFourB = \lyricmode {
+  \set stanza = "4."
+  주 가 응 답 하 시 고 나 를 맞 아 주 셨 네
+  주 는 사 랑 이 시 라 죄 인 구 원 하 시 네
+}
+
+myChordsB = \chordmode {
+}
+
 \bookpart {
   
   \paper {
@@ -277,6 +503,11 @@ myChords = \chordmode {
       \fill-line {    
         \smallCaps \smaller \bibleInfo
         \smallCaps \smaller \engTitle
+      }
+      \if \on-last-page-of-part
+      \fill-line {    
+        \smallCaps \smaller \bibleInfoB
+        \smallCaps \smaller \engTitleB
       }
     }
     evenFooterMarkup = \oddFooterMarkup
@@ -331,6 +562,62 @@ myChords = \chordmode {
           }
         }
         
+      >>
+    >>
+    \layout {
+      indent = 0.0
+      page-count = #1
+      \context {
+        \Lyrics
+        % Adjusting font size to fit 4 verses comfortably
+        %\override LyricText.font-size = #-1
+        %\override LyricText.font-family = #'serif
+      }
+    }
+    \midi {}
+  }
+
+  \noPageBreak
+  
+  \score {
+    \header {
+      title = \korTitleB
+      %subtitle = \engTitle
+      opus = \hymnNumberB
+      poet = \poetB
+      composer = \composerB
+    } 
+  
+    <<
+      \new ChoirStaff <<
+        \new ChordNames \myChordsB
+        \context Staff = upper \with {
+          %\override StaffSymbol.staff-space = #(magstep -0.5)
+        }{
+          \context Voice = sop {
+            <<
+              \sopranoB
+              \altoB
+            >>
+          }
+        }
+           
+        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOneB }
+        \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwoB }
+        \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThreeB }
+        \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFourB }
+    
+        \context Staff = lower \with {
+          %\override StaffSymbol.staff-space = #(magstep -0.5)
+        }{
+          \new Voice {
+            \clef bass
+            <<
+              \tenorB
+              \bassB
+            >>
+          }
+        }
       >>
     >>
     \layout {
