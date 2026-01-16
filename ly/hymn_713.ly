@@ -48,7 +48,7 @@ soprano = \relative c' {
   >> 
   bf'4 |
   c2 \breathe c4 |
-  df4 f, df' | \break
+  df4 f, df' |  %\break
   
   c4 af c |
   c4 bf f |
@@ -65,47 +65,53 @@ soprano = \relative c' {
     }
   >>
   f8 g |
-  af4 ef af | \break
-  bf 4
-  << 
-    { \voiceOne 
-       ef,4
-    }
-    \new Voice {
-      \voiceTwo
-      ef4
-    }
-  >>
-  bf' |
+  af4 ef af | %\break
   
-  c2 \breathe c4 |
-  ef4 df bf |
-  af4 g af |
-  c4 c bf |
-  af2 \bar "||" \break
-  
-  c8. df16 |
-  \stemDown ef2 \stemNeutral c8. df16 |
-  ef2 \breathe ef8. c16 |
-  af4 bf c |
-  bf2 \breathe bf8. c16 |
-  df2 \break
-  
-  bf8. c16 |
-  df2 df8 bf |
-  ef4 ef df |
-  c2 \breathe ef,4 |
-   << 
-    { \voiceOne 
-       ef2
-    }
-    \new Voice {
-      \voiceTwo
-      c4( ef)
-    }
-  >>
-  f8 g |
-  af4 ef af |
+  \repeat segno 2 {
+    bf 4
+    << 
+      { \voiceOne 
+         ef,4
+      }
+      \new Voice {
+        \voiceTwo
+        ef4
+      }
+    >>
+    bf' |
+    
+    c2 \breathe c4 |
+    ef4 df bf |
+    af4 g af |
+    c4 c bf |
+    af2 \bar "||" %\break
+    \volta 2 \fine
+    \volta 1
+ 
+    c8. df16 |
+    \stemDown ef2 \stemNeutral c8. df16 |
+    ef2 \breathe ef8. c16 |
+    af4 bf c |
+    bf2 \breathe bf8. c16 |
+    df2 \break \bar "|"
+    
+    bf8. c16 |
+    df2 df8 bf |
+    ef4 ef df |
+    c2 \breathe ef,4 |
+     << 
+      { \voiceOne 
+         ef2
+      }
+      \new Voice {
+        \voiceTwo
+        c4( ef)
+      }
+    >>
+    f8 g |
+    af4 ef af |
+    \section
+  }
 }
 
 alto = \relative c' {
@@ -184,6 +190,56 @@ tenor = \relative c {
     }
   >> 
   ef4 \stemDown af af | 
+  
+  g4 g g |
+  << 
+    { \voiceOne 
+      af2 \breathe af4 |
+    }
+    \new Voice {
+      \voiceTwo
+      af2 af4 |
+    }
+  >> 
+  \stemDown af4 bf df |
+  c4 bf c |
+  af4 af g |
+  af2 
+  
+   << 
+    { \voiceOne 
+      af8. bf16 |
+      c2 af8. bf16 |
+    }
+    \new Voice {
+      \voiceTwo
+      \autoBeamOff
+      af8. af16 |
+      af2 af8. af16
+    }
+  >> 
+  
+  c2 \breathe c8. af16 |
+  af4 g af |
+  \stemNeutral
+  g2 \breathe g8. af16 |
+  bf2
+  
+  \stemDown g8. af16 |
+  bf2 bf8 g |
+  af4 af g |
+  af2 \breathe af4 |
+  << 
+    { \voiceOne 
+      af2 g8 ef |
+    }
+    \new Voice {
+      \voiceTwo
+      \autoBeamOff
+      af,4( c) ef8 ef |
+    }
+  >> 
+  ef4 af af |
 }
 
 bass = \relative c {
@@ -200,25 +256,65 @@ bass = \relative c {
   ef2 ef4 |
   s2. |
   af,4 af c |
+  
+  ef4 ef ef |
+  s2. |
+  df4 df df |
+  ef4 ef ef |
+  ef4 ef ef |
+  af,2
+  
+  s4 |
+  s2. |
+  af'2 af,8. af16 |
+  c4 bf af |
+  ef'2 ef8. ef16 |
+  ef2
+  
+  ef8. ef16 |
+  ef2 ef8 df |
+  c4 c bf |
+  af2 af4 |
+  s2. |
+  af4 af c |
+  
 }
+
 
 verseOne = \lyricmode {
   \set stanza = "1."
+  주 하 나 님 큰 일 을 행 하 셨 네 주 독 생 자
+  세 상 에 보 내 시 사 우 리    죄 를 대 속 해
+  주 시 려 고 그 몸 버 려 생 명 문 여 셨 도 다
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
+  주 님 피 로 온 전 히 대 속 했 네 누 구 든 지
+  믿 으 면 사 함 얻 네 모 든    죄 인 주 앞 에 
+  회 개 할 때 그 즉 시 로 예 수 께 용 서 받 네
+  땅 들 아 들 으 라 주 의 귀 한 음 성 만 민 아
+  들 으 라 주 의 기 쁜 소 식 예 수 앞 에 나 와 서 
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
+  주 행 하 신 큰 공 로 바 라 볼 때 내 맘 속 에
+  기 쁨 이 충 만 하 나 더 크    고 도 더 높 고
+  더 깊 은 복 주 예 수 님 뵐 때 에 누 리 겠 네
+}
+
+verseFine = \lyricmode {
+  \repeat unfold 29 { \skip 1 }
+  \once \override LyricText.self-alignment-X = #RIGHT D.S._경 배 하 라 그 행 하 신 큰 일 을 찬 양 하 라
 }
 
 myChords = \chordmode {
 }
 
+
 \bookpart {
-  
+
   \paper {
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
@@ -268,13 +364,16 @@ myChords = \chordmode {
         \context Staff = lower \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-          \new Voice {
+          \new Voice = bas {
             \clef bass
             <<
               \tenor
               \bass
             >>
           }
+        }
+        \context Lyrics = "LyrFine" \lyricsto "bas" { 
+           \verseFine 
         }
       >>
     >>
