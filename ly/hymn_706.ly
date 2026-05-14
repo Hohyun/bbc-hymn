@@ -8,8 +8,8 @@
 korTitle = "주님 다시 세상에 오실 때"
 engTitle = "There'll be No Dark Valley"
 hymnNumber = "706"
-poet = "Willam O. Cushing"
-composer = "Ira D. Sankey"
+poet = "Willam O. Cushing, 1823~1902"
+composer = "Ira D. Sankey, 1840~1908"
 bibleInfo = "살전 4:16-17"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
@@ -20,6 +20,33 @@ global = {
   \set Score.tempoHideNote = ##t
   \autoBeamOff
   \partial 4
+}
+
+aligner = \fixed c' {
+  \global
+  ef8. f16 |
+  <ef g>4 bf, bf,8 bf,4 bf,8 |
+  <af, c>4 <c ef> <bf, ef> \breathe <bf, ef>8. <bf, f>16 |
+  <ef g>4 <g bf> %\break
+  
+  <af c'>8 <g bf>4 <ef g>8 |
+  <ef g>4 <d f> <d f> \breathe ef8. f16 |
+  <ef g>4 bf, bf,8 bf,4 bf,8 |
+  <af, c>4 <c ef> \breathe %\break
+  
+  <bf, ef>4 <d g> |
+  <ef g>8 <ef bf>4 ef8 <ef g>4 <d f>4 |
+  <bf, ef>2. \breathe \bar "||" <ef g>4^\markup "(후렴)" |
+  <ef bf>8 <ef bf>4 <ef bf>8 c'[ bf] <ef g>4 | %\break
+  
+  bf4 d ef \breathe g8.[ af16] |
+  <ef bf>8 <ef bf>4 \stemDown <g ef'>8 \stemUp <f d'>4 <ef c'> |
+  bf4 d ef \breathe <d bf>8. <d c'>16 | %\break
+  
+  <ef bf>4 <bf, ef> <bf, g>8 <bf, g>4 bf,8 |
+  <af, c>4 <c ef> <bf, ef> \breathe <d f> |
+  <ef g>8 <ef bf>4 ef8 <ef g>4 <d f> |
+  <bf, ef>2. \bar "|."
 }
 
 soprano = \fixed c' {
@@ -107,7 +134,8 @@ verseOne = \lyricmode {
   주 님 다 시 세 상 에 오 실 때 어 둔 그 늘
   다 시 는 없 겠 네 영 광 스 런 그 날 이 오 면
   주 님 나 를 데 려 가 리 
-  나 그 날 을 고_대 하 네  주 다 시 오 실 그 날 
+  %나 그 날 을 고_대 하 {\once \override LyricText.self-alignment-X = #LEFT "네 (그 날)"}  주 다 시 오 실 그 {\once \override LyricText.self-alignment-X = #LEFT "날 (그 날)"}
+  나 그 날 을 고_대 하 네 (그 날) 주 다 시 오 실 그 날 (그 날)
   어 둔 그 늘 다 시 는 없 겠 네 주 다 시 오 실 그 날 
 }
 
@@ -130,13 +158,6 @@ verseFour = \lyricmode {
   주 님 다 시 세 상 에 오 실 때 기 쁜 노 래
   부 르 며 맞 으 리 영 광 스 런 그 날 이 오 면
   주 님 나 를 데 려 가
-}
-
-verseAlto = \lyricmode {
-  "" "" "" "" "" "" 
-  "" "" "" "" "" ""
-  "" "" "" (그 날)
-  "" "" (그 날)
 }
 
 myChords = \chordmode {
@@ -187,14 +208,16 @@ myChords = \chordmode {
               \voiceTwo
                 \alto
             }
+            \context NullVoice = aligner {
+              \aligner
+            }
           >>
         }
            
-        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOne }
+        \context Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
         \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwo }
         \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThree }
         \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFour }
-        \context Lyrics = "LyrAlto" \lyricsto "alto" { \verseAlto }
     
         \context Staff = lower \with {
           \override StaffSymbol.staff-space = #(magstep -0.5)
