@@ -138,7 +138,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
-        \override LyricText.font-name = "GungsuhChe"
+        %\override LyricText.font-name = "GungsuhChe"
         \override LyricText.font-series = #'bold
       }
     }

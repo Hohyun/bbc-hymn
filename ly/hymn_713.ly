@@ -276,7 +276,7 @@ bass = \relative c {
   c4 c bf |
   af2 af4 |
   s2. |
-  af4 af c |
+  af4 af c \bar "||" |
   
 }
 

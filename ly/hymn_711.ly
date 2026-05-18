@@ -53,6 +53,23 @@ aligner = \fixed c' {
   <df df'>4. <f c'>8 <f bf>4 <f af> |
   <ef g>4 ef <ef g> <ef bf> |
   <ef ef'>4. <ef df'>8 <ef c'>4
+  
+  af4 | 2 <gf ef'>4 q8. <f f'>16 |
+  f2 <bf df'>4 <e c'>8. <e bf>16 | 
+  <f af>4 <f df'> <gf df'> <gf ef'> | 
+  <f df'>2.
+ 
+  af8. <ef af>16 |
+  <f df'>4 <gf ef'>4 <af f'> <af df'>8. q16 |
+  <gf ef'>4 <af f'> <bf gf'> <af f'>8. <gf ef'> 16 |
+  <gf ef'>4 q <gf ef'>4 q |
+  <f df'>2.
+  
+  af8. <ef af>16 |
+  <f df'>4 <gf ef'> <af f'> <af df'>8. 16 |
+  <gf ef'>4 <af f'> <bf gf'>  <af f'>8. <gf ef'>16 |
+  <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16  |
+  <f df'>2.
 }
   
 soprano = \fixed c' {
@@ -85,7 +102,26 @@ soprano = \fixed c' {
   <df f>4 <af, df> <df f> af |
   <df df'>4. <f c'>8 <f bf>4 \breathe <f af> |
   <ef g>4 ef <ef g> <ef bf> |
-  <ef ef'>4. <ef df'>8 <ef c'>4 \breathe
+  <ef ef'>4. <ef df'>8 <ef c'>4 \breathe \break
+  
+  af4 | f'2 s2 |
+  df'2 s4 \breathe <e c'>8. <e bf>16 |
+  <f af>4 <f df'> <gf df'> <gf ef'> |
+  <f df'>2. \breathe \break
+  
+  af8.^\markup "(생략할 수도 있음)" <ef af>16 |
+  <f df'>4 s2. |
+  s1 |
+  <gf ef'>4 q s2 |
+  <f df'>2.\breathe \break
+  
+  af8. <ef af>16 |
+  <f df'>4 \stemDown <gf ef'> <af f'> <af df'>8. 16 |
+  <gf ef'>4 <af f'> <bf gf'>\fermata \breathe <af f'>8. <gf ef'>16^\markup "rit" |
+  <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16 \stemUp |
+  <f df'>2. \bar "|."
+  
+  
 }
 
 alto = \fixed c' {
@@ -97,6 +133,14 @@ alto = \fixed c' {
   g4 | f4 4 s2 | f4 4 s2 |s4 <af df'> <gf df'> <gf ef'> | f4 gf f 
   af8.[ gf16] | f4( 4) s2 | f4( 4) s2 | s4 <af ef'> <g ef'> s4 | ef4( c df) 
   s4 | s2. df8[ ef] | s1 | s4 ef s2 | s2.
+  
+  af4 | 4 4 <gf ef'>4 q8. <f f'>16 |
+  f4 cf' <bf df'>^\fermata s4 | s1 | s2.
+  
+  af8. s16 | 
+  s4 <gf ef'>4 <af f'> <af df'>8. q16  |
+  <gf ef'>4 <af f'> <bf gf'>\breathe <af f'>8. <gf ef'> 16|
+  s2 <gf ef'>4 q | s2.
 }
 
 tenor = \fixed c {
@@ -108,6 +152,10 @@ tenor = \fixed c {
   af4 | af2 s2 | s1 | s1 | df'4 bf af
   af4 | s1 |s1 | s1 | s2.
   s4 | s2. af4 | s1 | s2. g4 | s2 af4 
+  s4 | s1 | s1 | s1 | s2. 
+  
+  af8. 16 | s1 | s1 | s1 | s2.
+  af8. 16 | s1 | s1 | s1 | <df af>2.^\fermata
 }
 
 bass = \fixed c {
@@ -141,6 +189,24 @@ bass = \fixed c {
   <bf, bf>4. <c a>8 <df bf>4 \breathe <d bf> |
   <ef bf>4 <ef g> <ef bf> ef8[ df] |
   <c af>4. <ef g>8 af4 \breathe
+  
+  <af c'>4 |
+  <df df'>4^(_( <f df'>^)_) <af c>4 q8. q16 |
+  <bf df'>4^(_( <f df'>^)_) <gf df' gf'>_\fermata \breathe <g df'>8. q16 |
+  <af df'>4 <f af> <ef bf> <af c'> |
+  <df df'>2. \breathe
+  
+  af8. gf16 |
+  <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
+  <gf bf>4 <f bf> < ef ef'> \breathe <f df'>8. <gf df'>16 |
+  <af df'>4 <f af> <ef bf> <af c'> |
+  <df df'>2. \breathe
+  
+  af8. gf16 |
+  <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
+  <gf bf>4 <f bf> <ef ef'>\fermata\breathe <f df'>8. <gf df'>16 |
+  <af df'>4.. q16 <af, af ef'>4.. <df af>16 |
+  df8[ bf, af, f,] df,4 \fermata
 }
 
 verseOne = \lyricmode {
@@ -157,6 +223,13 @@ verseOne = \lyricmode {
   
   큰 폭 풍 내 게 닥 쳐 도
   두 려 워 하 지 않 으 리
+  그 말 씀 굳 게 믿 고 
+  나 의 소 망 삼 겠 네
+  
+  생 명 의 말 씀 내 가 믿 고 서
+  거 기 굳 게 서 겠 네
+  능 력 의 말 씀 굳 게 믿 어 서
+  나 의 소 망 삼 겠 네
 }
 
 verseTwo = \lyricmode {
@@ -177,7 +250,7 @@ verseThree = \lyricmode {
 
 verseFour = \lyricmode {
   \set stanza = "4."
-  성 경 말 씀 주 의 뜻 알 리 고
+  성 경 말 씀 주 의 뜻 을 알 리 고
   영 생 으 로 인 도 하 여 주 시 네
   모 든 슬 픔 고 통 없 게 하 시 며
   내 게 힘 주 사 승 리 하 게 하 시 네 
@@ -267,7 +340,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
-        \override LyricText.font-name = "GungsuhChe"
+        %\override LyricText.font-name = "HCR Dotum Ext"
         \override LyricText.font-series = #'bold
       }
     }
