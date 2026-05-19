@@ -6,24 +6,30 @@
 
 % Hymn Info
 korTitle = ""
-engTitle = ""
+engTitle = "Verily, Verily"
 hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
+poet = "James McGranahan, 1840~1907"
+composer = "James McGranahan, 1840~1907"
+bibleInfo = "요 5:24"
 oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
+  \key g \major
   \time 4/4
-  \tempo 4 = 80
+  %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
-  \partial 4
 }
 
 soprano = \fixed c' {
   \global
+  <d g>4 q8 <d a> <d g> <d fs> <c e> <b,d> |
+  <d g>4 <d a> <d b>2 \breathe |
+  <d a>4 q8 <d b>8 \break
+  
+  <d a>8 <d g> <d fs> <d g> |
+  <d a>4 <d b> <d c'>2 \breathe |
+  <d b>4 <f d'>8. q16 <e c'>8 <d b> <c a> <b, g> |
 }
 
 alto = \fixed c' {

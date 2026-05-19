@@ -12,7 +12,8 @@
    % page-breaking = #ly:one-page-breaking
    
    %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
-   #(define fonts (make-pango-font-tree "Batang" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+   %#(define fonts (make-pango-font-tree "NamumSquare" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+   #(define fonts (make-pango-font-tree "Gowun Batang" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
 }
 
 hymnOddScoreTitleMarkup = \markup { 
