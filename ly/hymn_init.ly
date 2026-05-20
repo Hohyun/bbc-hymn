@@ -27,6 +27,9 @@ hymnOddScoreTitleMarkup = \markup {
       { \number \fontsize #5 \fromproperty #'header:opus }
     }
     \fill-line {
+      " " " " " "
+    }
+    \fill-line {
       \smallCaps { \smaller \fromproperty #'header:poet }
       \smallCaps { \smaller \fromproperty #'header:composer }
     }
@@ -42,6 +45,9 @@ hymnEvenScoreTitleMarkup = \markup {
         \smallCaps \fromproperty #'header:subtitle
       }
       ""
+    }
+    \fill-line {
+      " " " " " "
     }
     \fill-line {
       \smallCaps { \smaller \fromproperty #'header:poet }

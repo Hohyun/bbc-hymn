@@ -6,16 +6,16 @@
 
 % Hymn Info
 korTitle = ""
-engTitle = ""
+engTitle = "When He Reached Down His Hand for Me"
 hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
+poet = "G. E. Wright, 1916"
+composer = "G. E. Wright, 1916"
+bibleInfo = "엡 2:4-6"
 oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
-  \time 4/4
+  \key c \major
+  \time 3/4
   %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
@@ -24,6 +24,13 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <g, c>8. <c e>16 |
+  <e g>4.^(_( <f a>8^)_) q4 |
+  <e g>2 c8. 16 |
+  <c e>4. c8 <b, d>4 |
+  <g, c>2 \breathe <e g>8. <ds a>16 | \break
+  
+  
 }
 
 aligner = \fixed c' {
@@ -32,6 +39,7 @@ aligner = \fixed c' {
 
 alto = \fixed c' {
   \global
+  s4 | s2. | s2 c8. 16 | s4. c8 s4 | s2. |
 }
 
 tenor = \fixed c {
