@@ -1,21 +1,23 @@
 \version "2.24.0"
 
-\include "./hymn_init.ly"
+\include "./hymn_init_b.ly"
 
 \language "english"
 
 % Hymn Info
-korTitle = ""
+korTitle = "주의 선하심과 자비하심"
 engTitle = ""
-hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
-oneOrTwo = #1  % odd page: 1, even page: 2
+hymnNumber = "740"
+poet = "John. W.Peterson, 1921" 
+poetb = "Alfred B. Smith"
+composer = "John. W.Peterson, 1921"
+composerb = "Alfred B. Smith"
+bibleInfo = "시 23:1-6"
+oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
-  \time 4/4
+  \key ef \major
+  \time 3/4
   %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
@@ -24,6 +26,7 @@ global = {
 
 soprano = \fixed c' {
   \global
+  bf,8. 16 |
 }
 
 aligner = \fixed c' {
@@ -32,6 +35,7 @@ aligner = \fixed c' {
 
 alto = \fixed c' {
   \global
+  bf,8. 16 |
 }
 
 tenor = \fixed c {
@@ -89,7 +93,9 @@ myChords = \chordmode {
       %subtitle = \engTitle
       opus = \hymnNumber
       poet = \poet
+      poetb = \poetb
       composer = \composer
+      composerb = \composerb
     } 
   
     <<

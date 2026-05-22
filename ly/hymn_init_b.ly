@@ -1,0 +1,70 @@
+\version "2.24.0"
+
+#(set-global-staff-size 18)
+
+\paper {
+   #(set-paper-size '(cons (* 155 mm) (* 220 mm)))
+   print-all-headers = ##t
+   print-page-number = ##f
+   %print-first-page-number = ##t
+   %ragged-bottom = ##f
+   %ragged-last-bottom = ##f
+   % page-breaking = #ly:one-page-breaking
+   
+   %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
+   %#(define fonts (make-pango-font-tree "NamumSquare" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+   #(define fonts (make-pango-font-tree "Gowun Batang" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+}
+
+hymnOddScoreTitleMarkup = \markup { 
+  \column {
+    \fill-line { 
+      ""
+      \center-column { 
+        \huge \larger \larger \bold \fromproperty #'header:title
+        \smallCaps \fromproperty #'header:subtitle
+      }
+      { \number \fontsize #5 \fromproperty #'header:opus }
+    }
+    \fill-line {
+      " " " " " "
+    }
+    \fill-line {
+      \smallCaps { \smaller \fromproperty #'header:poet }
+      \smallCaps { \smaller \fromproperty #'header:composer }
+    }
+    \fill-line {
+      \smallCaps { \smaller \fromproperty #'header:poetb }
+      \smallCaps { \smaller \fromproperty #'header:composerb }
+    }
+  }
+}
+
+hymnEvenScoreTitleMarkup = \markup { 
+  \column {
+    \fill-line { 
+      { \number \fontsize #5 \fromproperty #'header:opus }
+      \center-column { 
+        \huge \larger \larger \bold \fromproperty #'header:title
+        \smallCaps \fromproperty #'header:subtitle
+      }
+      ""
+    }
+    \fill-line {
+      " " " " " "
+    }
+    \fill-line {
+      \smallCaps { \smaller \fromproperty #'header:poet }
+      \smallCaps { \smaller \fromproperty #'header:composer }
+    }
+    \fill-line {
+      \smallCaps { \smaller \fromproperty #'header:poetb }
+      \smallCaps { \smaller \fromproperty #'header:composerb }
+    }    
+  }
+}
+
+#(define (hymnScoreTitleMarkup nbr) 
+   (if (odd? nbr)
+       hymnOddScoreTitleMarkup
+       hymnEvenScoreTitleMarkup))

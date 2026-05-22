@@ -30,7 +30,7 @@ a4 g2 c4 |
 a4 a a g8. g16 |
 f8. f16 f8. d16 c2 | 
 f8. f16 f8. g16 a4 g |
-f2. \bar "||"
+f2. \bar "||" \break
 
 % Chorus (후렴)
 c'4^\markup {\hspace #-6.4 \line {"(후렴)" \fermata}} |
@@ -83,11 +83,11 @@ a2.
 
 
 % Chorus
-a4 \fermata |
+a4_\fermata |
 c4 c8. c16 c4 bes8. bes16 |
 a4 bes a4. a8 |
 a8. a16 a8. a16 c4. c8 |
-c4 c c \fermata c |
+c4 c c_\fermata c |
 c4 c8. c16 c4 bes8. bes16 |
 a4 bes a2 |
 f8. f16 f8. f16 c'4 bes |
@@ -120,29 +120,38 @@ f2.
 
 verseOne = \lyricmode {
   \set stanza = "1."
-  주 하 나 님 은 큰 반 석 이 시 요 나 는 반 석 위 에 섰 네 
-  영 원 토 록 변 치 않 는 하 나 님 반 석 위 에 섬 일 세 
+  주 하 나 님 은 큰 반 석 이 시 요 
+  나 는 반 석 위 에 섰 네 
+  영 원 토 록 변 치 않 는 하 나 님 
+  반 석 위 에 섬 일 세 
   내 가 반 석 붙 은 것 아 니 요 
-  주 반 석 나 를 붙 들 고 있 네 내 영 혼 이 편 하 게 쉴 곳 은 
+  주 반 석 나 를 붙 들 고 있 네 
+  내 영 혼 이 편 하 게 쉴 곳 은 
   주 의 반 석 뿐 일 세
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
-  큰 풍 파 일 어 도 반 석 이 소 요 나 는 반 석 위 에 섰 네 
+  큰 풍 파 일 어 도 반 석 이 소 요 
+  나 는 반 석 위 에 섰 네 
   큰 파 도 덮 쳐 도 요 동 안 함 은
+  반 석 위 에 섬 일 세 
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
-  주 명 령 따 라 폭 풍 도 순 종 해 나 는 반 석 위 에 섰 네
+  주 명 령 따 라 폭 풍 도 순 종 해 
+  나 는 반 석 위 에 섰 네
   이 사 랑 손 안 에 화 평 누 림 은 
+  반 석 위 에 섬 일 세 
 }
 
 verseFour = \lyricmode {
   \set stanza = "4."
-  주 반 석 실 로 안 전 한 곳 일 세 나 는 반 석 위 에 섰 네 
+  주 반 석 실 로 안 전 한 곳 일 세 
+  나 는 반 석 위 에 섰 네 
   이 세 상 마 귀 도 침 해 못 함 은
+  반 석 위 에 섬 일 세 
 }
 
 
@@ -202,6 +211,7 @@ verseFour = \lyricmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}
