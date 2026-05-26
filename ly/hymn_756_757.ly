@@ -572,6 +572,7 @@ myChordsB = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}
@@ -628,6 +629,7 @@ myChordsB = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}

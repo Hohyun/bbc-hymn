@@ -1,8 +1,8 @@
 \version "2.24.0"
 
-\include "./hymn_init.ly"
+\version "2.24.0"
 
-\language "english"
+\include "./hymn_init.ly"
 
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
@@ -15,24 +15,24 @@ bibleInfo = "엡 2:15-18"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key bf \major
+  \key f \major
   \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
+  %\partial 8 
 }
 
 soprano = \relative c' {
   \global
-  <d f>8 q q q <ef g> <d f>4. |
+  c2 d2 |
 }
 
-aligner = \relative c'' {
+alto = \relative c' {
   \global
 }
 
-
-alto = \relative c' {
+aligner = \relative c' {
   \global
 }
 
@@ -42,6 +42,7 @@ tenor = \relative c' {
 
 bass = \relative c {
   \global
+  c2 d2 |
 }
 
 verseOne = \lyricmode {
@@ -75,7 +76,7 @@ oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
   \key f \major
-  \time 3/4
+  \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
@@ -83,11 +84,11 @@ globalB = {
 
 sopranoB = \relative c'' {
   \globalB
-  <d f>8 q q q q q |
+  c2 d2 |
 }
 
-alignerB = \relative c'' {
-  \globalB
+alignerB = \relative c' {
+  \global
 }
 
 altoB = \relative c' {
@@ -100,6 +101,7 @@ tenorB = \relative c' {
 
 bassB = \relative c {
   \globalB
+  c2 d2 |
 }
 
 verseOneB = \lyricmode {
@@ -124,7 +126,7 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    page-breaking = #ly:minimal-breaking
+    %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
@@ -149,7 +151,7 @@ myChordsB = \chordmode {
   }
   
   \score {
-      \header {
+    \header {
       title = \korTitle
       %subtitle = \engTitle
       opus = \hymnNumber
@@ -160,7 +162,7 @@ myChordsB = \chordmode {
     <<
       \new ChoirStaff <<
         \new ChordNames \myChords
-        \context Staff = upper \with {
+        \new Staff = upper \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
           <<
@@ -177,16 +179,16 @@ myChordsB = \chordmode {
             }
           >>
         }
-           
-        \context Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
-        \context Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
-        \context Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
-        \context Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
+        
+        \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
+        \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
+        \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
+        \new Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
     
-        \context Staff = lower \with {
+        \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-           \clef bass
+          \clef bass
             <<      
               \context Voice = tenor {
                 \voiceOne
@@ -198,6 +200,7 @@ myChordsB = \chordmode {
               }
           >>       
         }
+        
       >>
     >>
     \layout {
@@ -211,39 +214,13 @@ myChordsB = \chordmode {
         \override LyricText.font-series = #'bold
       }
     }
-    \midi {
-      \tempo 4 = 90
-    }
+    \midi {}
   }
-}
 
   \noPageBreak
-
-  \paper {
-    page-breaking = #ly:minimal-breaking
-    %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
-    scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwoB)
-    ragged-bottom = ##f
-    ragged-last-bottom = ##t
-    oddFooterMarkup = \markup {
-      \if \on-first-page-of-part
-      \fill-line {    
-        \smallCaps \smaller \bibleInfo
-        \smallCaps \smaller \engTitle
-      }
-      \if \on-last-page-of-part
-      \fill-line {    
-        \smallCaps \smaller \bibleInfoB
-        \smallCaps \smaller \engTitleB
-      }
-    }
-    evenFooterMarkup = \oddFooterMarkup
-  }
   
   \score {
-    
-      \header {
+    \header {
       title = \korTitleB
       %subtitle = \engTitle
       opus = \hymnNumberB
@@ -272,15 +249,15 @@ myChordsB = \chordmode {
           >>
         }
            
-        \context Lyrics = "LyrOne" \lyricsto "alignerb" { \verseOneB }
-        \context Lyrics = "LyrTwo" \lyricsto "alignerb" { \verseTwoB }
-        \context Lyrics = "LyrThree" \lyricsto "alignerb" { \verseThreeB }
-        \context Lyrics = "LyrFour" \lyricsto "alignerb" { \verseFourB }
+        \context Lyrics = "LyrOneB" \lyricsto "alignerb" { \verseOneB }
+        \context Lyrics = "LyrTwoB" \lyricsto "alignerb" { \verseTwoB }
+        \context Lyrics = "LyrThreeB" \lyricsto "alignerb" { \verseThreeB }
+        \context Lyrics = "LyrFourB" \lyricsto "alignerb" { \verseFourB }
     
         \context Staff = lower \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-           \clef bass
+          \clef bass
             <<      
               \context Voice = tenor {
                 \voiceOne
@@ -305,8 +282,6 @@ myChordsB = \chordmode {
         \override LyricText.font-series = #'bold
       }
     }
-    \midi {
-      \tempo 4 = 90
-    }
+    \midi {}
+  }
 }
-
