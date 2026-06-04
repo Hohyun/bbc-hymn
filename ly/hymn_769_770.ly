@@ -4,263 +4,209 @@
 
 \include "./hymn_init.ly"
 
+\language "english"
+
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "진리로 승리하리라"
 engTitle = "The Fight is On"
 hymnNumber = "769"
-poet = "Willam Martin, 19th century"
-composer = "C. Austin Miles, 1868~1946"
-bibleInfo = "엡 2:15-18"
+poet = "Lelia N. Morris, 1862~1929"
+composer = "Lelia N. Morris, 1862~1929"
+bibleInfo = "엡 6:10-17"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key bes \major
+  \key bf \major
+  \numericTimeSignature
   \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
-  \partial 8 
+  \partial 16 
 }
 
-soprano = \relative c' {
+soprano = \fixed c' {
   \global
-  % temporary polyphonic passage
-  << 
-    { \voiceOne 
-      f8 |
-    }
-    \new Voice {
-      \voiceTwo
-      f8 |
-    }
-  >>
-  d'8. d16 d8. c16 bes8. bes16 a8. bes16 |
-  c8. bes16 g8. bes16 f4. \breathe %\break
+  <d f>16 |
+  <d bf>4 <cs bf> <d bf>4.. <d f>16 |
+  <d g>8. <d f>16 q8.q16 <d g>8. <d f>16 f8. 16 |
+  <f c'>4 <e c'> %\break
   
-  f8 |
-  d'8. d16 d8. c16 bes8. bes16 a8. bes16 |
-  c8. c16 c8. d16 c4. \breathe %\break
+  <f c'>4. <f d'>8 |
+  <e c'>8. <e bf>16 <e a>8. <e g>16 f4.. \breathe \break 16 |
+  <f d'>4 <fs d'> s2 |
+  s8. <g c'>16 %\break
   
-  << 
-    { \voiceOne 
-      f,8 |
-    }
-    \new Voice {
-      \voiceTwo
-      f8 |
-    }
-  >>
-  ees'8. d16 d8. c16 bes8. bes16 a8. bes16 |
-  c8. bes16 g8. bes16 f4. \breathe %\break
+  s4 <g c'>8. <g bf>16 <f a>8. <ef g>16 \breathe |
+  <d f>4 <cs bf> <d bf>4.. <d f>16 |
+  <f d'>8. <ef c'>16 <d bf>8. <d a>16 <d bf>8.\fermata \bar "||"  \break
   
-  f8 |
-  g8. g16 a8. a16 bes8. bes16 c8. c16 \bar "||" |
-  \time 2/4
-  d8. c16 bes8. a16 |
-  \time 4/4
-  bes2. \breathe \break
+  f16^\markup "(후렴)" g8. a16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <d f> q^(_( q8.^)_)  f16 <ef g>8. <ef a>16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <a, ef>2^(_( q8.^)_) %\break
   
-  f4^\markup{"(후렴)"} |
-  bes2~ bes8. f16 bes8. a16 |
-  g4 g2 g4 \breathe | %\break
+  <a, c>16 <c ef>8. <d f>16 |
+  <ef a>4 q b8.\rest f16 <ef a>8. <ef bf>16 |
+  <ef c'>4 q b8.\rest c16 d8. <c ef>16 |
+  <ef a>4 <ef g> <c ef> <ef g> |
+  <d f>2 b8.\rest %\break
   
-  c2~ c8. g16 c8. bes16 |
-  a2. \breathe f4 |
-  d'2~ \break
+  f16 g8. <ef a>16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <d f> q4^(_( q8.^)_) f16 <ef g>8. <ef a>16 |
+  <d bf>4 <f d'> <g ef'> <f d'> |
+  <ef g>2^(_( q8.^)_) %\break
   
-  d8. c16 bes8. a16 |
-  c4 bes a g |
-  f8 bes4. bes4 a |
-  bes2. s8 \bar "|." 
+  fs16 g8. a16 |
+  bf4 4 b8.\rest c'16 d'8. ef'16 |
+  d'4 4 b8.\rest f16 8. 16 |
+  g4 s <f d'> <ef c'> |
+  <d bf>2. b8.\rest \bar "|."
 }
 
-alto = \relative c' {
+alto = \fixed c' {
   \global
-  s8 |
-  f8. f16 f8. ees16 d8. d16 d8. d16|
-  ees8. ees16 ees8. ees16 d4. 
+  s16 | s1 | s2. f8. 16 | s2
+  s2 | s2 f4.. 16 | s2 <g d'>4.. <af d'>16 | <g d'>8. s16
+  <g ef'>8. <g d'>16 s2 | s1 | s2 s8.
   
-  d8 |
-  f8. f16 f8. ees16 d8. d16 d8. d16|
-  f8. f16 e8. e16 f4. 
-  
-  s8 |
-  f8. f16 f8. ees16 d8. d16 d8. d16|
-  ees8. ees16 ees8. ees16 d4. 
-  
-  d8 |
-  ees8. ees16 ees8. ees16 f8. f16 g8. g16 |
-  \time 2/4
-  f8. ees16 d8. c16 |  % 2/4
-  \time 4/4
-  d2.   % 4/4
-  
-  s4 |
-  
+  f16 g8. a16 | s1 | s2 s8. ef16 s4 | s1 | s2 s8.
+  s16 s4 | s2 s8. ef16 s4 | s2 s8. c16 c8. s16 | s1 | s2 s8.
+  f16 f8. s16 | s1 | s2 s8. ef16 s4 | s1 | s2 s8.
+  s16 s4 |
+  cs4 4 s8. c'16 d'8. ef'16 | f4 4 s8. f16 8. 16 | ef4 <g ef'>4 s2 | s2. s8.
 }
 
-altoRefrain = \relative c' {
+aligner = \fixed c {
   \global
-  \skip 8 |
-  \skip 1*7
-  \time 2/4 \skip 2
-  \time 4/4 \skip 2.
-  f4 |
-  d8. d16 d8. d16 d8. d16 d8. d16 |
-  ees8. ees16 ees8. ees16 ees4 ees |
+  <d f>16 |
+  <d bf>4 <cs bf> <d bf>4.. <d f>16 |
+  <d g>8. <d f>16 q8.q16 <d g>8. <d f>16 f8. 16 |
+  <f c'>4 <e c'> 
   
-  e8. e16 e8. e16 e8. e16 e8. e16 |
-  f8. f16 f8. f16 f4 f |
-  f8. f16 f8. f16 
+  <f c'>4. <f d'>8 |
+  <e c'>8. <e bf>16 <e a>8. <e g>16 f4.. 16 |
+  <f d'>4 <fs d'> <g d'>4.. <af d'>16  |
+  <g d'>8. <g c'>16 
   
-  f8. ees16 d8. d16 |
-  ees8. ees16 ees8. ees16 f4 ees8 ees |
-  d8 f4. ees4 ees |
-  d2. bes'8\rest
+  <g ef'>8. <g d'>16 <g c'>8. <g bf>16 <f a>8. <ef g>16 |
+  <d f>4 <cs bf> <d bf>4.. <d f>16 |
+  <f d'>8. <ef c'>16 <d bf>8. <d a>16 <d bf>8.
+  
+  f16 g8. a16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <d f> q^(_( q8.^)_) f16 <ef g>8. <ef a>16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <a, ef>2^(_( q8.^)_) 
+  
+  <a, c>16 <c ef>8. <d f>16 |
+  <ef a>4 q b8.\rest f16 <ef a>8. <ef bf>16 |
+  <ef c'>4 q b8.\rest c16 d8. <c ef>16 |
+  <ef a>4 <ef g> <c ef> <ef g> |
+  <d f>2 b8.\rest
+  
+  f16 g8. <ef a>16 |
+  <d bf>4 <d a> <d g> <bf, d> |
+  <d f> q4^(_( q8.^)_) f16 <ef g>8. <ef a>16 |
+  <d bf>4 <f d'> <g ef'> <f d'> |
+  <ef g>2^(_( q8.^)_)
+  
+  fs16 g8. a16 |
+  bf4 4 b8.\rest c'16 d'8. ef'16 |
+  d'4 4 b8.\rest f16 8. 16 |
+  g4 4 <f d'> <ef c'> |
+  <d bf>2. b8.\rest
 }
 
-tenor = \relative c' {
+tenor = \fixed c {
   \global
-
-   << 
-    { \voiceTwo
-      g8 |
-    }
-    \new Voice {
-      \voiceOne
-      \autoBeamOff
-      g8 |
-    }
-  >>
-  bes8. bes16 bes8. bes16 f8. f16 f8. f16 |
-  g8. g16 bes8. g16 bes4. \breathe
+  s16 | s4 <bf, e> s2 | s1 | s2
+  s2 | s2 a4.. s16 | s1 | s4 
+  s2. | s1 | s2 s8.
   
-  bes8 |
-  bes8. bes16 bes8. bes 16 f8. f16 f8. f16 |
-  a8. a16 g8. bes16 a4. \breathe
-  
-  a8 |
-  bes8. bes16 bes8. bes16 f8. f16 f8. f16 |
-  g8. g16 bes8. g16 bes4. \breathe
-  
-  bes8 |
-  bes8. bes16 f8. f16 bes8. bes16 bes8. bes16 |
-  \time 2/4
-  bes8. a16 
-  <<
-    { \voiceTwo
-      f8. f16 |
-      
-    }
-    \new Voice {
-      \voiceOne
-      \autoBeamOff
-      f8. f16 |
-    }
-  >>
-  \time 4/4
-  f2. \breathe
-  <<
-    { \voiceTwo
-      f4 |
-    }
-    \new Voice {
-      \voiceOne 
-      f4 |
-    }
-  >>
-  
-  f8. f16 f8. f16 bes8. bes16 bes8. bes16 |
-  bes8. bes16 bes8. bes16 bes4 bes |
-  c8. g16 g8. g16 g8. c16 c8. c16 |
-  c8. c16 c8. c16 c4 \breathe a |
-  bes8. bes16 bes8. bes16
-  
-  bes8. bes16 f8. f16 |
-  g8. g16 g8. g16 a4 bes8 bes |
-  bes8 d4. c4 
-  
-  <<
-    { \voiceTwo
-      f,4 |
-    }
-    \new Voice {
-      \voiceOne 
-      f4 |
-    }
-  >>
-  f2. d8\rest
+  f16 8. 16 | s1 | s2. s8. f16 | s1 | s2 s8.
+  f16 s4 | s1 | s1 | s1 | s2 s8.
+  f16 8. 16 | s1 | s2. s8. f16 | s1 | s2 s8.
+  s16 s4 | s1 | s1 | s1 | s2. s8.
 }
 
-bass = \relative c {
+bass = \fixed c {
   \global
-  s8 |
-  bes8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 |
-  ees8. ees16 ees8. ees16 bes4. 
+  <bf, bf>16 |
+  <bf, f>4 s q4.. <bf, bf>16 |
+  q8. q16 q8. q16 q8. q16 <d bf>8. \breathe q16 |
+  <f a>4 q 
   
-  bes8 |
-  bes8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 |
-  f'8. f16 c8. c16 f4.
+  <a c'>4. <f a>8 |
+  <c g>8. q16 <c c'>8. <c bf>16 f8.[ ef16 d8.] \breathe <c a>16 |
+  <bf, bf>4 <d a> <g bf>4.. <f bf>16 |
+  <ef bf>8. q16
   
-  f8 |
-  bes,8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 |
-  ees8. ees16 ees8. ees16 bes4.
+  q8. q16 q8. q16 q8. q16 \breathe |
+  <f bf>4 <gf bf> <f bf>4.. <f bf>16 |
+  q8. <f a>16 <f bf>8. <f c'>16 <bf, bf>8.
   
-  bes8 |
-  ees8. ees16 c8. c16 d8. d16 ees8. ees16 |
+  f16 8. 16 |
+  <bf, f>4 q <bf, bf> <bf, f> |
+  <bf, bf> q^(_( q8.^)_) <f a>16 q8. f16 |
+  <bf, f>4 <bf, bf> q <d f> |
+  <c ef>2^(_( q8.^)_)
   
-  \time 2/4
-  f8. f16 s4 |
-  \time 4/4
-  bes,2.
+  f16 <f a>8. <f bf>16 |
+  <f c'>4 q d8.\rest <f a>16 <f c'>8. <f bf>16 |
+  <f a>4 q d8.\rest q16 q8. q16 |
+  <f c'>4 <f bf> <f a> q |
+  <bf, bf>2 d8.\rest
   
-  s4 |
-  bes8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 |
-  ees8. ees16 ees8. ees16 ees4 ees |
+  f16 8. 16 |
+  <bf, f>4 q <bf, bf> <bf, f> |
+  <bf, bf>4 q^(_( q8.^)_) <f a>16 q8. f16 |
+  <bf, f>4 <bf, bf> q q | 
+  <ef bf>2^(_( q8.^)_)
   
-  c8. c16 c8. c16 c8. c16 c8. c16 |
-  f8. f16 f8. f16 f4 f |
-  bes,8. bes16 bes8. bes 16
-  
-  bes8. bes16 bes8. bes 16 |
-  ees8. ees16 ees8. ees16 ees4 ees8 ees |
-  f8 f4. f4 s |
-  bes,2. d8\rest
+  d16\rest d4\rest | 
+  <e g>4 q d2\rest |
+  <f bf>4 q d8.\rest <d bf>16 q8. q16 |
+  <ef bf>4 <c bf> <f bf> <f a> |
+  <bf, f>2. d8.\rest
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
-  내 주 께 나 의 모 든 맘 이 날 로 끌 리 니
-  저 황 금 빛 과 아 침 햇 살 보 다 빛 나 네
-  내 모 든 소 원 주 님 안 에 숨 겨 있 으 니
-  내 주 의 이 름 이 전 보 다 더 욱 귀 하 네
-  저 황 금 길 에 주 님 과 함 께 걸 을 때 
-  주 님 이 주 실 평 안 속 에 길 이 살 겠 네
+  큰 싸 움 났 다 나 팔 소 리 들 린 다
+  무 기 를 들 라 굳 센 병 사 여
+  우 리 의 대 장 예 수 님 이 앞 서 가 니
+  최 후 승 리 우 리 것 이 다
+  
+  싸 워 라 주 의 군 병 들 아 
+  힘 차 게 전 진 하 여 라
+  번 득 이 는 칼 날 리 는 깃 발
+  진 리 로 승 리 하 리 라
+  두 려 워 물 러 가 지 말 라
+  전 능 한 주 께 붙 어 라
+  주 함 께 하 사 도 와 주 시 니
+  승 전 가 높 이 부 르 리
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
-  나 주 를 떠 나 멀 리 서 서 방 황 할 때 에
-  주 크 신 사 랑 나 의 맘 을 두 드 리 셨 네
-  내 갈 급 하 는 심 령 속 에 친 히 오 시 니
-  내 주 의 이 름 이 전 보 다 더 욱 귀 하 네
+  큰 싸 움 났 다 군 병 들 아 일 어 나 라 
+  우 리 주 가 승 리 하 셨 다
+  사 망 의 권 세 깨 치 시 고 사 셨 으 니
+  끝 날 까 지 참 고 견 디 세
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
-  주 내 게 온 후 항 상 나 를 위 로 하 시 며
-  큰 환 란 시 험 당 할 때 에 피 할 길 주 사
-  주 나 의 모 든 죄 의 짐 을 대 신 지 시 니
-  내 주 의 이 름 이 전 보 다 더 욱 귀 하 네
+  동 편 하 늘 에 무 지 개 를 보 아 라
+  승 리 의 약 속 증 거 하 도 다
+  온 세 상 만 국 주 님 앞 에 무 릎 꿇 고
+  주 가 영 영 다 스 리 겠 네
 }
 
-verseRefrain = \lyricmode {
-  저 황 금 길 에 황 금 길 에 주 와 걸 을 때
-  저 황 금 길 에 황 금 길 에 주 와 걸 을 때
-  내 주 가 주 실 평 안 속 에 길 이 살 겠 네
-  주 와 길 이 살 겠 네
-}
 
 myChords = \chordmode {
 }
@@ -268,223 +214,100 @@ myChords = \chordmode {
 
 % Second Song placed on odd page (right page) which will be printed second page.
 % Hymn Info
-korTitleB = "주의 깊은 자비를"
-engTitleB = "Depth of Mercy"
-hymnNumberB = "757"
-poetB = "Charles Wesley, 1707~1788"
-composerB = "Willam B. Bradbury, 1816~1868"
-bibleInfoB = "마 11:28"
+korTitleB = "전능의 주와 함께 나가라"
+engTitleB = "We Are Not Here To Play"
+hymnNumberB = "770"
+poetB = "Anonymous"
+composerB = "Anonymous"
+bibleInfoB = "시 46:6-11"
 oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
-  \key f \major
-  \time 3/4
+  \key bf \major
+  \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
 }
 
-sopranoB = \relative c'' {
+sopranoB = \fixed c' {
   \globalB
-  % temporary polyphonic passage
-  << 
-    { \voiceOne 
-      a4( c) f, |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
+  bf4 8. 16 8 f d f |
+  <d bf>4 <f c'> <f d'>2 \breathe |
+  <f c'>4 <f a>8. <f bf>16 <f ef'>8 <f d'> <f c'> <f bf> |
+  <f a>4 <e g> f2 \breathe | \break
   
-  g2 g4 |
-  g4( f) g |
-  a2. \breathe |
-  
-  << 
-    { \voiceOne 
-      a4( c) f, |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
-  
-  g2 g4 |
-  
-  << 
-    { \voiceOne 
-      g4( a) g |
-      f2. \breathe | \break
-    }
-    \new Voice {
-      \voiceTwo
-      e2 e4 |
-      f2. |
-    }
-  >> 
-  
-  bes2 bes4 |
-  a2 a4 |
-  g2 f4 |
-  c'2. \breathe |
-  << 
-    { \voiceOne 
-      c4( a) f |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
-  
-  g2 g4 |
-  g4( a) g |
-  f2. \bar "|." |
+  bf4 8. 16 8 f <f bf> <f c'> |
+  <f d'>4 <f bf> <f c'>4. \breathe f8 |
+  <d bf>2 <ef g>4. f8 |
+  bf1 \bar "|." |
 }
 
-altoB = \relative c' {
+alignerB = \sopranoB
+
+altoB = \fixed c' {
   \globalB
-  s2. |
-  e2 e4 |
-  s2. |
-  f2. |
-  s2. |
-  e2 e4 |
-  s2. |
-  s2. |
+  bf4 8. 16 8 f d f |
+  s1 |
+  s1 |
+  s2 f2 |
   
-  f2 f4 |
-  f2 f4 |
-  c2 d4 |
-  e2. |
-  s2. |
-  e2 e4 |
-  e2 e4 |
-  c2. |
+  bf4 8. 16 8 f  s4 |
+  s2 s4. f8 |
+  s2 s4. ef8 |
+  d1 |
 }
 
-tenorB = \relative c' {
+tenorB = \fixed c {
   \globalB
-  << 
-    { \voiceOne
-      c4( a) a |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
+  bf4 8. 16 8 f d f |
+  s1 |
+  s1 |
+  s1 |
   
-  \stemDown
-  c'2 c4 |
-  c2 c4 |
-  c2. \breathe |
-  
-  << 
-    { \voiceOne
-      c4( a) a |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
-  
-  \stemDown
-  c'2 c4 |
-  
-  << 
-    { \voiceOne 
-      bes4( c) bes |
-      
-    }
-    \new Voice {
-      \voiceTwo
-      c,2 c4 |
-    }
-  >> 
-  
-  \stemDown
-  a'2. \breathe | \break
-  
-  \stemDown
-  d2 d4 |
-  c2 c4 |
-  c2 b4 |
-  c2. \breathe |
-  << 
-    { \voiceOne
-      a4( c) a |
-    }
-    \new Voice {
-      \voiceTwo
-      f2 f4 |
-    }
-  >> 
-  
-  \stemDown
-  c'2 c4 |
-  << 
-    { \voiceOne
-      bes4( c) bes |
-    }
-    \new Voice {
-      \voiceTwo
-      c,2 c4 |
-    }
-  >> 
-  
-  
-  \stemDown
-  a'2. \bar "|." |
+  bf4 8. 16 8 f s4 |
+  s2 s4. f8 |
+  bf2 4. a8 |
+  bf1 |
 }
 
-bassB = \relative c {
+bassB = \fixed c {
   \globalB
-  s2. |
-  c2 c4 |
-  c2 c4 |
-  f2. |
-  s2. |
-  c2 c4 |
-  s2. |
-  f2. |
+  bf4 8. 16 8 f d f |
+  <g bf>4 <f a> < bf, bf>2 \breathe |
+  <f a>4 <f c'>8. <d bf>16 <c a>8 <bf, bf> <a, c'> <bf d'> |
+  <c c'>4 <c bf> <f a>2 \breathe |
   
-  f2 f4 |
-  f2 f4 |
-  e2 d4 |
-  c2. |
-  s2. |
-  c2 c4 |
-  s2. |
-  f2. |
+  bf4 8. 16 8 f <d bf> <f a> |
+  <bf, bf>4 <d bf> <f a>4. \breathe f8 |
+  g8[ a g f] ef[ d c] f |
+  bf,1 |
 }
 
 verseOneB = \lyricmode {
   \set stanza = "1."
-  주 의 깊 은 자 비 를 나 를 위 해 두 셨 나
-  죄 인 괴 수 된 나 를 오 래 참 고 계 셨 네
+  전 능 의 주 와 함 께 나 가 라
+  죽 음 과 괴 롬 겁 내 지 말 고
+  주 예 수 구 령 역 사 위 하 여
+  힘 써 전 하 라
 }
 
 verseTwoB = \lyricmode {
   \set stanza = "2."
-  주 의 은 혜 배 반 코 주 께 욕 을 돌 렸 네
-  주 의 부 름 떠 나 서 주 께 슬 픔 돌 렸 네
+  세 상 의 헛 된 것 을 버 리 며
+  내 주 의 힘 센 팔 을 붙 잡 고
+  영 광 의 십 자 가 를 위 하 여
+  굳 세 게 서 라
 }
 
 verseThreeB = \lyricmode {
   \set stanza = "3."
-  지 금 주 께 돌 아 와 죄 로 슬 퍼 합 니 다
-  주 의 말 씀 따 라 서 믿 고 주 께 옵 니 다
+  죄 악 의 권 세 더 욱 강 하 고
+  큰 싸 움 나 를 엄 습 하 여 도
+  승 리 는 우 리 손 에 있 으 니
+  잡 아 라 승 리
 }
 
-verseFourB = \lyricmode {
-  \set stanza = "4."
-  주 가 응 답 하 시 고 나 를 맞 아 주 셨 네
-  주 는 사 랑 이 시 라 죄 인 구 원 하 시 네
-}
 
 myChordsB = \chordmode {
 }
@@ -494,10 +317,10 @@ myChordsB = \chordmode {
   \paper {
     %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -532,34 +355,38 @@ myChordsB = \chordmode {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
           <<
-            \new Voice = "women" {
-              <<
+            \context Voice = sop {
+              \voiceOne
                 \soprano
-                \alto
-              >>
             }
-            \new Voice = "refrain" {
+            \context Voice = alto {
               \voiceTwo
-              \altoRefrain
+                \alto
+            }
+            \context NullVoice = aligner {
+             \aligner
             }
           >>
         }
         
-        \new Lyrics = "LyrOne" \lyricsto "women" { \verseOne }
-        \new Lyrics = "LyrTwo" \lyricsto "women" { \verseTwo }
-        \new Lyrics = "LyrThree" \lyricsto "women" { \verseThree }
-        \new Lyrics = "LyrRefrain" \lyricsto "refrain" { \verseRefrain }
+        \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
+        \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
+        \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-          \new Voice = "men" {
-            \clef bass
-            <<
-              \tenor
-              \bass
-            >>
-          }
+          \clef bass
+            <<      
+              \context Voice = tenor {
+                \voiceOne
+                \tenor
+              }
+              \context Voice = bass {
+                \voiceTwo
+                \bass
+              }
+          >>       
         }
         
       >>
@@ -572,6 +399,7 @@ myChordsB = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}
@@ -594,29 +422,39 @@ myChordsB = \chordmode {
         \context Staff = upper \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-          \context Voice = sop {
-            <<
-              \sopranoB
-              \altoB
-            >>
-          }
+          <<
+            \context Voice = sop {
+              \voiceOne
+                \sopranoB
+            }
+            \context Voice = alto {
+              \voiceTwo
+                \altoB
+            }
+            \context NullVoice = alignerb {
+             \alignerB
+            }
+          >>
         }
            
-        \context Lyrics = "LyrOne" \lyricsto "sop" { \verseOneB }
-        \context Lyrics = "LyrTwo" \lyricsto "sop" { \verseTwoB }
-        \context Lyrics = "LyrThree" \lyricsto "sop" { \verseThreeB }
-        \context Lyrics = "LyrFour" \lyricsto "sop" { \verseFourB }
-    
+        \context Lyrics = "LyrOneB" \lyricsto "alignerb" { \verseOneB }
+        \context Lyrics = "LyrTwoB" \lyricsto "alignerb" { \verseTwoB }
+        \context Lyrics = "LyrThreeB" \lyricsto "alignerb" { \verseThreeB }
+        
         \context Staff = lower \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
-          \new Voice {
-            \clef bass
-            <<
-              \tenorB
-              \bassB
-            >>
-          }
+          \clef bass
+            <<      
+              \context Voice = tenor {
+                \voiceOne
+                \tenorB
+              }
+              \context Voice = bass {
+                \voiceTwo
+                \bassB
+              }
+          >>       
         }
       >>
     >>
@@ -628,6 +466,7 @@ myChordsB = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}

@@ -6,12 +6,12 @@
 
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
-korTitle = "내 주의 이름이 전보다 더욱 귀하네"
-engTitle = "Still Sweeter Every Day"
-hymnNumber = "756"
-poet = "Willam Martin, 19th century"
-composer = "C. Austin Miles, 1868~1946"
-bibleInfo = "엡 2:15-18"
+korTitle = ""
+engTitle = ""
+hymnNumber = ""
+poet = ""
+composer = ""
+bibleInfo = ""
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
@@ -23,24 +23,24 @@ global = {
   %\partial 8 
 }
 
-soprano = \relative c' {
+soprano = \fixed c' {
   \global
   c2 d2 |
 }
 
-alto = \relative c' {
+alto = \fixed c' {
   \global
 }
 
-aligner = \relative c' {
+aligner = \fixed c' {
   \global
 }
 
-tenor = \relative c' {
+tenor = \fixed c {
   \global
 }
 
-bass = \relative c {
+bass = \fixed c {
   \global
   c2 d2 |
 }
@@ -66,12 +66,12 @@ myChords = \chordmode {
 
 % Second Song placed on odd page (right page) which will be printed second page.
 % Hymn Info
-korTitleB = "주의 깊은 자비를"
-engTitleB = "Depth of Mercy"
-hymnNumberB = "757"
-poetB = "Charles Wesley, 1707~1788"
-composerB = "Willam B. Bradbury, 1816~1868"
-bibleInfoB = "마 11:28"
+korTitleB = ""
+engTitleB = ""
+hymnNumberB = ""
+poetB = ""
+composerB = ""
+bibleInfoB = ""
 oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
@@ -82,24 +82,24 @@ globalB = {
   \autoBeamOff
 }
 
-sopranoB = \relative c'' {
+sopranoB = \fixed c' {
   \globalB
   c2 d2 |
 }
 
-alignerB = \relative c' {
-  \global
-}
-
-altoB = \relative c' {
+alignerB = \fixed c' {
   \globalB
 }
 
-tenorB = \relative c' {
+altoB = \fixed c' {
   \globalB
 }
 
-bassB = \relative c {
+tenorB = \fixed c {
+  \globalB
+}
+
+bassB = \fixed c {
   \globalB
   c2 d2 |
 }
