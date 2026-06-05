@@ -1,8 +1,8 @@
 \version "2.24.0"
 
-\version "2.24.0"
-
 \include "./hymn_init.ly"
+
+\language "english"
 
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
@@ -80,6 +80,7 @@ globalB = {
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
+  %\partial 8
 }
 
 sopranoB = \fixed c' {
@@ -214,7 +215,9 @@ myChordsB = \chordmode {
         \override LyricText.font-series = #'bold
       }
     }
-    \midi {}
+    \midi {
+      \tempo 4 = 100
+    }
   }
 
   \noPageBreak
@@ -282,6 +285,8 @@ myChordsB = \chordmode {
         \override LyricText.font-series = #'bold
       }
     }
-    \midi {}
+    \midi {
+      \tempo 4 = 100
+    }
   }
 }
