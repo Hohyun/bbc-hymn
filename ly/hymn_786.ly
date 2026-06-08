@@ -9,7 +9,7 @@ korTitle = "사랑하는 예수"
 engTitle = "O How I Love Jesus"
 hymnNumber = "786"
 poet = "Frederick Whitfielo, 1829~1904"
-composer = "Arr by G. W. Peterson, 1921"
+composer = "Arr. by G. W. Peterson, 1921"
 bibleInfo = "롬 8:36-39"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
@@ -25,22 +25,89 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <b, g>8 |
+  <d b>4 q8 q8[ <c a>] <d b> |
+  <b, g>4 q8 q4 \breathe <d g>8 |
+  <d a>4 q8 a[ g] <d a> |
+  <d b>4. <d d'>4 \breathe \break
+  
+  <d c'>8 |
+  <d b>4 q8 q[ <c a>] <d b> |
+  <b, g>4 q8 q4 \breathe <d g>8 |
+  a[ b] <e c'> <d b>4 <c a>8 |
+  <b, g>4.^(_( q^)_) \bar "||" | \break
+  
+  <d b>4.^\markup "(후렴)" q8 <c a> <d b> |
+  <b, g>4. <d g> \breathe |
+  <d a>4. q8 <d g> <d a> |
+  <d b>4. d'4( c'8) \breathe | \break
+  
+  <d b>4. <ds b>8 <ds a> <fs b> |
+  <e g>4. g4\breathe 8 |
+  a8[ b] <ef c'>8 <d b>4 <c a>8 |
+  <b, g>4.^(_( q4^)_) \bar "|."
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  s8 | s2. | s2. | s4. d4 s8 | s4. s4
+  s8 | s2. | s2. | e4 s2 | s2. |
+  
+  s2. | s2. | s2. | s4. d |
+  s2. | s4. f4 8 | e4 s2 | s4. s4
 }
 
 tenor = \fixed c {
   \global
+  <g, d>8 | 
+  <g, g>4 q8 q4 q8 | 
+  <g, d>4 q8 q4 \breathe s8 | 
+  s4. fs8[ e] s | 
+  <g, g>4. s4
+  
+  <a, fs>8 | 
+  <g, g>4 q8 q4 q8 | 
+  <g, d>4 q8 q4 \breathe s8 | 
+  s2. | 
+  <g, d>4.^(_( q^)_) |
+  
+  <g, g>4. q8 q q | 
+  <g, d>4. s | 
+  s2 e8 s | 
+  <g, g>4. s \breathe |
+  
+  <g, g>4. s | 
+  s2. | 
+  s2. | 
+  <g, d>4.^(_( q4^)_)
 }
 
 bass = \fixed c {
   \global
+  s8 |
+  s2. |
+  s4. s4 <b, g>8 |
+  <d fs>4 q8 d4 <d fs>8 |
+  s4. <b, g>4 \breathe
+  
+  s8 |
+  s2. |
+  s4. s4  \breathe <b, g>8 |
+  <c g>4 q8 <d fs>4 q8 |
+  s2. |
+  
+  s2. |
+  s4. <b, g> \breathe |
+  <d fs>4. q8 d <d fs> |
+  s4. \stemUp <b, g>4^(_( \stemDown <a, fs>8^)_) |
+  
+  s4. <b, fs>8 q <ds b> |
+  <e b>4. <d b>4 \breathe q8 |
+  <c a>8[ <b, gs>] <a, g> <d fs>4 q8 |
+  s4. s4
+  
 }
 
 verseOne = \lyricmode {
