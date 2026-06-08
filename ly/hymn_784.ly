@@ -24,10 +24,47 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <ef c'>8. <df bf>16 <c af>8. <df bf>16 < ef c'>4 <c ef> |
+  <df f>8. <df bf>16 <df af>8. <df f>16 <c ef>2 \breathe |
+  <ef c'>8. <df bf>16 < c af>8. <df bf>16 %\break
+  
+  <ef c'>4 <ef af> |
+  <d bf>8. q16 q8. <d c'>16 <df bf>2 \breathe |
+  <ef c'>8. <df bf>16 <c af>8. <df bf>16 < ef c'>4 <c ef> |
+  <df f>8. <df bf>16 %\break
+  
+  <df af>8. <df f>16 <c ef>4. q8 |
+  \repeat segno 2 {
+    <df f>8. q16 <df g>8. q16 <ef af>8. q16 <f bf>8. <f b>16 |
+    <ef c'>4 <df bf> <c af>2 |
+    \volta 2 \fine %\break
+    \volta 1 
+    <ef c'>4^\markup "(후렴)" q q4. <ef af>8 |
+    <f bf>8. <f af>16 <df f> 8. <df af>16 <c ef>2 \breathe |
+    <ef c'>4 q q4. <ef af>8 | %\break
+    
+    <d bf>8. q16 q8. <d c'>16 <df bf>2 \breathe |
+    <ef c'>4 q q4. <ef af>8 |
+    <f bf>8. <f af>16 q8. <df f>16 <c ef>4. q8 
+  }
+  \section
 }
 
-aligner = \fixed c' {
-  \global
+aligner = \soprano
+
+alignerb = \fixed c' {
+  s1 | s1 | s2
+  s2 | s1 | s1 | s4
+  s2. | 
+  \repeat segno 2 {
+    <df af>8. q16 <bf, bf>8. q16 <c af>8. q16 <df af>8. <d af>16 | 
+    <ef af>4 <ef g> q2 |
+    \volta 2 \fine
+    \volta 1
+    s1 | s1 | s1 |
+    s1 | s1 | s1 |
+  }
+  \section
 }
 
 alto = \fixed c' {
@@ -36,10 +73,45 @@ alto = \fixed c' {
 
 tenor = \fixed c {
   \global
+  s4 <af, ef>8. q16 s2 | s1 | s4 <af, ef>8. q16
+  s2 | s1 | s4 <af, ef>8. q16 s2 | s4
+  s2. | 
+  \repeat segno 2 {
+    s1 | s2 <af, ef>2
+    \volta 2 \fine
+    \volta 1
+    s1 | s1 | s2 <f, af>4. q8 |
+    s1 | s1 | s1 |
+  }
+  \section
 }
 
 bass = \fixed c {
   \global
+  <af, af>8. q16 s4 q4 q | 
+  <df af>8. <df f>16 q8. <df af>16 <af, af>2 \breathe |
+  <af, af>8. q16 s4 
+  
+  <af, af>4 <c af> |
+  <bf, af>8. q16 q8. q16 <ef g>2 \breathe | 
+  <af, af>8. q16 s4 q4 q | 
+  <df af>8. <df f>16
+  
+  <df f>8. <df af>16 <af, af>4. q8 | 
+  \repeat segno 2 {
+    <df af>8. q16 <bf, bf>8. q16 <c af>8. q16 <df af>8. <d af>16 | 
+    <ef af>4 <ef g> s2 |
+    \volta 2 \fine
+    \volta 1
+    <af, af>4 q q4. <c af>8 | 
+    <df af>8. q16 q8. <df f>16 <af, af>2 \breathe | 
+    <af, af>4 q s2 |
+    
+    <bf, af>8. q16 q8. q16 <ef g>2 \breathe | 
+    <af, af>4 q q4. <c af>8 | 
+    <df af>8. q16 q8. q16 <af, af>4. q8 |
+  }
+  \section
 }
 
 verseOne = \lyricmode {
@@ -70,7 +142,8 @@ verseThree = \lyricmode {
   나 들 림 받 아 영 원 찬 미 하 겠 네
 }
 
-verseExtra = \lyrincmode {
+verseExtra = \lyricmode {
+  \once \override LyricText.self-alignment-X = #RIGHT 
   D.S.능 력 으 로 나 를 매 일 지 키 네
 }
 
@@ -146,8 +219,13 @@ myChords = \chordmode {
                 \voiceTwo
                 \bass
               }
+             \context NullVoice = alignerb {
+               \alignerb
+             }
           >>       
         }
+        
+       \context Lyrics = "LyrExtra" \lyricsto "alignerb" { \verseExtra }
       >>
     >>
     \layout {

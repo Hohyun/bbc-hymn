@@ -6,26 +6,25 @@
 
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
-korTitle = ""
-engTitle = ""
-hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
+korTitle = "주와 동행하는 것이 영광이로다"
+engTitle = "It is Glory Just to Walk With Him"
+hymnNumber = "788"
+poet = "Avis B.Christiansen, 1895"
+composer = "Haldor Lillenas, 1885~1959"
+bibleInfo = "히 13:4-5"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
+  \key c \major
   \time 4/4
-  \tempo 4 = 80
+  %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
-  %\partial 8 
+  \partial 4 
 }
 
 soprano = \fixed c' {
   \global
-  c2 d2 |
 }
 
 alto = \fixed c' {
@@ -36,28 +35,56 @@ aligner = \fixed c' {
   \global
 }
 
+alignerb = \fixed c' {
+  \global
+}
+
 tenor = \fixed c {
   \global
 }
 
 bass = \fixed c {
   \global
-  c2 d2 |
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
+  나 를 구 속 하 신 주 와 
+  동 행 하 는 이 영 광
+  내 영 혼 에 기 쁨 이 로 다
+  나 의 발 길 가 는 곳 에
+  주 가 함 께 하 시 니
+  나 의 평 생 영 광 이 로 다
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
+  어 둔 그 늘 가 운 데 도
+  주 가 동 행 하 시 니
+  주 를 믿 고 의 지 합 니 다
+  밝 은 하 늘 밑 에 서 도
+  주 가 동 행 하 시 니
+  나 의 평 생 영 광 이 로 다
+
+  주 와 동 행 하 는 이 영 광
+  주 와 동 행 하 는 이 영 광
+  깊 은 골 짝 에 서 나
+  험 한 산 길 에 서 도 
+  주 는 나 의 영 광 되 도 다
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
+  주 와 함 께 천 국 길 을
+  동 행 하 는 이 영 광
+  다 시 주 를 떠 남 없 겠 네
+  슬 픔 고 통 없 는 곳
+  주 와 함 께 사 는 것
+  영 원 토 록 영 광 이 로 다
 }
 
-verseFour = \lyricmode {
+verseExtra = \lyricmode {
+  영 광 영 광
 }
 
 myChords = \chordmode {
@@ -66,26 +93,24 @@ myChords = \chordmode {
 
 % Second Song placed on odd page (right page) which will be printed second page.
 % Hymn Info
-korTitleB = ""
-engTitleB = ""
-hymnNumberB = ""
-poetB = ""
-composerB = ""
-bibleInfoB = ""
+korTitleB = "이 몸이 죽을 때"
+engTitleB = "Earth's Joy Are But Fleeting"
+hymnNumberB = "789"
+poetB = "Ananymous"
+composerB = "Lowell Mason, 1856"
+bibleInfoB = "전 1:1-8"
 oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
-  \key f \major
-  \time 4/4
-  \tempo 4 = 80
+  \key g \major
+  \time 6/4
+  %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
-  %\partial 8
 }
 
 sopranoB = \fixed c' {
   \globalB
-  c2 d2 |
 }
 
 alignerB = \fixed c' {
@@ -102,23 +127,38 @@ tenorB = \fixed c {
 
 bassB = \fixed c {
   \globalB
-  c2 d2 |
 }
 
 verseOneB = \lyricmode {
   \set stanza = "1."
+  이 세 상 소 망 은 구 름 같 고
+  부 귀 와 영 화 도 한 꿈 일 세
+  이 몸 이 죽 을 때 안 개 같 이 되 나
+  주 님 주 신 소 망 영 원 일 세
 }
 
 verseTwoB = \lyricmode {
   \set stanza = "2."
+  주 예 수 안 믿 는 모 든 영 혼
+  영 원 한 고 통 의 지 옥 가 나
+  구 원 받 은 영 혼 영 원 한 영 생 복
+  주 님 계 신 천 국 나 는 가 네
 }
 
 verseThreeB = \lyricmode {
   \set stanza = "3."
+  연 약 한 나 의 몸 매 일 매 시
+  주 님 의 능 력 에 맡 깁 니 다
+  구 주 여 내 몸 을 강 건 케 하 시 고
+  주 님 의 뜻 대 로 늘 쓰 소 서
 }
 
 verseFourB = \lyricmode {
   \set stanza = "4."
+  죄 인 괴 수 라 도 버 리 잖 는
+  주 의 크 신 은 혜 한 량 없 네
+  십 자 가 의 고 난 너 위 해 받 으 신
+  사 랑 의 주 예 수 영 접 하 라
 }
 
 myChordsB = \chordmode {
@@ -176,7 +216,10 @@ myChordsB = \chordmode {
                 \alto
             }
             \context NullVoice = aligner {
-             \aligner
+              \aligner
+            }
+            \context NullVoice = alignerb {
+              \alignerb
             }
           >>
         }
@@ -184,7 +227,7 @@ myChordsB = \chordmode {
         \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
         \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
         \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
-        \new Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
+        \new Lyrics = "LyrExtra" \lyricsto "alignerb" { \verseExtra }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)

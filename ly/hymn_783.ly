@@ -25,22 +25,110 @@ global = {
 
 soprano = \fixed c' {
   \global
+  bf,4 | 
+  ef2 d4 ef2 f4 |
+  <ef g>2 fs4 <ef g>2 <f af>4 \breathe |
+  <g bf>2 <fs a>4 <g bf>2 s4 |
+  <g bf>2.^(_( q2^)_) \breathe \break
+  
+  <g bf>4 |
+  s2. s2. |
+  <g bf>2 <ef g>4 ef2 \breathe <ef g>4 |
+  q2 f4 2 <ef g>4 |
+  <d f>2.^(_( q2^)_) \breathe \break
+  
+  bf,4 |
+  ef2 d4 ef2 f4 |
+  <ef g>2 fs4 <ef g>2 <f af>4 \breathe |
+  <g bf>2 <fs a>4 <g bf>2 s4 |
+  <g bf>2.^(_( q2^)_) \breathe \break
+  
+  <g bf>4 |
+  s2. s2. |
+  <g bf>2 <ef g>4 <c ef>2\fermata \breathe <c af>4 |
+  <bf, g>2 <ef g>4 <d f>2 q4 |
+  <bf, ef>2.^(_( q2^)_) \bar "|."
 }
 
 aligner = \fixed c' {
   \global
+  bf,4 | 
+  ef2 d4 ef2 f4 |
+  <ef g>2 fs4 <ef g>2 <f af>4 |
+  <g bf>2 <fs a>4 <g bf>2 q4 |
+  <g bf>2.^(_( q2^)_) 
+  
+  <g bf>4 |
+  q2 q4 q2 q4 |
+  <g bf>2 <ef g>4 ef2 <ef g>4 |
+  q2 f4 2 <ef g>4 |
+  <d f>2.^(_( q2^)_) 
+  
+  bf,4 |
+  ef2 d4 ef2 f4 |
+  <ef g>2 fs4 <ef g>2 <f af>4 |
+  <g bf>2 <fs a>4 <g bf>2 q4 |
+  <g bf>2.^(_( q2^)_) 
+  
+  <g bf>4 |
+  q2 q4 q2 q4 |
+  <g bf>2 <ef g>4 <c ef>2 <c af>4 |
+  <bf, g>2 <ef g>4 <d f>2 q4 |
+  <bf, ef>2.^(_( q2^)_)
 }
 
 alto = \fixed c' {
   \global
+  s4 | s2. s2. | s2 ef4 s2. | s2. s2 <af c'>4 | s2. s2
+  
+  s4 | 
+  <af c'>2 <bf d'>4 <c' ef'>2 <af c'>4 | 
+  s2. ef2 s4  |
+  s2 ef4 2 s4 |
+  s2. s2
+  
+  s4 | s2. s2. | s2 ef4 s2. | s2. s2 <af c'>4 | s2. s2
+  
+  s4 | 
+  <af c'>2 <bf d'>4 <c' ef'>2 <af c'>4 |  
+  s2. s2. | 
+  s2. s2
 }
 
 tenor = \fixed c {
   \global
+  d4\rest | ef,2. s2. | ef,2. s2. | ef,2. s2. | ef,2. s2
+  d4\rest | af,2. s2. | ef,2. s2. | c2. s2. | s2. bf,,2
+  d4\rest | ef,2. s2. | ef,2. s2. | ef,2. s2. | s2. s2
+  s4      | af,2. s2. | ef,2. s2 f,4 | <bf, ef>2. s2. | s2. s2
 }
 
 bass = \fixed c {
   \global
+  s4 | 
+  s2. <ef g bf>2. | 
+  s2. <ef bf>2. \breathe |
+  s2. q2. |
+  s2. ef2 \breathe
+  
+  s4 |
+  s2. <af ef'> |
+  s2. <ef g bf> \breathe |
+  s2. <f a>2. |
+  <bf, bf>2. s2 \breathe 
+  
+  s4 |
+  s2. <ef g bf>2. |
+  s2. <ef bf> \breathe |
+  s2. <ef bf> |
+  \stemUp ef,2.( \stemDown ef2) \breathe
+  
+  ef4 |
+  s2. <af ef'> |
+  s2. <c g>2\fermata \breathe s4 |
+  s2. <bf, af> |
+  <ef g>2.^(_( q2^)_)
+  
 }
 
 verseOne = \lyricmode {
@@ -71,7 +159,7 @@ verseThree = \lyricmode {
   \set stanza = "3."
   험 하 고 좁 은 길 을 가 면
   황 금 길 있 다
-  그 진 주 문 을 들 어 가 면
+  그 진 주 문 을 들 어 가 
   주 예 수 뵈 오 리
   그 한 량 없 는 영 광 중 에
   기 뻐 하 리 라
@@ -167,7 +255,7 @@ myChords = \chordmode {
       }
     }
     \midi {
-      \tempo 4 = 100
+      \tempo 4 = 120
     }
   }
 }
