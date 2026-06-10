@@ -24,22 +24,102 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <d f>2 <cs e>4 <c ef> |
+  <bf, d>4 <d f> <d bf>2 |
+  <ef bf>2 <f a>4 <ef g> |
+  <d f>1 \breathe |
+  f2 <ef a>4 <ef g> |
+  <d g> <d f> <d bf>2 | %\break
+  
+  <c a>4 <f a> <e bf> <e g> |
+  <ef c'>1 \breathe |
+  <d f>2 <cs e>4 <c ef> |
+  <bf, d> <d f> <d bf>2 |
+  <f d'>2 <f c'>4 <f bf> |
+  <ef g>1 \breathe |
+  <ef bf>2 <f a>4 <ef g> | %\break
+  
+  <d f>4 <cs e> <d f> <bf, bf> |
+  <ef bf>2 <ef c'> |
+  <d bf>1 \breathe | \break
+  <ef c'>2^\markup "(후렴)" <d b> |
+  <ef d'>4 <ef c'> <ef a> <c f> |
+  <bf, bf>2 g |
+  <d f>1 | %\break
+  
+  <ef c'>2 \breathe <d b> |
+  <ef d'>4 <ef c'> <ef a> f |
+  <d bf>2 <g c'> |
+  <fs d'>2. b4\rest |
+  <d f>2 <cs e>4 <c ef> |
+  <bf, d> <d f> <d bf>2 | %\break
+  
+  <f d'>2 <f c'>4 <f bf> |
+  <ef g>1 \breathe |
+  <ef bf>2 <f a>4 <ef g> |
+  <d f> <cs e> <d f> <bf, bf> |
+  <ef bf>2^> <ef c'>^> |
+  <d bf>1^> \bar "|." |
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  s1 | s1  | s1 | s1 | ef2 s2 | s1 |
+  s1 | s1  | s1 | s1 | s1 | s1 | s1 |
+  s1 | s1  | s1 | s1 | s1 | s2 bf,4( c) | s1 |
+  s1 | s2. ef4  | s1 | s1 | s1 | s1 | 
+  s1 | s1  | s1 | s1 | s1 | s1 | 
 }
 
 tenor = \fixed c {
   \global
+  bf4( f) s2 | s2 <bf, f>2  | s2 ef8[ f] g[ a] | s1 | s1 | s1 |
+  s1 | s1  | s1 | s1 | s1 | s1 | s2 ef8[ f] g[ a] |
+  s1 | s1  | s1 | s2 gs2 | s1 | s2 g4( a) | s1 |
+  s2 gs2 | s1  | s2 bf4( g) | s1 | bf4( f) s2 | s1 | 
+  s1 | s1  | s2 ef8[ f] g[ a] | s1 | s1 | s1 | 
 }
 
 bass = \fixed c {
   \global
+  bf,2 <bf, g>4 <bf, a> |
+  <bf, bf> q s2 |
+  <ef g>2 ef4 ef |
+  <bf, bf>1 \breathe |
+  <f a>2 <f c'>4 <f a> |
+  <bf, bf> q <bf, f>2 |
+  
+  <c f>4 <c a> <c g> <c c'> |
+  <f, f a>1 \breathe |
+  <bf, f>2 <bf, g>4 <bf, a> |
+  <bf, bf>4 q <bf, f>2 |
+  <bf, bf>2 <c a>4 <c bf> |
+  <ef bf>1 \breathe |
+  <ef g>2 ef4 ef |
+  
+  <bf, bf>4 <bf, g> <bf, f> <d f> |
+  <ef g>2 <f, f a> |
+  <bf, f bf>1 \breathe |
+  <f a>2 f|
+  <f a>4 q <f c'> <ef a> |
+  <d f>2 ef |
+  <bf bf>1 |
+  
+  <f a>2 \breathe f |
+  <f a>4 q <f c'> <f a> |
+  <g bf>2 ef |
+  <d a>2. d4\rest |
+  bf,2 <bf, g>4 <bf, a> |
+  <bf, bf> q <bf, f>2 |
+  
+  <bf, bf>2 <c a>4 <d bf> |
+  <ef bf>1 \breathe |
+  <ef g>2 ef4 4 |
+  <bf, bf> <bf, g> <bf, f> <d f> |
+  <c g>2^> <f, f a>^> |
+  <bf, f bf>1^>
 }
 
 verseOne = \lyricmode {

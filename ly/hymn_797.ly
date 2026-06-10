@@ -24,22 +24,68 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <d f>8 q q <bf, d> <c ef> <d f> |
+  <ef g> q q <g bf>4. \breathe |
+  <f d'>8 q <d bf> <ef c'>4 <f d'>8 |
+  <d bf>4.^(_( q4^)_) b8\rest | \break
+  
+  <d f>8 q q <bf, d> <c ef> <d f> |
+  <ef g> q q <g bf>4. \breathe |
+  <f d'>8 q <d bf> <ef c'>4 <f d'>8 |
+  <d bf>4.^(_( q4^)_) b8\rest | \break
+  
+  <d f>8^\markup "(후렴)" q q <ef g>4 q8|
+  <d f>4.^(_( q4^)_) b8\rest \breathe |
+  <d bf>8 q q <f d'>4 <f bf>8 |
+  <f c'>4.^(_( q4^)_) b8\rest \breathe | \break
+  
+  <f d'>8 q q <f bf> q b8\rest |
+  <ef g> q q <d f> q b8\rest \breathe |
+  <d bf> q q <ef c'>4 q8 |
+  bf4.( 4) b8\rest \bar "|." |
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  s2. | s2. | s2. | s2. |
+  s2. | s2. | s2. | s2. |
+  
+  s2. | s2. | s2. | s2. |
+  s2. | s2. | s2. | d4 ef8 d4 s8 |
 }
 
 tenor = \fixed c {
   \global
+  s2. | s2. | s4. f4 8 | <bf, f>4.^(_( q4^)_) d8\rest \breathe |
+  s2. | s2. | s4. f4 8 | <bf, f>4.^(_( q4^)_) d8\rest \breathe |
+  
+  s2. | s2. | s4. bf4 s8 | s2. |
+  s2. | s2. | s4. f4 8 | f4 g8 f4 s8 |
 }
 
 bass = \fixed c {
   \global
+  <bf, bf>8 q q <bf, f> q <bf, bf> |
+  <ef bf> q q q4. \breathe |
+  <f bf>8 q q f4 8 |
+  s2. |
+  
+  <bf, bf>8 q q <bf, f> q <bf, bf> |
+  <ef bf> q q q4. \breathe |
+  <f bf>8 q q f4 8 |
+  s2. |
+  
+  <bf, bf>8 q q <ef bf>4 q8 |
+  <bf, bf>4.^(_( q4^)_) d8\rest \breathe |
+  <bf, f>8 q q bf4 <d bf>8 |
+  <f a>4.^(_( q4^)_) d8\rest \breathe |
+  
+  <bf, bf>8 q q q q d8\rest |
+  <ef bf> q q <bf, bf> q d8\rest \breathe |
+  <bf, f> q q f4 8 |
+  bf,4. 4 d8\rest
 }
 
 verseOne = \lyricmode {

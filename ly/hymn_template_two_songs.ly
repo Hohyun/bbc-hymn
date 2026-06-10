@@ -16,6 +16,7 @@ oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
   \key f \major
+  \numericTimeSignature
   \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
@@ -76,6 +77,7 @@ oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
   \key f \major
+  \numericTimeSignature
   \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t

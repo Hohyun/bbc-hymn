@@ -25,10 +25,75 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <c ef>4 |
+  q <c f> <c g> <ef af> <ef bf> <ef c'> |
+  <f ef'> <f df'> <f bf> <df f>2 \breathe q4 |
+  <df g> <df af> <df bf> \break
+  
+  <df bf>4 <df g> ef |
+  <df f> <c ef> <b, d> <c ef>2 \breathe q4 |
+  q4 <c f> <c g> <ef af> <ef bf> <ef c'> |
+  <ef ef'> <ef c'> <ef bf> <ef g>2 \breathe \break
+  
+  <ef g>4 |
+  bf( c') <d bf> bf <af c'> bf |
+  ef'2.( ef') \breathe |
+  <ef c'>2.^\markup "(후렴)" <ef g>2 <ef af>4 | \break
+  
+  <d bf>2. <d f>2 q4 |
+  <df g>2. <df f>2 <df g>4 |
+  <c ef>2.^(_( q2^)_) q4 |
+  <df f>2. af2 bf4 | \break
+  
+  <af c'>2. \stemDown <a ef'>2 \stemUp <a c'>4 |
+  <af c'>2. bf2 <af c'>4 |
+  bf2.( 2) \breathe ef4 |
+  <ef c'>2. <ef g>2 af4 | \break
+  
+  <f bf>2. <d f>2 q4 |
+  <ef g>2 g4 <f af>2 <f bf>4 |
+  <g c'>2.^(_( q2^)_) \breathe <e c'>4^\markup "여성" |
+  <f bf>2. <f af>2 <c c'>4^\markup "남성" |
+  <d bf>2. <d af>2 \breathe \break
+  
+  c'4 |
+  \stemDown <af ef'>2. <a f'>2 \stemUp <f c'>4 | 
+  <f df'>2.^(_( q2^)_) \breathe <f f'>4 |
+  <ef g>2. <g c'>2 <ef bf>4 |
+  <ef af>2.^(_( q2^)_) \bar "|."
 }
 
 alto = \fixed c' {
   \global
+  s4 | s1. | s1. | s2.
+  s2 df4 | s1. | s1. | s2. s2
+  
+  s4 | d2 s4 af4 s af | g g af bf2. | 
+  
+  %후렴
+  \tiny b,4\rest <c ef> q b,4\rest q b,4\rest |
+  
+  a,4\rest <d f> q s2. |
+  a,4\rest df df s2. |
+  s1. | 
+  a,4\rest df df c4\rest <df f> \normalsize af |
+  
+  \tiny b,4\rest ef4 ef s <f a> s |
+  b,4\rest <d af> q \normalsize af2 s4 |
+  g f ff ef2 4 |
+  \tiny b,4\rest <c ef> q b,4\rest <c ef> \normalsize af4 |
+  
+  \tiny b,4\rest f f s2. |
+  b,4\rest df ef s2. |
+  c4\rest e e e2 s4 |
+  s1. |
+  s2. s2 \normalsize
+  
+  c'4 |
+  s1. |
+  \tiny b,4\rest <f bf> q s2. |
+  \stemUp ef'2 4 4 4 df' |
+  c'2.^( 2) \normalsize
 }
 
 aligneraa = \fixed c' {
@@ -116,6 +181,15 @@ globalB = {
 
 sopranoB = \fixed c' {
   \globalB
+  <g b>4 q8 q <f b>4. g8 |
+  <e c'>8 <e g> q <ef a> <d g>2 \breathe |
+  <d g>4 q8 <d a> <g b> q <a c> <g b> |
+  <fs a>2. b4\rest \breathe | \break
+  
+  <g b>4 q8 q <f b>4. g8 |
+  <e c'>8 <e g> q <ef a> <d g>2 \breathe |
+  <g b>4 \stemDown <b d'>16 \stemUp <a c'>8. <g b>8 <e g> <fs a>16 q8. |
+  <d g>2. b4\rest \bar "|." |
 }
 
 alignerBA = \fixed c' {
@@ -124,6 +198,8 @@ alignerBA = \fixed c' {
 
 altoB = \fixed c' {
   \globalB
+  s2 s4. f8 | s1 | s1 | s1 |
+  s2 s4. f8 | s1 | s1 | s1 |
 }
 
 tenorB = \fixed c {
@@ -132,6 +208,15 @@ tenorB = \fixed c {
 
 bassB = \fixed c {
   \globalB
+  <g d'>4 q8 q q4. <b, d'>8 |
+  <c c'>8 q q q <g, b>2 \breathe |
+  <g b>4 q8 <g c'> <g d'> q <fs d'> <g d'> |
+  <d d'>2. d4\rest \breathe |
+  
+  <g d'>4 q8 q q4. <b, d'>8 |
+  <c c'>8 q q q <g, b>2 \breathe |
+  <g d'>4 <b, f'>16 <c e'>8. <d d'>8 <e b> <d c'>16 q8. |
+  <g, b>2. d4\rest |
 }
 
 alignerBB = \fixed c {
@@ -223,19 +308,19 @@ myChordsB = \chordmode {
               \voiceTwo
                 \alto
             }
-            \context NullVoice = aligner {
-              \aligner
+            \context NullVoice = aligneraa {
+              \aligneraa
             }
-            \context NullVoice = alignerba {
-              \alignerba
+            \context NullVoice = alignerab {
+              \alignerab
             }
           >>
         }
         
-        \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
-        \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
-        \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
-        \new Lyrics = "LyrExtraAA" \lyricsto "aligneraa" { \verseExtraAA }
+        \new Lyrics = "LyrOne" \lyricsto "aligneraa" { \verseOne }
+        \new Lyrics = "LyrTwo" \lyricsto "aligneraa" { \verseTwo }
+        \new Lyrics = "LyrThree" \lyricsto "aligneraa" { \verseThree }
+        \new Lyrics = "LyrExtraAA" \lyricsto "alignerab" { \verseExtraAA }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
@@ -250,13 +335,13 @@ myChordsB = \chordmode {
                 \voiceTwo
                 \bass
               }
-              \context NullVoice = alignerbb {
-                \alignerbb
+              \context NullVoice = alignerac {
+                \alignerac
               }
           >>       
         }
 
-        \new Lyrics = "LyrExtraAB" \lyricsto "alignerab" { \verseExtraAB }
+        \new Lyrics = "LyrExtraAB" \lyricsto "alignerac" { \verseExtraAB }
       >>
     >>
     \layout {

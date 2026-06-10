@@ -24,28 +24,111 @@ global = {
 
 soprano = \fixed c' {
   \global
+  g8 fs g |
+  ef4. g8 af ef |
+  g4. \breathe 8 bf af |
+  f4. bf,8 f g |
+  ef4. \breathe %\break
+  
+  g8 fs g |
+  ef4. 8 g bf |
+  af4. c'8 bf af |
+  g ef g4 f |
+  ef4.\fermata \break
+  
+  ef8^\markup "(후렴)" 8 8 |
+  ef'4. c'8 ef' c' |
+  bf4. \breathe g8 c' bf |
+  af4. f8 g a | %\break
+  
+  bf4. \breathe 8 a af |
+  g4. ef8 g bf |
+  af4. c'8 bf af | %\break
+  
+  g8\fermata ef g4 f |
+  ef4.\fermata \bar "||" <af, ef>8^\markup "(마지막절 후에)" <a, ef> q |
+  <bf, ef>4. ef8 8 f |
+  <ef g>4.\fermata \bar "|."
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  s4. | s2. | s2. | s2. | s4.
+  s4. | s2. | s2. | s2. | s4.
+  
+  s4. | 
+  e8\rest <ef af>8[ <af c'>] e8\rest e4\rest |
+  e8\rest <bf, ef>8[ <ef g>] c8\rest c4\rest |
+  <c ef f>8[ q] q b,8\rest b,4\rest |
+  
+  s2. | s2. | s2. |
+  s2. | s2. | s2. | s4
 }
 
 tenor = \fixed c {
   \global
+  bf8 b bf |
+  g4. df'8 c' cf' |
+  bf4. \breathe 8 d' c' |
+  af4. g8 af bf |
+  g4. \breathe 
+  
+  bf8 a bf |
+  g4. 8 bf df' |
+  c'4. ef'8 d' c' |
+  bf8 a bf4 a |
+  g4.\fermata 
+  
+  g8 c' df' |
+  c'4. af8 c' af |
+  g4. \breathe bf8 af g |
+  f4. d'8 ef' ef' |
+  d'4. \breathe bf8 c' d' |
+  ef'4. g8 bf df' |
+  c'4. ef'8 d' c' |
+  
+  bf8\fermata a bf4 af |
+  g4.\fermata g8 fs fs |
+  g4. df'8 c' cf' |
+  bf4.\fermata
+  
 }
 
 bass = \fixed c {
   \global
+  d8\rest b,4\rest |
+  ef,8[ bf,] ef d8\rest b,4\rest |
+  ef,8[ bf,] ef d8\rest b,4\rest |
+  <bf,, bf,>8[ f,] bf, d8\rest d4\rest |
+  f,8[ bf,] ef
+  
+  d8\rest b,4\rest |
+  ef,8[ bf,] ef d8\rest b,4\rest |
+  af,8[ c] ef d8\rest b,4\rest |
+  ef,8 c] bf,[ ef] d[ bf,] |
+  ef8[ bf,] ef,\fermata
+  
+  c8\rest c4\rest |
+  af4. c8\rest c4\rest |
+  ef4. c8\rest c4\rest | 
+  f4. e8\rest c4\rest |
+  
+  <bf,, bf,>8[ f,] bf, bf,8\rest bf,4\rest |
+  ef,8[ bf,] ef bf,8\rest bf,4\rest |
+  af,8[ c] ef d8\rest bf,4\rest |
+  
+  ef,8[\fermata c] bf,[ ef] d[ bf,] |
+  ef8[ bf,] ef,\fermata ef[ c] cf |
+  bf,[ ef] bf,[ g,] af,4 |
+  <ef, ef>4.
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
   조 용 히 예 수 님 보 라
-  그 는 하 나 님 이 라
+  그 는 참 하 나 님 이 라
   네 모 든 생 사 화 복 을
   손 안 에 쥐 고 계 시 네
 
@@ -87,7 +170,7 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f

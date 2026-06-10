@@ -24,26 +24,86 @@ global = {
 
 soprano = \fixed c' {
   \global
+  c8 c |
+  <c f>8 q q q q <c e> d <c e> |
+  <c f>2. \breathe <f a>8 <g bf> |
+  <a c'>8 q q q %\break
+  
+  q4 <g bf>8 <f a> |
+  <e g>2. \breathe <f a>8 q |
+  <e bf> q q <f a> <e g>4 <e c'>8 q |
+  <f a> q q <c g> %\break
+  
+  <c f>4 \breathe q8 q |
+  <d g>4 q8 q <c e>8 q d8. <c e>16 |
+  <c f>2. \breathe \bar "||" 
+  \stemDown <a c'>8.^\markup "(후렴)" <bf d'>16 |
+  <a c'>2. \stemUp <f a>8. <g bf>16 | %\break
+  
+  <f a>2. \breathe q8 q |
+  <e g> q q q <f d'> q q8. q16 |
+  c'2.\fermata \breathe <a c'>8. \stemDown <bf d'>16 \stemUp | %\break
+  
+  <a c'>2. <f a>8. <g bf>16 |
+  <f a>2. \breathe c8 c |
+  <c f> q <f c'>\fermata <g bf> <f a> q <e a>8. <e g>16 |
+  f2. \bar "|."
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alignerb = \fixed c' {
   \global
+  s4 | s1 | s1 | s2
+  s2 | s1 | s1 | s2
+  s2 | s1 | s1 | s4 f8. 16 4 s4
+  s4 f8. 16 4 s4 | s2. g8. 16 | g8 a bf c c4 s4 |
+  s4 f8. 16 4 s4 | s4 f8. 16 4 s4 | s1 | s2.
 }
 
 alto = \fixed c' {
   \global
+  s4 | s2. c8 s | s1 | s2
+  s2 | s1 | s1 | s2
+  s2 | s2. c8. s16 | s1 | s1
+  s1 | s1 | e8 f g a bf4^\fermata s4 |
+  s1 | s2. c8 c | s1 | f2.
 }
 
 tenor = \fixed c {
   \global
+  s4 | s1 | s1 | s2
+  s2 | s1 | s1 | s2
+  s2 | s1 | s1 | s1
+  s1 | s1 | g8 a bf c' c'4\fermata \breathe s4 |
+  s1 | s1 | s1 | s2.
 }
 
 bass = \fixed c {
   \global
+  <f a>8 q |
+  q q q q <f bf> q q q |
+  <f a>2. \breathe <f c'>8 q |
+  q q q q
+  
+  q4 q8 q |
+  <c c'>2. \breathe <f c'>8 q |
+  <g c'>8 q q q <c c'>4 q8 q |
+  <f c'>8 q q <f bf>
+  
+  <f a>4 \breathe q8 <e a> |
+  <bf, bf>4 q8 q <c g> q <c bf>8. q16 |
+  <f a>2. \breathe d4\rest |
+  d4\rest <f c'>8. q16 q4 d4\rest |
+  
+  d4\rest <f c'>8. q16 q4 \breathe q8 q |
+  <g c'> q q q <g b>8 q q8. q16 |
+  c2.\fermata d4\rest |
+  
+  d4\rest <f c'>8. q16 q4 d4\rest |
+  d4\rest q8. q16 q4 \breathe <f a>8 q |
+  q q q\fermata <bf, d'> <c c'> q q8. <c bf>16 |
+  <f a>2.
 }
 
 verseOne = \lyricmode {
@@ -96,7 +156,7 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
@@ -151,8 +211,7 @@ myChords = \chordmode {
         \context Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
         \context Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
         \context Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
-        \context Lyrics = "LyrExtra" \lyricsto "alignerb" { \verseExtra }
-    
+        
         \context Staff = lower \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
         }{
@@ -168,6 +227,7 @@ myChords = \chordmode {
               }
           >>       
         }
+        \context Lyrics = "LyrExtra" \lyricsto "alignerb" { \verseExtra }
       >>
     >>
     \layout {

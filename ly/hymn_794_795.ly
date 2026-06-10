@@ -16,6 +16,7 @@ oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
   \key af \major
+  \numericTimeSignature
   \time 4/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
@@ -25,22 +26,124 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <c af>4 |
+  <ef c'>8. q16 q2 q4 |
+  <df bf>4 <c af>2 \breathe <ef af>8 q |
+  <f bf>8. <f af>16 q2 <df af>4 |
+  <df f>4 <c ef>2 \breathe %\break
+  
+  q8 q |
+  <c af>8. q16 q2 <ef bf>4 |
+  <ef c'>8. <e bf>16 <f af>2 \breathe <ef af>4 |
+  <d bf>8. q16 q2 <d c'>4 |
+  <ef bf>2. \breathe %\break
+  
+  <c af>4 |
+  <ef c'>8. q16 q2 q4 |
+  <df bf>4 <c af>2 \breathe <ef af>8 q |
+  <f bf>8. <f af>16 q2 <df af>4 |
+  <df f> <c ef>2 \breathe %\break
+   
+  <c ef>4 |
+  <c af> q q <ef bf> |
+  <ef c'> <e bf> \breathe <f af> af |
+  <f bf> q <ef af> <ef g> |
+  <ef af>2. \break
+   
+  <ef c'>4^\markup "(후렴)" |
+  \stemDown <af ef'>8. q16 q2 <af f'>4 \stemUp |
+  <af c'>4 <ef af>2 \breathe <gf c'>4 |
+  <f bf> <f af>2 <df af>4 |
+  <df f> <c ef>2 \breathe q4 |
+  <c af>4 q2 <ef bf>4 | %\break
+   
+  <ef c'>4 <ef af>2 <ef c'>4 |
+  <d bf> q q <d c'> |
+  <ef bf>2. \breathe <ef c'>4 |
+  \stemDown <af ef'>8. q16 q2 <af f'>4 \stemUp |
+  <af c'>4 <ef af>2 \breathe <gf c'>4 |
+  <f bf>8. <f af>16 %\break
+   
+  <f af>2 <df af>4 |
+  <df f> <c ef>2 \breathe q4 |
+  <ef af>4 q2 <af c'>4 |
+  \stemDown <af ef'>8. q16 q2 \breathe \stemUp <ef af>4 |
+  <af c'> <f bf> <ef af> <ef g> |
+  <ef af>2. \bar "|."
 }
 
 alto = \fixed c' {
   \global
+  s4 | s1 | s1 | s1 | s2.
+  s4 | s1 | s1 | s1 | s2.
+  s4 | s1 | s1 | s1 | s2.
+  s4 | s1 | s2. gf4 | s1 | s2.
+  
+  s4  | s1 | s1 | s1 | s1 | s1 |
+  s1  | s1 | s1 | s1 | s1 | s4
+  s2. | s1 | s1 | s1 | s1 | s2.
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 tenor = \fixed c {
   \global
+  s4 | s1 | s1 | s1 | af4 2
+  af8 8 | s1 | af8. s16 s2. | s1 | s2.
+  s4 | s1 | s1 | s1 | af4 2
+  af4 | s1 | af4 s2. | s1 | s2.
+  
+  af4 | s1 | s1 | s1 | af4 2 \breathe 4 | s1 |
+  af4 s2.  | s1 | s2. af4 | s1 | s1 | s4
+  s2. | af4 2 \breathe 4  | s1 | s1 | s1 | s2.
 }
 
 bass = \fixed c {
   \global
+  <af, ef>4 |
+  <af, af>8. q16 q2 q4 |
+  <af, f> <af, ef>2 \breathe <c af>8 q|
+  <df df'>8. q16 q2 <f af>4 |
+  af4 2 \breathe
+  
+  af8 8 |
+  <f af>8. q16 q2 <ef g>4 |
+  af8. <g bf>16 <f c'>2 \breathe <c af>4 |
+  <bf, f>8. q16 q2 <bf, af>4 |
+  <ef g>2. \breathe 
+  
+  <af, ef>4 |
+  <af, af>8. q16 q2 <af, af>4|
+  <af, f>4 <af, ef>2 \breathe <c af>8 q |
+  <df df'>8. q16 q2 <f af>4 |
+  af4 2 \breathe
+  
+  af4 | 
+  <f af> q q <ef g> |
+  af4 <g bf> \breathe <f c'> <c ef'> |
+  <df df'> q <ef c'> <ef bf> |
+  <af, c'>2.
+  
+  af4 |
+  <af c'>8. q16 q2 <af df'>4 |
+  <af ef'> <af c'>2 \breathe <af ef'>4 |
+  <df df'> q2 <f af>4 |
+  af4 2 \breathe 4|
+  <f af>4 q2 <ef g>4 |
+  
+  af4 <af c'>2 <af, af>4 |
+  <bf, f> q <df af> q |
+  <ef g>2. \breathe af4 |
+  <af c'>8. q16 q2 <af df'>4 |
+  <af ef'> <af c'>2 \breathe <af ef'>4 |
+  <df df'>8. q16
+  
+  q2 <f af>4 |
+  af4 2 \breathe 4 |
+  <af c'> q2 <af ef'>4 |
+  <af c'>8. q16 q2 \breathe q4 |
+  <af ef'> <df df'> <ef c'> <ef bf> |
+  <af, c'>2.
 }
 
 verseOne = \lyricmode {
@@ -56,7 +159,7 @@ verseTwo = \lyricmode {
   주 놀 라 운 이 적 은 모 든 죄 사 할 권 세 니
   앉 은 뱅 이 도 일 어 나 고 저 소 경 눈 떴 네
   주 권 능 을 나 믿 고 주 의 이 름 을 부 를 때
-  내 죄 하 사 주 가 내 게 승 리 주 셨 네
+  내 죄 사 하 사 주 가 내 게 승 리 주 셨 네
 
   오 예 수 는 내 승 리 영 원 한 구 줄 세
   그 귀 한 보 혈 로 날 사 주 셨 다 네
@@ -91,6 +194,7 @@ oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
   \key bf \major
+  \numericTimeSignature
   \time 2/4
   %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
@@ -100,11 +204,20 @@ globalB = {
 
 sopranoB = \fixed c' {
   \globalB
+  <d f>8 <ef g> |
+  <d bf>4 q8. q16 |
+  <ef g> <d f>8. \breathe <f bf>8 q |
+  <f c'>4 q8. <f d'>16 |
+  <ef c'>16 <d bf>8. \break
+  
+  <f bf>8 <f c'> |
+  <f d'>4 q8. <af d'>16 |
+  <g c'> <g bf>8. \breathe q8 <ef g> |
+  <d f>8. q16 <d bf>8 <ef c'> |
+  <d bf>4 \bar "|."
 }
 
-alignerB = \fixed c' {
-  \globalB
-}
+alignerB = \sopranoB
 
 altoB = \fixed c' {
   \globalB
@@ -112,10 +225,23 @@ altoB = \fixed c' {
 
 tenorB = \fixed c {
   \globalB
+  s4 | s2 | s2 | s2 | s4
+  s4 | bf4 s4 | s2 | s2 | s4
 }
 
 bassB = \fixed c {
   \globalB
+  <bf, bf>8 q |
+  <bf, f>4 <bf, g>8. q16 |
+  <bf, bf>16 q8. \breathe <d bf>8 q |
+  <f a>4 q8. <f bf>16 |
+  <bf, bf> q8. \breathe
+  
+  <d bf>8 <f a> |
+  bf4 <bf, bf>8. <d bf>16 |
+  <ef bf> q8. \breathe q8 q |
+  <f bf>8. q16 q8 <f a> |
+  <bf, bf>4 \bar "|."
 }
 
 alignerBB = \fixed c {
@@ -153,7 +279,7 @@ verseFiveB = \lyricmode {
 }
 
 verseExtraB = \lyricmode {
-  옛 부 터 전 한 복 음
+  \override LyricText.self-alignment-X = #RIGHT "(후렴) 옛" 부 터 전 한 복 음
   옛 부 터 전 한 복 음
   옛 부 터 전 한 복 음
   내 게 만 족 합 니 다
@@ -314,7 +440,7 @@ myChordsB = \chordmode {
           >>       
         }
 	
-        \context Lyrics = "LyrExtraB" \lyricsto "alignerbb" { \verseExtraB }
+        \context Lyrics = "LyrExtraB" \lyricsto "alignerb" { \verseExtraB }
       >>
     >>
     \layout {
