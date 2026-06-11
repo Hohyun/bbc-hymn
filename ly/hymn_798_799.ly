@@ -28,33 +28,33 @@ soprano = \fixed c' {
   <c ef>4 |
   q <c f> <c g> <ef af> <ef bf> <ef c'> |
   <f ef'> <f df'> <f bf> <df f>2 \breathe q4 |
-  <df g> <df af> <df bf> \break
+  <df g> <df af> <df bf> %\break
   
   <df bf>4 <df g> ef |
   <df f> <c ef> <b, d> <c ef>2 \breathe q4 |
   q4 <c f> <c g> <ef af> <ef bf> <ef c'> |
-  <ef ef'> <ef c'> <ef bf> <ef g>2 \breathe \break
+  <ef ef'> <ef c'> <ef bf> <ef g>2 \breathe %\break
   
   <ef g>4 |
   bf( c') <d bf> bf <af c'> bf |
   ef'2.( ef') \breathe |
-  <ef c'>2.^\markup "(후렴)" <ef g>2 <ef af>4 | \break
+  <ef c'>2.^\markup "(후렴)" <ef g>2 <ef af>4 | %\break
   
   <d bf>2. <d f>2 q4 |
   <df g>2. <df f>2 <df g>4 |
   <c ef>2.^(_( q2^)_) q4 |
-  <df f>2. af2 bf4 | \break
+  <df f>2. af2 bf4 | %\break
   
   <af c'>2. \stemDown <a ef'>2 \stemUp <a c'>4 |
   <af c'>2. bf2 <af c'>4 |
   bf2.( 2) \breathe ef4 |
-  <ef c'>2. <ef g>2 af4 | \break
+  <ef c'>2. <ef g>2 af4 | %\break
   
   <f bf>2. <d f>2 q4 |
   <ef g>2 g4 <f af>2 <f bf>4 |
   <g c'>2.^(_( q2^)_) \breathe <e c'>4^\markup "여성" |
   <f bf>2. <f af>2 <c c'>4^\markup "남성" |
-  <d bf>2. <d af>2 \breathe \break
+  <d bf>2. <d af>2 \breathe %\break
   
   c'4 |
   \stemDown <af ef'>2. <a f'>2 \stemUp <f c'>4 | 
@@ -96,30 +96,110 @@ alto = \fixed c' {
   c'2.^( 2) \normalsize
 }
 
-aligneraa = \fixed c' {
-  \global
-}
+aligneraa = \soprano
 
 alignerab = \fixed c' {
   \global
+  s4  | s1. | s1. | s2.
+  s2. | s1. | s1. | s2. s2  
+  s4  | s1. | s1. | s1. |
+  
+  s1. | s1. | s1. | s1. |
+  s1. | s1. | s1. | s1. |
+  s1. | s1. | s1. | s1. | s2. s2
+  s4  | s1. | s2. s2 af4 | g2 4 4 4 4 | ef2. s2
 }
 
 alignerac = \fixed c {
   \global
+  s4  | s1. | s1. | s2.
+  s2. | s1. | s1. | s2. s2
+  
+  s4  | s1. | ef'4 bf c' df'2. | s1. |
+  
+  f4 c' bf af af s |
+  s1. |
+  s4 ef f g f ef |
+  s1. |
+  
+  s1. | s1. | ef4 f fs g2 s4 | s1. |
+  s1. | s1. | s1. | s1. | s2. s2
+  s4  | s1. | s1. | s1. | s2. s2
 }
 
 tenor = \fixed c {
   \global
+  s4  | s1. | s1. | s4 f s
+  s2. | s1. | s1. | s2. s2
+  
+  s4  | s1. | ef'4 bf c' df'2. | 
+  %후렴
+  \tiny d'4\rest af af s2. \normalsize |
+  
+  f4 c' bf af af s |
+  \tiny d'4\rest <g bf> q s2. \normalsize |
+  s4 ef f g^(_( f^)_) ef |
+  \tiny d'4\rest af af s2. \normalsize |
+  
+  \tiny \once \override NoteColumn.X-offset = #0.8 a4\rest <af c'> q s2. \normalsize |
+  s1. | 
+  df'2.( 2) s4 | 
+  \tiny \once \override NoteColumn.X-offset = #0.8 g4\rest af af s2. |
+  
+  \once \override NoteColumn.X-offset = #0.8 g4\rest \stemDown <bf d'> q s2.  | 
+  s1. | 
+  \once \override NoteColumn.X-offset = #0.8 a4\rest c' c' s2. \stemUp \normalsize | 
+  s1. | 
+  s2. s2
+  
+  c'4  | 2. 2 s4 | df'2.( 2) s4 | s1. | 
+  \tiny f,4\rest \stemDown ef c af,2 \stemUp
 }
 
 bass = \fixed c {
   \global
+  <af, af>4 |
+  q q q <c af> q q |
+  <bf, bf> q <bf, df'> <bf, bf>2 \breathe q4 |
+  <ef bf> ef <ef g> 
+  
+  q <ef bf> <ef g> |
+  <af, af> q q q2 \breathe q4 |
+  q q q <c af> q q |
+  <bf, g> q q <bf, bf>2 \breathe
+  
+  <bf, bf>4 |
+  q2 q4 <bf d'> q q |
+  ef2.( 2.) |
+  <af, af>2. <c g>2 <cf f>4 |
+  
+  bf,2. 2 4 |
+  <ef bf>2. <ef af>2 <ef bf>4 |
+  <af, af> ef f g f ef |
+  <df af>2. <f df'>2 <ff df'>4 |
+  
+  <ef ef'>2. <f c'>2 <f ef'>4 |
+  <bf d'>2. q2 q4 |
+  ef4 f fs g2 \breathe <ef df'>4 |
+  <af, c'>2. <c c'>2 <cf ef'>4 |
+  
+  <bf, d'>2. <bf, bf>2 bf4 |
+  <ef bf>2 <ef df'>4 <f c'>2 <df f'>4 |
+  <c e'>2.^(_( q2^)_) \breathe d4\rest |
+  <df f bf>4 q q q2 d4\rest |
+  <d f bf>4 q q q2 \breathe
+  
+  c'4 |
+  af2( f4) <f c'>2 <a ef'>4 |
+  bf2 f4 bf,2 \breathe <bf df'>4 |
+  <ef ef'>2. <ef ef'>2 <ef df'>4 |
+  <af c'>2.^(_( q2^)_)
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
   내 소 망 은 예 수 께 붙 어 있 네
-  나 주 님 의 의 로 사 가 려 졌 네
+  나 주 님 의 의 로 서 가 려 졌 네
   주 십 자 가 보 혈 로 정 케 됐 네
   내 소 망 주 께 있 네
 }
@@ -146,15 +226,15 @@ verseThree = \lyricmode {
   내 소 망 주 께 있 네
 }
 
-verseExtraAA = \lyricmode {
-  놀 라 운 주 님
-  내 영 광 일 세
+verseExtraAA = \lyricmode {   
+  내 소 망 주 께 있 네
 }
 
 verseExtraAB = \lyricmode {
   주 께 있 네
+  놀 라 운 주 님
+  내 영 광 일 세
   구 원 했 네
-  내 소 망 주 께 있 네
 }
 
 myChords = \chordmode {
@@ -181,20 +261,21 @@ globalB = {
 
 sopranoB = \fixed c' {
   \globalB
-  <g b>4 q8 q <f b>4. g8 |
-  <e c'>8 <e g> q <ef a> <d g>2 \breathe |
-  <d g>4 q8 <d a> <g b> q <a c> <g b> |
-  <fs a>2. b4\rest \breathe | \break
-  
-  <g b>4 q8 q <f b>4. g8 |
-  <e c'>8 <e g> q <ef a> <d g>2 \breathe |
-  <g b>4 \stemDown <b d'>16 \stemUp <a c'>8. <g b>8 <e g> <fs a>16 q8. |
-  <d g>2. b4\rest \bar "|." |
+  \repeat segno 2 {
+    <g b>4 q8 q <f b>4. g8 |
+    <e c'>8 <e g> q <ef a> <d g>2 \breathe |
+    <d g>4 q8 <d a> <g b> q <a c'> <g b> |
+    <fs a>2. b4\rest \breathe | %\break
+    
+    <g b>4 q8 q <f b>4. g8 |
+    <e a>8 <e g> q <ef a> <d g>2 \breathe |
+    <g b>4 \stemDown <b d'>16 \stemUp <a c'>8. <g b>8 <e g> <fs a>16 q8. |
+    <d g>2. b4\rest \bar "|." |
+  }
+  \fine
 }
 
-alignerBA = \fixed c' {
-  \globalB
-}
+alignerBA = \sopranoB
 
 altoB = \fixed c' {
   \globalB
@@ -208,6 +289,7 @@ tenorB = \fixed c {
 
 bassB = \fixed c {
   \globalB
+  \repeat segno 2 {
   <g d'>4 q8 q q4. <b, d'>8 |
   <c c'>8 q q q <g, b>2 \breathe |
   <g b>4 q8 <g c'> <g d'> q <fs d'> <g d'> |
@@ -217,11 +299,11 @@ bassB = \fixed c {
   <c c'>8 q q q <g, b>2 \breathe |
   <g d'>4 <b, f'>16 <c e'>8. <d d'>8 <e b> <d c'>16 q8. |
   <g, b>2. d4\rest |
+  } 
+  \fine
 }
 
-alignerBB = \fixed c {
-  \globalB
-}
+alignerBB = \bassB
 
 verseOneB = \lyricmode {
   \set stanza = "1."
@@ -248,7 +330,7 @@ verseThreeB = \lyricmode {
 }
 
 verseExtraB = \lyricmode {
-  "D.C. 내" 어 디 갈 까 내 어 디 갈 까
+  \once \override LyricText.self-alignment-X = #RIGHT "D.C. 내" 어 디 갈 까 내 어 디 갈 까
   내 영 혼 쉴 곳 어 딘 가
   끝 까 지 나 를 지 키 시 는 분
   주 예 수 밖 에 없 도 다
@@ -320,7 +402,7 @@ myChordsB = \chordmode {
         \new Lyrics = "LyrOne" \lyricsto "aligneraa" { \verseOne }
         \new Lyrics = "LyrTwo" \lyricsto "aligneraa" { \verseTwo }
         \new Lyrics = "LyrThree" \lyricsto "aligneraa" { \verseThree }
-        \new Lyrics = "LyrExtraAA" \lyricsto "alignerab" { \verseExtraAA }
+        \new Lyrics = "LyrExtraAA" \with { alignAboveContext = "upper" } \lyricsto "alignerab" { \verseExtraAA }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
