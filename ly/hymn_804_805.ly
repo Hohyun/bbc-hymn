@@ -6,18 +6,18 @@
 
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
-korTitle = ""
-engTitle = ""
-hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
+korTitle = "내게 오라"
+engTitle = "Come to Me"
+hymnNumber = "804"
+poet = "Charles P. Jones"
+composer = "Charles P. Jones"
+bibleInfo = "마 11:28-29"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
+  \key c \major
   \time 4/4
-  \tempo 4 = 80
+  %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
   %\partial 8 
@@ -25,14 +25,22 @@ global = {
 
 soprano = \fixed c' {
   \global
-  c2 d2 |
+  <c e>8. q16 q8. <d f>16 <e g>4 <c e> |
+  <e c'>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
+  <d f>8. q16 <f a>8. q16 <d f>4 d |
+  <f b>8. <f a>16 < e g>8. <d f>16 <c e>2 \breathe | \break
+  
+  <e c'>8. q16 q8. q16 q4 <e g> |
+  <f a>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
+  \stemDown <g e'>8. q16 q8. <g d'>16 <a c'>4 \stemUp <f a> |
+  <e g>8. <e c'>16 <d b>8. <f d'>16 <e c'>2 \breathe | \break
 }
 
 alto = \fixed c' {
   \global
 }
 
-aligner = \fixed c' {
+aligneraa = \fixed c' {
   \global
 }
 
@@ -42,22 +50,55 @@ tenor = \fixed c {
 
 bass = \fixed c {
   \global
-  c2 d2 |
+}
+
+alignerab = \fixed c' {
+  \global
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
+  자 비 하 신 주 가 부 르 는 음 성
+  수 고 하 고 무 건 짐 진 자 들 아
+  내 게 와 서 편 히 쉼 을 얻 으 라
+  세 상 근 심 염 려 가 지 고 오 라
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
+  죄 의 골 짝 에 서 길 잃 었 느 뇨
+  지 옥 불 을 향 해 달 려 가 느 뇨
+  죄 의 권 세 아 래 갇 혀 있 느 뇨
+  선 한 목 자 예 수 음 성 들 으 라
+
+  내 게 오 라 쉬 게 하 리 라
+  네 무 거 운 짐 내 게 맡 기 라
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
+  너 의 마 음 속 에 실 망 있 느 뇨
+  주 의 말 씀 듣 기 주 저 하 느 뇨
+  주 를 멀 리 떠 나 방 황 하 느 뇨
+  주 께 나 아 오 면 쉼 을 주 리 라
 }
 
 verseFour = \lyricmode {
+  자 주 시 험 만 나 굴 복 하 느 뇨
+  연 약 함 을 인 해 맘 상 하 느 뇨
+  주 님 앞 에 나 와 도 움 구 하 면
+  성 령 께 서 네 게 쉼 을 주 리 라
+}
+
+verseExtra = \lyricmode {
+  내 게 오 라 
+  내 게 오 라
+  쉬 게 하 리 라 
+  쉬 게 하 리 라
+  너 의 모 든 죄 를 
+  너 의 모 든 죄 를
+  내 게 맡 겨 라 
+  내 게 맡 겨 라
 }
 
 myChords = \chordmode {
@@ -66,55 +107,121 @@ myChords = \chordmode {
 
 % Second Song placed on odd page (right page) which will be printed second page.
 % Hymn Info
-korTitleB = ""
-engTitleB = ""
-hymnNumberB = ""
-poetB = ""
-composerB = ""
-bibleInfoB = ""
+korTitleB = "주께서 내길 인도하시네"
+engTitleB = "I Know the Lord Has Made a Way"
+hymnNumberB = "805"
+poetB = "arr. by K. William, 1939"
+composerB = "arr. by Hohn W. Peterson"
+bibleInfoB = "요 10:3-4"
 oneOrTwoB = #1  % odd page: 1, even page: 2
 
 globalB = {
   \key f \major
-  \time 4/4
-  \tempo 4 = 80
+  \time 3/4
+  %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
-  %\partial 8
+  \partial 4.
 }
 
 sopranoB = \fixed c' {
   \globalB
-  c2 d2 |
+  <a, c>8 <a, f> <bf, e g> |
+  <c f a>4. <b, fs g>8 <c fs a> <d fs bf> |
+  <bf, e g>2 <c e a>4 |
+  f2.( |
+  4.) <a, c>8 <a, f> <c f a> | \break
+  
+  <a c'>4. <gs b>8 <a c'> <bf d'> |
+  <e g bf>2 <e a c'>4 |
+  a2.( |
+  2) c'8 8 |
+  <bf d'>4. \stemDown <a cs'>8 <bf d'> \stemUp <f c'> |
+  <d bf>2 d'8 8 | \break
+  
+  c'4. b8 c' bf |
+  <c f a>4. c8 <a, d a> <bf, e g> |
+  <c f a>4. <b, fs g>8 <c fs a> <d fs bf> |
+  <bf, e g>2 <c e a>4 |
+  f2.( | <a, f>4.) \bar "|."
 }
 
-alignerB = \fixed c' {
-  \globalB
-}
+alignerB = \sopranoB
 
 altoB = \fixed c' {
   \globalB
+  s4. | s2. | s2. a,4. c8[ bf, c] | a,4. s |
+  f2 4 | s2. f4. e8[ d e] | <c f>2 f4 | f2 s4 | s2 <f bf>4 |
+  f2 4 | s2. | s2. | s2. | a,4. c8 bf,4 | s4.
 }
 
 tenorB = \fixed c {
   \globalB
+  d8\rest d4\rest |
+  f,8[ c f d] c4 |
+  c,8[ g, e d] c4 |
+  f8\rest c e4 d |
+  c2 4 |
+  
+  f,8[ c] s4 c |
+  c,8[ g, e g] s4 |
+  f,8[ c] s2 |
+  a4 c f, |
+  bf,,8[ f, d f] s4 |
+  s2 bf,4
+  
+  a,8[ f] s2 |
+  s2. |
+  c4 c, c |
+  c,8[ g, e d ] c4 |
+  f8\rest c8 e4 d8[ df] |
+  c4.
 }
 
 bassB = \fixed c {
   \globalB
-  c2 d2 |
+  s4. | s2. | s2. | f,2.( | 4) c, s4 |
+  
+  s4 a4 s |
+  s2 <c bf>4 |
+  s4 a <f bf>4( |
+  f4) s2 |
+  s2 bf4 |
+  bf,8[ f g f] s4 |
+  
+  s4 c'4 a8[ f] |
+  f4 e d8[ df] |
+  s2. |
+  s2.
+  f,2.( |
+  4.)
 }
 
 verseOneB = \lyricmode {
   \set stanza = "1."
+  주 께 서 내 길 인 도 하 시 네 __
+  주 께 서 내 길 인 도 하 시 네 __
+  내 가 악 을 버 리 고 
+  참 된 생 활 할 때 에
+  주 께 서 내 길 인 도 하 시 네 __
 }
 
 verseTwoB = \lyricmode {
   \set stanza = "2."
+  주 께 서 나 를 항 상 보 시 네 __
+  주 께 서 나 를 보 호 하 시 네 __
+  복 음 전 파 하 면 서
+  잃 은 영 혼 구 하 세
+  주 님 을 사 랑 하 며 따 르 네 __
 }
 
 verseThreeB = \lyricmode {
   \set stanza = "3."
+  나 이 제 주 를 따 라 가 겠 네 __
+  나 이 제 주 를 따 라 가 겠 네 __
+  내 가 하 루 하 루 를 
+  주 를 위 해 살 리 라
+  사 랑 의 주 님 뒤 를 따 르 리 __
 }
 
 verseFourB = \lyricmode {
@@ -175,16 +282,20 @@ myChordsB = \chordmode {
               \voiceTwo
                 \alto
             }
-            \context NullVoice = aligner {
-             \aligner
+            \context NullVoice = aligneraa {
+              \aligneraa
+            }
+            \context NullVoice = alignerab {
+              \alignerab
             }
           >>
         }
         
-        \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
-        \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
-        \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
-        \new Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
+        \new Lyrics = "LyrOne" \lyricsto "aligneraa" { \verseOne }
+        \new Lyrics = "LyrTwo" \lyricsto "aligneraa" { \verseTwo }
+        \new Lyrics = "LyrThree" \lyricsto "aligneraa" { \verseThree }
+        \new Lyrics = "LyrFour" \lyricsto "aligneraa" { \verseFour }
+        \new Lyrics = "LyrExtra" \lyricsto "alignerab" { \verseExtra }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)

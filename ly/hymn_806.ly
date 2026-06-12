@@ -5,18 +5,18 @@
 \language "english"
 
 % Hymn Info
-korTitle = ""
-engTitle = ""
-hymnNumber = ""
-poet = ""
-composer = ""
-bibleInfo = ""
-oneOrTwo = #1  % odd page: 1, even page: 2
+korTitle = "거기 늙음이 전혀 없네"
+engTitle = "Where We Will Never Grow Old"
+hymnNumber = "806"
+poet = "Jas. C. Moore, 19th Century"
+composer = "Jas. C. Moore, 19th Century"
+bibleInfo = "계 21:4-5"
+oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key f \major
+  \key ef \major
   \numericTimeSignature
-  \time 4/4
+  \time 6/4
   %\tempo 4 = 80
   \set Score.tempoHideNote = ##t
   \autoBeamOff
@@ -45,14 +45,31 @@ bass = \fixed c {
 
 verseOne = \lyricmode {
   \set stanza = "1."
+  하 늘 너 머 저 편 머 나 먼 강 변 에
+  아 름 다 운 내 고 향 있 네
+  주 가 예 비 하 신 고 통 없 는 그 곳
+  늙 고 죽 음 이 영 없 다 오
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
+  다 시 방 항 할 일 없 는 그 곳 에 서
+  나 의 영 혼 이 편 히 쉴 때
+  만 국 왕 주 님 께 영 원 찬 미 하 리
+  거 기 죽 음 이 다 시 없 네
+
+  늙 음 없 네 늙 음 없 네
+  거 기 늙 음 이 전 혀 없 네
+  늙 음 없 네 늙 음 없 네
+  거 기 늙 음 이 전 혀 없 네
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
+  나 의 달 려 갈 길 모 두 마 친 후 에
+  주 가 면 류 관 내 게 줄 때
+  모 든 슬 픔 고 통 모 두 사 라 지 고
+  앞 서 간 성 도 만 나 리 라
 }
 
 verseFour = \lyricmode {

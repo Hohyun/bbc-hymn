@@ -56,7 +56,7 @@ soprano = \fixed c' {
   <\tweak font-size #-3 c \tweak font-size #-3 d \tweak font-size #-3 fs a>2.^(_( q^)_) \breathe | \break
   
   % L3
-  <d \tweak font-size #-3 g \tweak font-size #-3 b d'>4
+  <d \tweak font-size #-3 g \tweak font-size #-3 b d'>4^\markup "(후렴)"
   <e \tweak font-size #-3 g cs'>4
   <fs \tweak font-size #-3 a c'>4
   <\tweak font-size #-3 d g b>4
@@ -89,18 +89,14 @@ soprano = \fixed c' {
   <c \tweak font-size #-3 e a>4
   <\tweak font-size #-3 d \tweak font-size #-3 e gs>
   <\tweak font-size #-3 c \tweak font-size #-3 e a>
-  << { <\tweak font-size #-3 g \tweak font-size #-3 a \tweak font-size #-3 c' e'>2
-       <\tweak font-size #-3 c fs fs'>4 } \\
-     { s4.. <\tweak font-size #-3 c \tweak font-size #-3 fs \tweak font-size #-3 as \tweak font-size #-3 d'>4 s16 }
-  >> |
+  <\tweak font-size #-3 g \tweak font-size #-3 a \tweak font-size #-3 c' e'>2
+  <\tweak font-size #-3 c fs fs'>4 |
   
   <\tweak font-size #-3 b, \tweak font-size #-3 d g \tweak font-size #-3 g'>2.^(_( q^)_) \bar "|." |
   
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
@@ -125,10 +121,7 @@ tenor = \fixed c {
   
   <d, d>4 <e, e> <fs, fs> <g, e>2. \breathe |
   <g, g>4 <a, fs> <b, f> <c e>2. \breathe |
-  s2. 
-  << { s2 <d, d>4 } \\ 
-     { <a, a>2 \stemUp \teeny \shiftOnn <d, f>4 \normalsize \stemDown } 
-  >> |
+  s2. s2 <d, d>4 |
   <g, g>2.^(_( q^)_) |
   
 }
@@ -141,7 +134,7 @@ bass = \fixed c {
   
   s1. | 
   s1. | 
-  <a, a>4 <b, gs> <c g> s2. | 
+  <a, a>4 <b, gs> <c g> <a, a>2 s4 | 
   s1. |
 }
 
@@ -161,7 +154,7 @@ verseTwo = \lyricmode {
   예 수 님 만 나 겠 네
 
   인 자 한 주 의 얼 굴 
-  나 천 천 히 뵈 오 리
+  나 친 히 뵈 오 리
   영 광 보 좌 에 서 맞 아 주 실
   주 와 영 원 히 살 리 라
 }

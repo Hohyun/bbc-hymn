@@ -24,26 +24,126 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <c af>2 <ef af>4. <ef bf>8 |
+  <ef c'>2. <ef ef'>4 |
+  <f df'>^(_( <df f>^)_) g( bf) |
+  <c af>2. \breathe <af, c>4 |
+  <af, df>^(_( <df bf>^)_) g( ef) |
+  <ef af>2 bf4( af) | %\break
+  
+  <ef g>2 <d f> |
+  ef2. b4\rest |
+  ef2 <ef g>4 <ef bf> |
+  af2( g4) ef |
+  <ef af>2 <ef c'> |
+  <ef bf>2. \breathe <c ef>4 |
+  <df f>^(_( <f af>2^)_) <df f>4 | %\break
+  
+  ef4( af2) <f bf>4 |
+  <ef c'>2 <df bf> |
+  <c af>2. b4\rest | \break
+  <ef c'>2 <ef bf>4 ef |
+  <ef af>2 bf4( c') |
+  df'( f) bf( af) |
+  g4.( f8) ef4 \breathe %\break
+  
+  <bf, ef>4 |
+  c( ef af) <c ef> |
+  f( af df') f |
+  g( bf ef') <df g> |
+  <c af>2. \breathe af4 |
+  c'2 2 |
+  bf2. 4 | %\break
+  
+  df'2 2 |
+  c'2. \breathe 4 |
+  f'2 2 |
+  ef'2 df'4( bf) |
+  <ef af>2 <df g> |
+  <c af>2. b4\rest \bar "|." |
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alignerb = \fixed c' {
   \global
+  s1 | s1 | s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 | s1 | s1 | s2.
+  s4 | s1 | s1 | s1 | s1 | s2 af2 | g4 4 4 s4 |  
+  s2 g2 | af4 4 4 s4 | s4 4 4 4 | s1 | s1 | s1 |
 }
 
 alto = \fixed c' {
   \global
+  s1 | s1 | s2 df2 | s1 | s2 bf,2 | s2 ef2 |
+  s1 | ef2. s4 | ef2 s2 | ef2. 4 | s1 | s1 | s1 |
+  ef2. s4 | s1 | s1 | s2. ef4 | s2 ef | f f | ef2.
+  
+  s4 | 
+  c2. s4 | 
+  df4( f2) 4 | 
+  ef2. s4 | 
+  s2. c4\rest   | 
+  ef2\rest ef2  | 
+  4 4 4 c4\rest |
+  
+  ef2\rest ef2 |
+  4 4 4 e4\rest |
+  f4\rest af4 4 4 |
+  af2 f |
+  s1 |
+  s1 |
 }
 
 tenor = \fixed c {
   \global
+  <af, ef>2 s | af2. s4 | s2 bf4 g | s2. <af, ef>4 | s2 ef4 s4 | s1 |
+  s1 | s1 | s1 | c'2( bf4) s4 | af2 2 | s2. af4 | s1 |
+  s1 | s1 | s1 | af2 s2 | s1 | s2 af4( bf) | bf4.( af8) g4
+  s4 | s1 | s1 | bf4( ef2) s4 | s1 | s1 | s1 |  
+  s1 | s1 | s1 | s2 bf4( df') | s1 | s1 |
 }
 
 bass = \fixed c {
   \global
+  s2 <c af>4. <ef g>8 | 
+  af4( ef c) <af, c'> |
+  <df bf>2 ef |
+  <af, af>2. \breathe s4 |
+  <df f>2 ef4^(_( <df g>^)_) |
+  <c af>^(_( <af, c'>^)_) <g, df'>^(_( <af, c'>^)_) |
+  
+  <bf, bf>2 <bf, af> |
+  <ef g>2. d4\rest |
+  q2 <ef bf>4 <ef c'> |
+  ef2. <ef g>4 |
+  c( bf,) af,( bf,) |
+  <ef g>( <f af> <g bf>) af |
+  <df af>2. q4 |
+  
+  <c af>2. <df af>4 |
+  <ef af>2 <ef g> |
+  <af, af>2. d4\rest |
+  af,4( c) <ef g>4 <df g> |
+  <c af>2 <bf, g>4^(_( <af, af>^)_) |
+  <df af>2 d2 |
+  ef2. \breathe 
+  
+  <ef g>4 |
+  <af, af>2. q4 |
+  <df af>2. <df bf>4 |
+  ef2. <ef bf>4 |
+  <af, af>2. \breathe d4\rest |
+  d2\rest <af, af>2 |
+  <ef g>4 q q d4\rest |
+  
+  d2\rest <ef g>2 |
+  af4 <af c'> q \breathe d4\rest |
+  d4\rest <df df'>4 <f df'> <df df'> |
+  af2 df |
+  <ef c'> <ef bf> |
+  <af, af>2. d4\rest |
 }
 
 verseOne = \lyricmode {
@@ -86,6 +186,7 @@ verseFour = \lyricmode {
 verseExtra = \lyricmode {
   놀 라 워 라
   주 사 랑 이 어 찌 나
+}
 
 myChords = \chordmode {
 }
@@ -94,11 +195,11 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

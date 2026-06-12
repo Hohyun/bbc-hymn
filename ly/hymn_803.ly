@@ -25,14 +25,43 @@ global = {
 
 soprano = \fixed c' {
   \global
+  d8. <d g>16 q8. <d a>16 <g b>8. q16  q8. q16 |
+  q8. <fs a>16 q8. <g b>16 <a c'>2 \breathe |
+  d8. <d fs>16 <fs a>8. <g b>16  %\break
+  
+  <a c'>4. q8 |
+  q8. <g b>16 q8. <a c'>16 \stemDown <b d'>2 \stemUp \breathe |
+  d8. <d g>16 q8. <d a>16 <g b>8. q16 q8. q16 |
+  <e b>8. <e a>16  %\break
+  
+  <e a>8. <e b>16 <e c'>2 \breathe |
+  d8. 16 8. <d c'>16 b4 <fs a> |
+  g2. \bar "||" \break 
+  
+  <g d'>4^\markup "(후렴)" |
+  <fs d'>4. <fs a>8 <fs d'>8. q16 <fs a>8. <a c'>16 | %\break
+  
+  <a c'>4 <g b> q \breathe <g d'> |
+  <fs d'>4. <fs a>8 <fs d'>8. q16 <fs a>8. <a c'>16 |
+  <a c'>4 <g b> q \breathe d |
+  <d g>4. q8 %\break
+  
+  <fs a>8. <g b>16 q8. g16 |
+  <e g>4 <e c'> q\fermata \breathe <c e> |
+  <b, d>4. q8 <d g>8. <d a>16 <g b>8. <g c'>16 |
+  <g b>4 <fs a> <d g>2 \bar "|." |
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  d8. s16 s2. | s1 | d8. s16 s4
+  s2 | s1 | d8. s16 s2. | s4
+  s2. | d8. 16 8. s16 d8[ g] s4 | s1 | s1 |
+  s1 | s1 | s2. d4 | s2
+  s4 s8. f16 | s1 | s1 |s1 |
+  
 }
 
 tenor = \fixed c {
@@ -41,6 +70,28 @@ tenor = \fixed c {
 
 bass = \fixed c {
   \global
+  <g b>8. q16 q8. <g c'>16 <g d'>8. q16 q8. q16 |
+  <d d'>8. q16 q8. q16 q2 \breathe  |
+  <d fs>8. <d a>16 <d d'>8. q16
+  
+  <d d'>4. q8 |
+  <g d'>8. q16 q8. q16 q2 \breathe |
+  <g b>8. q16 q8. <g c'>16 <g d'>8. q16 q8. q16 |
+  <c c'>8. q16 
+  
+  <c c'>8. <b, gs>16 <a, a>2 \breathe |
+  <d fs>8. q16 q8. <d a>16 << { d4 <d c'> } \\ { \stemUp g8[ d'8] s4 } >>  |
+  <g b>2. q4 | <d a>4. <d d'>8 <d a>8. q16 <d d'>8. q16 |
+  
+  <g d'>4 q q \breathe <g b> |
+  <d a>4. <d d'>8 <d a>8. q16 <d d'>8. q16 |
+  <g d'>4 q q \breathe <g b> |
+  q4. q8
+  
+  <d d'>8. q16 q8. <g b>16 |
+  <c c'>4 <c g> q\fermata \breathe q |
+  <d g>4. q8 <d b>8. <d c'>16 <d d'>8. <d e'>16 |
+  <d d'>4 <d c'> <a, g b>2 |
 }
 
 verseOne = \lyricmode {
