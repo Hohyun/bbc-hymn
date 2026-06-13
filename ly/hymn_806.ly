@@ -25,22 +25,110 @@ global = {
 
 soprano = \fixed c' {
   \global
+  ef 8 f |
+  <ef g>4. fs8 <ef g>4 <bf, ef>2 \breathe <ef g>8 <f a> |
+  <g bf>4. <fs a>8 <g bf>4 <ef g>2 \breathe <g bf>8 q | %\break
+  
+  s2. <g bf>8 <ef g>4. ef4 |
+  <d f>2.^(_( q2^)_) \breathe ef8 f |
+  <ef g>4. fs8 <ef g>4 <bf, ef>2 <ef g>8 <f af> | %\break
+  
+  <g bf>4. <fs a>8 <g bf>4 <ef g>2 \breathe <g bf>8 q |
+  s2. <g bf>8 <ef g>4. <d f>4 |
+  ef2.^(_( 2.^)_) \breathe | \break
+  
+  <g bf>8^\markup "(후렴)" <ef g>4. <g bf>4 ef'2. |
+  s2. <g bf>2 \breathe q8 q |
+  q4 <ef g> q q8 <bf, f>4. <c ef>4 |
+  <d bf>2.^(_( q^)_) \breathe | %\break
+  
+  <g bf>8 <ef g>4. <g bf>4 ef'2. |
+  s2. <g bf>2 \breathe q8 q |
+  q4 <ef g> ef <ef g>8 q4. <d f>4 |
+  <bf, ef>2.^(_( 2^)_) \bar "|." 
 }
 
 aligner = \fixed c' {
   \global
+  ef 8 f |
+  <ef g>4. fs8 <ef g>4 <bf, ef>2 <ef g>8 <f a> |
+  <g bf>4. <fs a>8 <g bf>4 <ef g>2 <g bf>8 q | 
+  
+  <af c'>4 <af ef'> <af c'> <g bf>8 <ef g>4. ef4 |
+  <d f>2.^(_( q2^)_) ef8 f |
+  <ef g>4. fs8 <ef g>4 <bf, ef>2 <ef g>8 <f af> | 
+  
+  <g bf>4. <fs a>8 <g bf>4 <ef g>2 <g bf>8 q |
+  <af c'>4 <af ef'> <af c'> <g bf>8 <ef g>4. <d f>4 |
+  ef2.^(_( 2.^)_) | 
+  
+  <g bf>8 <ef g>4. <g bf>4 ef'2. |
+  <af c'>8 <af ef'>4. q4 <g bf>2 q8 q |
+  q4 <ef g> q q8 <bf, f>4. <c ef>4 |
+  <d bf>2.^(_( q^)_) | 
+  
+  <g bf>8 <ef g>4. <g bf>4 ef'2. |
+  <af c'>8 <af ef'>4. q4 <g bf>2 q8 q |
+  q4 <ef g> ef <ef g>8 q4. <d f>4 |
+  <bf, ef>2.^(_( 2^)_) 
 }
 
 alto = \fixed c' {
   \global
+  ef8 8 | s4. ef8 s1 | s1. |
+  
+  <af c'>4 <af ef'> <af c'> s8 s4. ef4 |
+  s2. s2 ef8 8 |
+  s4. ef8 s1 |
+  
+  s1. |
+  <af c'>4 <af ef'> <af c'> s2. |
+  ef2. 2. | 
+  
+  s2. g4 af bf | 
+  <af c'>8 <af ef'>4. <af c'>4 s2. | 
+  s1. |
+  s1. |
+  
+  s2. g4 af bf | 
+  <af c'>8 <af ef'>4. <af c'>4 s2. | 
+  s2 ef4 s2. |
+  s2. s2
 }
 
 tenor = \fixed c {
   \global
+  s4  | s1. | s1. |
+  s1. | s1. | s1. |
+  s1. | s2. s8 bf4. s4 | s1. |
+  
+  s2. ef'2. | s1. | s1. | s1. |
+  s2. ef'2. | s1. | s1. |s2. s2
 }
 
 bass = \fixed c {
   \global
+  <ef g>8 <ef af> |
+  <ef bf>4. <ef a>8 <ef bf>4 <ef g>2 \breathe <ef bf>8 q |
+  <ef ef'>4. q8 q4 <ef bf>2 \breathe <ef ef'>8 q |
+  
+  <af ef'>4 <af c'> <af ef'> <ef ef'>8 <ef bf>4. <c a>4 |
+  <bf, bf>2.^(_( q2^)_) \breathe <ef g>8 <ef af> |
+  <ef bf>4. <ef a>8 <ef bf>4 <ef g>2 <ef bf>8 q |
+  
+  <ef ef'>4. q8 q4 <ef bf>2 \breathe <ef ef'>8 q |
+  <af ef'>4 <af c'> <af ef'> <bf ef'>8 bf4. <bf, af>4 |
+  <ef g>2.^(_( q^)_) \breathe |
+  
+  <ef ef'>8 <ef bf>4. <ef ef'>4 ef f g |
+  <af ef'>8 <af c'>4. <af ef'>4 <ef ef'>2 \breathe <ef ef'>8 q |
+  q4 <ef bf> q q8 <d bf>4. <c a>4 |
+  <bf, bf>2.^(_( q^)_) \breathe |
+  
+  <ef bf>8 q4. <ef ef'>4 ef f g |
+  <af ef'>8 <af c'>4. <af ef'>4 ef'2 \breathe <ef ef'>8 q |
+  q4 <ef bf>4 <c a> <bf, bf>8 q4. <bf, af>4 |
+  <ef g>2.^(_( q2^)_) 
 }
 
 verseOne = \lyricmode {

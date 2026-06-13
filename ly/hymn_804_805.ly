@@ -28,32 +28,117 @@ soprano = \fixed c' {
   <c e>8. q16 q8. <d f>16 <e g>4 <c e> |
   <e c'>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
   <d f>8. q16 <f a>8. q16 <d f>4 d |
-  <f b>8. <f a>16 < e g>8. <d f>16 <c e>2 \breathe | \break
+  <f b>8. <f a>16 < e g>8. <d f>16 <c e>2 \breathe | %\break
   
   <e c'>8. q16 q8. q16 q4 <e g> |
   <f a>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
   \stemDown <g e'>8. q16 q8. <g d'>16 <a c'>4 \stemUp <f a> |
-  <e g>8. <e c'>16 <d b>8. <f d'>16 <e c'>2 \breathe | \break
+  <e g>8. <e c'>16 <d b>8. <f d'>16 <e c'>2 \breathe | %\break
+  
+  <e g>2.^\markup "(후렴)" <d f>8. <f a>16  |
+  <e g>2. b4\rest |
+  <f b>2 ^(_( q8.^)_) g16 <f a>8. <f b>16 |
+  c'2. b4\rest | %\break
+  
+  <a c'>2^(_( q8.^)_) q16 <g b>8. <f a>16 |
+  <e g>2 <c e> \breathe |
+  <fs d'>2^(_( q8.^)_) <a c'>16 <g b>8. <fs a>16 |
+  g2( 4) b4\rest | %\break
+  
+  <e g>2^(_( q8.^)_) q16 <f a>8. <e g>16 |
+  <c e>2 <e g> \breathe |
+  <f a>2^(_( q8.^)_) <a c'>16 <g b>8. <f a>16 |
+  \stemDown <g e'>2. \stemUp b4\rest | %\break
+  
+  <e g>2^(_( q8.^)_) <g e'>16 <g d'>8. <g c'>16 |
+  <a c'>2 <f a> |
+  <e g>2^(_( q8.^)_)^\markup "rit" <e c'>16 <d b>8. <f d'>16\fermata |
+  c'2. b4\rest |
+  
+  
 }
 
 alto = \fixed c' {
   \global
+  s1 | s1| s2. d4 | s1 |
+  s1 | s1 | s1 | s1 |
+  
+  s1 | s1 | s2 s8. f16 s4 | e8. 16 f8. 16 e4 s4 |
+  s1 | s1 | s1 | d8. 16 e8. 16 f4 s4 |
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | e8. 16 f8. 16 e4 s |
 }
 
-aligneraa = \fixed c' {
-  \global
-}
+aligneraa = \soprano
 
 tenor = \fixed c {
   \global
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s8. g16 <g, g>8. q16 s2 |
+  
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
 }
 
 bass = \fixed c {
   \global
+  <c g>8. q16 q8. q16 <c c'>4 <e g> |
+  <f a>8. <c c'>16 q8. q16 q2 \breathe |
+  <g b>8. q16 q8. q16 q4 q |
+  <g, b>8. q16 q8. <b, g>16 q2 \breathe |
+  
+  <c g>8. q16 q8. q16 q4 <c c'> |
+  <f c'>8. q16 q8. q16 <c c'>2 \breathe |
+  q8. q16 q8. <e c'>16 <f c'>4 q |
+  <g c'>8. g16 s4 <c g>2 \breathe |
+  
+  <c c'>4 q8. q16 q4 d4\rest |
+  q4 q8. q16 q4 d4\rest |
+  <g d'>8. q16 q8. q16 q8 d8\rest d4\rest |
+  <c g>8. q16 <c a>8. q16 <c g>4 d4\rest | 
+  
+  <f c'>8. q16 q8. q16 q8. q16 d4\rest |
+  <c c'>8. q16 q8. q16 <c g>4 q \breathe |
+  <d a>8. q16 q8. q16 q4 d4\rest |
+  <g b>8. q16 <g c'>8. q16 <g d'>4 d4\rest |
+  
+  <c c'>8. q16 q8. q16 q4 q |
+  <c g>8. q16 q8. q16 <c c'>4 q \breathe |
+  <f c'>8. q16 q8. q16 q4 d4\rest |
+  <c c'>8. q16 q8. q16 q4 d4\rest |
+  
+  <c c'>4 q q d4\rest |
+  <f c'>8. q16 q8. q16 q4 q |
+  <g c'> q q d4\rest |
+  <c g>8. q16 q8. q16 <c g>4 d4\rest |
 }
 
 alignerab = \fixed c' {
   \global
+  s1 | s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
+  
+  <c c'>4 q8. q16 q4 d4\rest |
+  q4 q8. q16 q4 d4\rest |
+  <g d'>8. q16 q8. q16 q8 d8\rest d4\rest |
+  <c g>8. q16 <c a>8. q16 <c g>4 d4\rest | 
+  
+  <f c'>8. q16 q8. q16 q8. q16 d4\rest |
+  <c c'>8. q16 q8. q16 <c g>4 q \breathe |
+  <d a>8. q16 q8. q16 q4 d4\rest |
+  <g b>8. q16 <g c'>8. q16 <g d'>4 d4\rest |
+  
+  <c c'>8. q16 q8. q16 q4 q |
+  <c g>8. q16 q8. q16 <c c'>4 q \breathe |
+  <f c'>8. q16 q8. q16 q4 d4\rest |
+  <c c'>8. q16 q8. q16 q4 d4\rest |
+  
+  <c c'>4 q q d4\rest |
+  <f c'>8. q16 q8. q16 q4 q |
+  <g c'> q q d4\rest |
+  <c g>8. q16 q8. q16 <c g>4 d4\rest |
 }
 
 verseOne = \lyricmode {
@@ -72,7 +157,9 @@ verseTwo = \lyricmode {
   선 한 목 자 예 수 음 성 들 으 라
 
   내 게 오 라 쉬 게 하 리 라
-  네 무 거 운 짐 내 게 맡 기 라
+  네 무 거 운 죄 짐 내 게 맡 기 라
+  나 는 온 유 하 니 내 게 배 우 라
+  내 멍 에 는 쉽 고 가 벼 우 니 라
 }
 
 verseThree = \lyricmode {
@@ -99,6 +186,12 @@ verseExtra = \lyricmode {
   너 의 모 든 죄 를
   내 게 맡 겨 라 
   내 게 맡 겨 라
+  나 는 온 유 하 니
+  나 는 온 유 하 니
+  내 게 배 우 라
+  내 게 배 우 라
+  내 멍 에 내 멍 에 는 쉽 고
+  내 멍 에 가 벼 우 니 라
 }
 
 myChords = \chordmode {
