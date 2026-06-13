@@ -25,22 +25,82 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <c ef>4 |
+  <ef c'>4. <f df'>8 <ef c'> <df bf> <c af> <df f> |
+  <c ef> <c af>^(_( q2^)_) \breathe af4 |
+  <f af>4. q8 q <f bf> <f af> <df f> |
+  <c ef>2. \breathe %\break
+  
+  <ef ef'>4 |
+  \stemDown <af ef'>4. <af f'>8 <af ef'> \stemUp <f df'> <ef c'> <c af> |
+  <df f>8 <c ef>^(_( q2^)_) \breathe <ef af>4 |
+  <ef c'>4. q8 q <c af> <df bf> q |
+  <c af>2. \break
+  
+  af4^\markup "(후렴)" |
+  <f df'>4. q8 q q q q |
+  <f af> <ff bf> <ef c'>2 \breathe <ef ef'>4 |
+  \stemDown <af ef'>4. <af f'>8 %\break
+  
+  <af ef'>8 <af c'> q \stemUp <ef af> |
+  bf4. 8 <g bf>4 \breathe \stemDown <g ef'> |
+  <af c'>4. q8 <af ef'> <af c'> \stemUp <gf bf>8 af | %\break
+  
+  <f af>4. <df f>8 <c ef>4. \breathe <ef c'>8 |
+  <ef ef'> q \stemDown <af ef'> <af c'> <af ef'>4. <af c'>8 |
+  \stemUp <g c'>16 q8. <ef af>2 \bar "|." 
+  
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
+
 
 alto = \fixed c' {
   \global
+  s4  | s1 | s2. gf4 | s1 | s2.
+  s4  | s1 | s1 | s1 | s2.
+  
+  gf4 | s1 | s1 | s2
+  s2 | af4. 8 s2 | s2. s8 gf8 |
+  s1 | s1 | s2. 
 }
 
 tenor = \fixed c {
   \global
+  s4  | s1 | s8 <af, ef>8^(_( q2^)_) \breathe s4 | s1 | af2.
+  s4  | s4. s4 af8 8 8 | s1 | s1 | s2.
+  
+  s4  | s1 | s1 | s2
+  s2  | s1 | s1 |
+  s2 af4. \breathe 8  | s1 | s2. 
 }
 
 bass = \fixed c {
   \global
+  <af, af>4 |
+  q4. q8 q q q q |
+  q8 s8 s2 <c af>4 |
+  <df af>4. q8 <df df'> q q <df af> |
+  af2. \breathe 
+  
+  <af c'>4 |
+  q4. <af df'>8 <af c'>8 af8 8 8 |
+  <af, af>8 q8^(_( q2^)_) \breathe <c af>4 |
+  <ef af>4. q8 q q <ef g> q |
+  <af, ef af>2.
+  
+  <c af>4 |
+  q4. q8 q q q q |
+  q q <af, af>2 \breathe <af c'>4 |
+  q4. <af df'>8
+  
+  <af, c'>8 <af, ef'> q <af, c'> |
+  <bf, d'>4. q8 <ef ef'>4 \breathe q |
+  <af ef'>4. q8 <af c'> <af ef'> <af c'> q |
+  
+  <df df'>4. <df af>8 af4. \breathe 8 |
+  <af c'>8 q q <af ef'> <af c'>4. <ef ef'>8 |
+  q16 <ef df'>8. <af, c'>2
 }
 
 verseOne = \lyricmode {
