@@ -25,6 +25,17 @@ global = {
 
 soprano = \fixed c' {
   \global
+  <c ef>8 <df f> |
+  <c af>2 q8 q |
+  q2 q8 <df bf> |
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 \break
+  
+  <bf, g>8 <c af>8 |
+  <df bf>2 q8 <c a> |
+  <df bf>2 <c af> <df bf> |
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 <ef af>8 q |
 }
 
 alto = \fixed c' {
@@ -105,14 +116,56 @@ globalB = {
 
 sopranoB = \fixed c' {
   \globalB
+  <f af>4 q q <f df'> |
+  <df f>8 <ef g> <f af> <gf bf> <f af>4 <df f> |
+  <ef gf>4 q q8 <df f> <c ef> <df f> |
+  <ef gf>4 <c af> <df f>2 | \break
+  
+  <f af>4 <f df'> q <f af> |
+  <gf bf> \stemDown <gf df'> q \stemUp <e bf> |
+  <f af>4 <f df'> df'8. c'16 bf8. c'16 |
+  df'2. \break
+  
+  f8.^\markup "(후렴)" af16 |
+  df'2. <af c'>8. <gf bf>16 |
+  <f af>2 <df f>4 af8. 16 |
+  df'4 8. 16 8. 16 c'8. df'16 |
+  ef'2. \break
+  
+  af8. df'16 |
+  f'2. \stemDown <af df'>4 |
+  <gf df'>2 \stemUp <gf bf>4 <e bf> |
+  <f af> <f df'> df'8. c'16 bf8. c'16 |
+  df'2( 2) \bar "|." |
 }
 
-alignerB = \fixed c' {
+alignerB = \sopranoB
+
+alignerBB = \fixed c' {
   \globalB
+  s1 | s1 | s1 | s1
+  s1 | s1 | s1 | s2.
+  
+  s4 | s4 df8. 16 4 s4 | s1 | s4 f8. 16 4 8. 16 | 8. 16 8. 16 4
+  s4 | s4 df8. 16 4 s4 | s1 | s2 af4 q | df8. 16 8. 16 2 |
 }
 
 altoB = \fixed c' {
   \globalB
+  s1 | s1 | s1 | s1
+  s1 | s1 | s1 | f4 gf f
+  
+  a,4\rest |
+  c4\rest f8. 16 4 s4 | 
+  s2. c4\rest |
+  c4\rest af8. 16 g4 8. 16 |
+  gf8. 16 8. 16 4
+  
+  b,4\rest |
+  c4\rest af8. 16 4 s4 |
+  s1 |
+  s2 gf4 4 |
+  f8. 16 gf8. 16 f2 |
 }
 
 tenorB = \fixed c {
@@ -121,6 +174,27 @@ tenorB = \fixed c {
 
 bassB = \fixed c {
   \globalB
+  <df df'>4 q q <df af> |
+  q q <df df'> <df af> |
+  <af, c'> q <af, af> q |
+  q q <df af>2 |
+  
+  <df df'>4 <df af> q <df df'> |
+  <gf df'> <gf bf> q <g df'> |
+  <af df'> q <af ef'> af |
+  <df af> <df bf> <df af> 
+  
+  d4\rest |
+  d4\rest <df af>8. q16 q4 <df df'>8. q16 |
+  q2 <df af>4 d4\rest |
+  d4\rest <f af>8. q16 <ef bf>4 q8. q16 |
+  <af c'>8. q16 q8. q16 q4
+  
+  d4\rest |
+  d4\rest <df df'>8. q16 q4 <f cf'>4 |
+  <gf bf>2 <gf df'>4 <g df'> |
+  <af df'> q <af ef'> q |
+  <df df'>8. <df af>16 <df bf>8. q16 <df af>2 |
 }
 
 verseOneB = \lyricmode {
@@ -222,7 +296,6 @@ myChordsB = \chordmode {
         \new Lyrics = "LyrOne" \lyricsto "aligner" { \verseOne }
         \new Lyrics = "LyrTwo" \lyricsto "aligner" { \verseTwo }
         \new Lyrics = "LyrThree" \lyricsto "aligner" { \verseThree }
-        \new Lyrics = "LyrFour" \lyricsto "aligner" { \verseFour }
     
         \new Staff = down \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)
@@ -285,7 +358,10 @@ myChordsB = \chordmode {
                 \altoB
             }
             \context NullVoice = alignerb {
-             \alignerB
+              \alignerB
+            }
+            \context NullVoice = alignerbb {
+              \alignerBB
             }
           >>
         }
@@ -293,7 +369,7 @@ myChordsB = \chordmode {
         \context Lyrics = "LyrOneB" \lyricsto "alignerb" { \verseOneB }
         \context Lyrics = "LyrTwoB" \lyricsto "alignerb" { \verseTwoB }
         \context Lyrics = "LyrThreeB" \lyricsto "alignerb" { \verseThreeB }
-        \context Lyrics = "LyrFourB" \lyricsto "alignerb" { \verseFourB }
+        \context Lyrics = "LyrExtraB" \lyricsto "alignerbb" { \verseExtraB }
     
         \context Staff = lower \with {
           %\override StaffSymbol.staff-space = #(magstep -0.5)

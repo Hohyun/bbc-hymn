@@ -25,22 +25,93 @@ global = {
 
 soprano = \fixed c' {
   \global
+  \repeat segno 2 {
+  <f af>16 q |
+  <f df'>8. q16 q8 <df f> <ef g> <fs af> |
+  \stemDown <af c'>8 \stemUp <g bf>2 \breathe q16 q |
+  <f af>8 \stemDown <af c'> \stemUp <gf bf> %\break
+  
+  <f af>8 <gf bf> <f af> |
+  q2 b8\rest \break 
+  q16 q|
+  <f df'>8. q16 q8 <df f> <ef gf> <f af> |
+  \stemDown <af c'> \stemUp <gf bf>2 \breathe %\break
+  
+  <gf bf>16 q |
+  <f af>8 <ef c'> <df bf> <c af> <c gf> <c ef> |
+  df2 b8\rest 
+  \fine \break
+  
+  <df f>16 q |
+  <c ef>8 <df f> <ef gf>  %\break
+  
+  <gf c'> <gf bf> af |
+  <f af> <f df'>2 \breathe q16 q |
+  <ef c'>8 <ef bf> \stemDown <af c'> <g ef'> <g df'> \stemUp <ef bf> |
+  <ef af>2
+  }
+  
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 alto = \fixed c' {
   \global
+  s8  | s2. | s2. | s4.
+  s4. | s2. | s2. | s8 s2
+  s8  | s2. | df2 s4 | s4.
+  s4 gf8 | s2. | s2. | s2
 }
 
 tenor = \fixed c {
   \global
+  s8  | s2. | s2. | af8 8 8
+  s4. | s2. | s2. | s8 s2
+  s8  | s8 af8 8 s4. | s2. | s4.
+  s4. | s2. | s2. | s2
 }
 
 bass = \fixed c {
   \global
+  \repeat segno 2 {
+  <df df'>16 q |
+  <df af>8. q16 q8 q q <df df'> |
+  <gf df'> q2 \breathe q16 q |
+  af8 8 8 
+  
+  <af, af>8 q q |
+  <df af>2 d8\rest \breathe <df df'>16 q |
+  <df af>8. q16 q8 q q <df df'> |
+  <gf df'> q2 \breathe 
+  
+  <gf df'>16 q |
+  q8 af8 8 <af, af>8 q <af, gf> |
+  <df f>2 d8\rest 
+  \fine
+  <df af>16 q |
+  <af, af>8 q q 
+  
+  <af, af>8 <af, c'> q |
+  <df df'> <df af>2 \breathe q16 q |
+  <ef af>8 <ef g> <ef af> <ef bf> q <ef df'> |
+  <af c'>2
+  }
+}
+
+alignerb = \fixed c {
+  <df df'>16 q |
+  <df af>8. q16 q8 q q <df df'> |
+  <gf df'> q2 \breathe q16 q |
+  af8 8 8 
+  
+  <af, af>8 q q |
+  <df af>2 d8\rest \breathe <df df'>16 q |
+  <df af>8. q16 q8 q q <df df'> |
+  <gf df'> q2 \breathe 
+  
+  <gf df'>16 q |
+  q8 af8 8 <af, af>8 q <af, gf> |
+  <df f>2 d8\rest 
 }
 
 verseOne = \lyricmode {
@@ -84,7 +155,7 @@ verseFour = \lyricmode {
 }
 
 verseExtra = \lyricmode {
-  "D.C. 나" "-" 인 생 의 석 양 맞 을 때
+  \once \override LyricText.self-alignment-X = #RIGHT "D.C. 나" "-" 인 생 의 석 양 맞 을 때
   나 그 네 수 고 그 치 겠 네
   나 "-" 인 생 의 석 양 대 할 때
   사 랑 하 는 주 뵈 오 리 라
@@ -102,7 +173,7 @@ myChords = \chordmode {
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -164,8 +235,13 @@ myChords = \chordmode {
                 \voiceTwo
                 \bass
               }
+              \context NullVoice = alignerb {
+                \alignerb
+              }
           >>       
         }
+        
+        \context Lyrics = "LyrExtra" \lyricsto "alignerb" { \verseExtra }
       >>
     >>
     \layout {
