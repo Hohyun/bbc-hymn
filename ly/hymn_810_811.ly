@@ -29,29 +29,110 @@ soprano = \fixed c' {
   <c af>2 q8 q |
   q2 q8 <df bf> |
   <ef c'>4. <d b>8 <ef c'> <df bf> |
-  <c af>2 \break
+  <c af>2 %\break
   
   <bf, g>8 <c af>8 |
   <df bf>2 q8 <c a> |
-  <df bf>2 <c af> <df bf> |
+  <df bf>2 <c af>8 <df bf> |
   <ef c'>4. <d b>8 <ef c'> <df bf> |
-  <c af>2 <ef af>8 q |
+  <c af>2 <ef af>8 q | %\break
+  
+  <f df'>4. q8 q q |
+  q2 <f af>8 <ff bf> |
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 <bf, g>8 <c af> |
+  <df bf>2 %\break
+  
+  \tuplet 3/2 { <df bf>8 <ef c'> <f df'> } |
+  <ef c'>2 <df bf>8 q |
+  <c af>2.^(_( |
+  q2^)_) \bar "||" \break 
+  
+  <ef af>8^\markup "(후렴)" q |
+  <f df'>2 q8 q |
+  q2 <f af>8 <ff bf> | %\break
+  
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 <bf, g>8 <c af> |
+  <df bf>4. <c a>8 <df bf> <c a> |
+  <df bf>4. <c af>8 q <df bf> | %\break
+  
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 \breathe <ef af>8 q |
+  <f df'>4. q8 q q |
+  q4. <f af>8 q <ff bf> | %\break
+  
+  <ef c'>4. <d b>8 <ef c'> <df bf> |
+  <c af>2 <bf, g>8 <c af> |
+  <df bf>2 \tuplet 3/2 { q8 <ef c'> <f df'> } |
+  <ef c'>2 <df bf>8 q |
+  <c af>2.^(_( |
+  <c af>2^)_) \bar "|."
 }
 
 alto = \fixed c' {
   \global
 }
 
-aligner = \fixed c' {
-  \global
-}
+aligner = \soprano
 
 tenor = \fixed c {
   \global
+  s4 | <af, ef>2 q8 q | q2 q8 q | s4. <af, f>8 s q | <af, ef>2
+  ef8 s | s2 s8 fs8 | s2 f8 s | s4. <af, f>8 s q8 | <af, ef>2 s4 |
+  s2. | s2. | s4. <af, f>8 s q | <af, ef>2 ef8 s | s2
+  s4 | s2. | <af, ef>2.^(_( | q2^)_) \bar "||" 
+  
+  %후렴
+  s4 | s2. | s2. |
+  s4. <af, f>8 s q | <af, ef>2 ef8 s | s4. fs8 s fs | s4. f8 8 s |
+  s4. <af, f>8 s q | <af, ef>2 \breathe s4 | s2. | s2. |
+  s4. <af, df>8 s q | <af, ef>2 ef8 s | s2. | s2. | <af, ef>2.^(_( | q2^)_) 
 }
 
 bass = \fixed c {
   \global
+  <af, af>8 q | s2. | s2. | q4. s8 q s | s2
+  
+  ef8 <ef af> | 
+  <ef g>2 q8 ef 8 | 
+  <ef g>2 f8 <ef g> | 
+  <af, af>4. s8 q s | 
+  s2 <c af>8 q |
+  
+  <df af>4. q8 q q |
+  q2 q8 q |
+  <af, af>4. s8 q s |
+  <af, ef>2 ef8 <ef af> |
+  <ef g>2
+  
+  \tuplet 3/2 { <ef g>8 <ef af> <ef bf> } |
+  <ef bf>2 <ef g>8 q |
+  s2. | 
+  s2
+  
+  %후렴
+  <ef af>8 q |
+  <df af>2 q8 q |
+  q2 q8 q |
+  
+  <af, af>4. s8 q s |
+  s2 ef8 <ef af> |
+  <ef g>4. ef8 <ef g> ef |
+  <ef g>4. f8 8 <ef g> |
+  
+  <af, af>4. s8 q s |
+  s2 <c af>8 q |
+  <df af>4. q8 q q |
+  q4. q8 q q |
+  
+  <af, af>4. s8 q s |
+  s2 ef8 <ef af> |
+  <ef g>2 \tuplet 3/2 { q8 <ef af> <ef bf> } | 
+  <ef af>2 <ef g>8 q |
+  s2.
+  s2
+                        
 }
 
 verseOne = \lyricmode {
@@ -239,7 +320,7 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    %page-breaking = #ly:minimal-breaking
+    page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
