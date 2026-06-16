@@ -28,17 +28,17 @@ soprano = \fixed c' {
   <gf bf>4.^(_( <gf bf>4^)_) <f af>8 <gf c'>4 <ef gf>8 |
   <ef gf>2. <c ef>8 <df f> <ef gf> |
   <gf bf>4.^(_( <gf bf>4^)_) <gf c'>8 <f bf>4 <df f>8 |
-  <df f>4.^(_( <df f>4^)_) b8\rest f8 g <f a>8 | \break
+  <df f>4.^(_( <df f>4^)_) b8\rest f8 g <f a>8 | %\break
   
   <f c'>4.^(_( <f c'>4^)_) f8 <f df'>8 <f df'>8. <ef c'>16 |
   <df bf>4.^(_( <df bf>4^)_) b8\rest <g ef'> <g bf> <g df'> |
   <af c'>4.^(_( <ef c'>4^)_) <c af>8 <df bf>4. |
-  <c af>4.^(_( <gf af>4^)_) b8\rest^\markup "(후렴)" af bf c' |
+  <c af>4.^(_( <gf af>4^)_) b8\rest \break af^\markup "(후렴)" bf c' |
   
   df'4.( df'4) ef'8 df' c' bf |
   af4.( af4) b8\rest <c ef> <df f> <ef gf> |
   <gf bf>4.^(_( <gf bf>4^)_) <gf c'>8 <gf bf>4. |
-  <f af>4.^(_( <f af>4^)_) b8\rest af bf c' | \break
+  <f af>4.^(_( <f af>4^)_) b8\rest af bf c' | %\break
   
   <f df'>4.^(_( <f df'>4^)_) d'8 f' ef' df' |
   <gf bf>4.^(_( <gf bf>4^)_) b8\rest <gf df'> <gf bf> <e df'> |
@@ -152,7 +152,7 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##t
@@ -227,6 +227,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {

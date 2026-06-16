@@ -1,6 +1,7 @@
 \version "2.24.4"
 
 \include "./hymn_init.ly"
+\language "english"
 
 % Hymn Info
 korTitle = "하늘 영광 버리고"
@@ -12,29 +13,29 @@ bibleInfo = "빌 2:5-8"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
-  \key aes \major
+  \key af \major
   \time 3/4
-  \tempo 4 = 90
+  %\tempo 4 = 90
   \set Score.tempoHideNote = ##t
   \autoBeamOff
 }
 
 soprano = \relative c'' {
   \global
-  aes2 bes4 |
-  aes4.( bes8) c 4 |
-  des2 c4 |
-  bes4( aes) bes \breathe |
-  ees2 des4 |
+  af2 bf4 |
+  af4.( bf8) c 4 |
+  df2 c4 |
+  bf4( af) bf \breathe |
+  ef2 df4 |
   c2 c4 |
-  bes4( aes) bes |
-  aes2. \breathe | \break
+  bf4( af) bf |
+  af2. \breathe | %\break
   
-  aes2 bes4 |
-  aes4.( bes8) c4 |
-  des2 c4 |
-  bes4 s bes |
-  ees2 des4 |
+  af2 bf4 |
+  af4.( bf8) c4 |
+  df2 c4 |
+  bf4 s bf |
+  ef2 df4 |
   c2 
   % temporary polyphonic passage
   << 
@@ -43,158 +44,158 @@ soprano = \relative c'' {
     }
     \new Voice {
       \voiceTwo
-      aes8( g)
+      af8( g)
     }
   >> |
-  bes4( aes) bes |
-  aes2. \breathe | \break
+  bf4( af) bf |
+  af2. \breathe | %\break
   
-  ees'2 ees4 |
-  ees4( des) c |
-  des2 des4 |
-  des4( c) bes |
+  ef'2 ef4 |
+  ef4( df) c |
+  df2 df4 |
+  df4( c) bf |
   c2 c4 |
-  c4( des) ees |
-  ees4( des) c |
-  bes2. \breathe | \break
+  c4( df) ef |
+  ef4( df) c |
+  bf2. \breathe | %\break
   
-  ees4( c) ees |
-  des( bes) des |
-  c4( aes) c |
-  bes8[ c des c] bes4 \breathe |
-  ees2 ees4 |
-  f4( ees) des |
+  ef4( c) ef |
+  df( bf) df |
+  c4( af) c |
+  bf8[ c df c] bf4 \breathe |
+  ef2 ef4 |
+  f4( ef) df |
   c2 
   << 
     { \voiceOne 
-      bes4 
+      bf4 
     }
     \new Voice {
       \voiceTwo
-      g8( ees)
+      g8( ef)
     }
   >> | 
-  aes2.\fermata | \bar "|."
+  af2.\fermata | \bar "|."
 }
 
 alto = \relative c' {
   \global
-  c2 des4 |
-  c4.( des8) ees4 |
-  ees2 ees4 |
-  des4( c) ees |
-  ees2 ees4 |
-  ees2 ees4 |
-  des4( c) des |
+  c2 df4 |
+  c4.( df8) ef4 |
+  ef2 ef4 |
+  df4( c) ef |
+  ef2 ef4 |
+  ef2 ef4 |
+  df4( c) df |
   c2. |
   
-  ees2 ees4 |
-  ees2 aes4 |
-  aes2 aes4 |
-  g4( aes) g |
-  aes2 g4 |
-  aes2 s4 |
-  f4( ees) ees |
-  ees2. |
+  ef2 ef4 |
+  ef2 af4 |
+  af2 af4 |
+  g4( af) g |
+  af2 g4 |
+  af2 s4 |
+  f4( ef) ef |
+  ef2. |
   
-  ees2 ees4 |
-  ees2 ees4 |
-  ees2 ees4 |
-  ees2 ees4 |
-  ees2 ees4
-  ees2 ees4 |
-  ees2 aes4 |
+  ef2 ef4 |
+  ef2 ef4 |
+  ef2 ef4 |
+  ef2 ef4 |
+  ef2 ef4
+  ef2 ef4 |
+  ef2 af4 |
   g2. |
   
-  ees2 ees4 |
-  ees2 ees4 |
-  ees2 aes4 |
-  g8[( aes bes aes]) g4 |
-  aes2 aes4 |
-  aes2 aes4 |
-  aes2 s4 |
-  ees2.
+  ef2 ef4 |
+  ef2 ef4 |
+  ef2 af4 |
+  g8[( af bf af]) g4 |
+  af2 af4 |
+  af2 af4 |
+  af2 s4 |
+  ef2.
   
 }
 
 tenor = \relative c' {
   \global
-  aes2 g4 |
-  aes2 aes4 |
-  aes4( g) << { aes4 } \\ { c,8( des) } >>  |
-  g4( aes) g \breathe |
-  << { c2 bes4 } \\ { aes,4( aes') g } >> |
-  << { aes2 aes4 } \\ { aes2 aes,8( c) } >> |
-  g'4( aes) g |
-  aes2. \breathe |
+  af2 g4 |
+  af2 af4 |
+  af4( g) << { af4 } \\ { c,8( df) } >>  |
+  g4( af) g \breathe |
+  << { c2 bf4 } \\ { af,4( af') g } >> |
+  << { af2 af4 } \\ { af2 af,8( c) } >> |
+  g'4( af) g |
+  af2. \breathe |
   
-  c2 des4 |
-  c4.( des8) ees4 |
-  << { ees2 ees4 } \\ { aes,4( g) aes } >> |
-  << { des4( c) ees } \\ { ees,4( f) ees } >>  \breathe |
-  ees'2 ees4 |
-  ees2 ees4 |
-  << { des4( c) des4 } \\ { des,4( ees) ees } >> |
+  c2 df4 |
+  c4.( df8) ef4 |
+  << { ef2 ef4 } \\ { af,4( g) af } >> |
+  << { df4( c) ef } \\ { ef,4( f) ef } >>  \breathe |
+  ef'2 ef4 |
+  ef2 ef4 |
+  << { df4( c) df4 } \\ { df,4( ef) ef } >> |
   c'2. \breathe |
   
   c2 c4 |
-  << { c4( bes) aes } \\ { aes,2 aes4 } >> |
-  << { bes'2 bes4 } \\ { ees,4( g) bes } >> |
-  << { bes4( aes) g } \\ { ees2 ees4 } >> \breathe |
-  aes2 aes4 |
-  << { aes4( bes) c } \\ { aes2 aes4 } >> |
-  << { bes2 c8[( des]) } \\ { g,2 aes4 } >> |
-  ees'2. \breathe |
+  << { c4( bf) af } \\ { af,2 af4 } >> |
+  << { bf'2 bf4 } \\ { ef,4( g) bf } >> |
+  << { bf4( af) g } \\ { ef2 ef4 } >> \breathe |
+  af2 af4 |
+  << { af4( bf) c } \\ { af2 af4 } >> |
+  << { bf2 c8[( df]) } \\ { g,2 af4 } >> |
+  ef'2. \breathe |
   
-  << { c4( aes) c |
-       bes4( g) bes |
-       aes4( c) aes |
-       ees'2 ees 4 | } \\ 
+  << { c4( af) c |
+       bf4( g) bf |
+       af4( c) af |
+       ef'2 ef 4 | } \\ 
      { r2. | r2. | r2. | r2. | } 
   >> \breathe |
-  ees2 c4 |
-  << { des4( c) des } \\ { des,4( ees) f } >> |
-  ees'2 des4 |
+  ef2 c4 |
+  << { df4( c) df } \\ { df,4( ef) f } >> |
+  ef'2 df4 |
   c2.\fermata |
 }
 
 bass = \relative c {
   \global
-  aes2 ees'4 |
-  aes,2 aes4 |
-  bes2 s4 |
-  ees4( f) ees |
+  af2 ef'4 |
+  af,2 af4 |
+  bf2 s4 |
+  ef4( f) ef |
   s2. |
   s2. |
-  ees4( f) ees |
-  aes,2. |
+  ef4( f) ef |
+  af,2. |
   
-  aes'2 g4 |
-  aes2 aes4 |
+  af'2 g4 |
+  af2 af4 |
   s2.  |
   s2.  |
-  aes2 ees4 |
-  aes2 aes,4 |
+  af2 ef4 |
+  af2 af,4 |
   s2.  |
-  aes2. |
+  af2. |
   
-  aes'2 aes4 |
+  af'2 af4 |
   s2. |
   s2. |
   s2. |
-  aes,2 aes4 |
+  af,2 af4 |
   s2. |
   s2. |
-  ees'2. |
+  ef'2. |
   
   s2. |
   s2. |
   s2. |
   s2. |
-  c'2 aes4 |
+  c'2 af4 |
   s2. |
-  ees2 ees4 |
-  aes,2. |
+  ef2 ef4 |
+  af,2. |
    
   
 }
@@ -237,7 +238,9 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
+    %top-margin = 5\mm
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##f
     ragged-last-bottom = ##t
     oddFooterMarkup = \markup {
@@ -303,6 +306,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}

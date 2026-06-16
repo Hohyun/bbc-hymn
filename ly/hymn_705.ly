@@ -59,7 +59,7 @@ soprano = \fixed c' {
   <f bf>8 <f c'> <f bf> <ef g> <d f>4 %\break
   
   bf8 c' | d'2. < f c'>8 q | 
-  <f bf>2. <d f>8 <ef g> | 
+  <f bf>2. \break <d f>8 <ef g> | 
   <f bf>8 q q <f c'> <f bf> <ef g> %\break
   
   <d f>8 <ef g> | <f bf>8 <f c'> <f bf> <ef g> <d f>4 
@@ -276,6 +276,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {

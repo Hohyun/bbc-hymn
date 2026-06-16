@@ -2,6 +2,8 @@
 
 \include "./hymn_init.ly"
 
+\language "english"
+
 % Hymn Info
 korTitle = "상하셨네 상하셨네"
 engTitle = "Wounded for Me"
@@ -12,7 +14,7 @@ bibleInfo = "벧전 2:24-25"
 oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
-  \key ees \major
+  \key ef \major
   \time 3/4
   \tempo 4 = 80
   \set Score.tempoHideNote = ##t
@@ -21,94 +23,94 @@ global = {
 
 soprano = \relative c'' {
   \global
-  bes4 a bes |
+  bf4 a bf |
   c2. |
-  bes4 aes d, |
-  ees2. \breathe |
-  ees4  g bes |
-  ees2 \break
+  bf4 af d, |
+  ef2. \breathe |
+  ef4  g bf |
+  ef2 \break
   
-  d8 ees |
+  d8 ef |
   d4 d c | 
-  bes2. \breathe |
-  ees4 d c |
-  bes4 aes g | \break
+  bf2. \breathe |
+  ef4 d c |
+  bf4 af g | \break
   
   f4 e f |
-  aes2. \breathe |
-  ees'4. d8 c4 |
-  bes4 aes g |
-  f4 ees d |
-  ees2. \bar "|." |
+  af2. \breathe |
+  ef'4. d8 c4 |
+  bf4 af g |
+  f4 ef d |
+  ef2. \bar "|." |
 }
 
 alto = \relative c' {
   \global
-  ees4 ees ees |
-  ees 2. |
-  d4 d bes |
-  bes2. |
-  bes4 ees f |
-  ees2 
+  ef4 ef ef |
+  ef 2. |
+  d4 d bf |
+  bf2. |
+  bf4 ef f |
+  ef2 
   
   f8 g |
   f4 f f |
   f2. |
-  g4 bes aes |
-  g4 f ees |
+  g4 bf af |
+  g4 f ef |
   c4 c c |
   f2. |
-  fis4. fis8 fis4 |
-  g4 f ees |
-  c4 bes bes |
-  bes2. |
+  fs4. fs8 fs4 |
+  g4 f ef |
+  c4 bf bf |
+  bf2. |
 }
 
 tenor = \relative c' {
   \global
-  g4 fis g |
-  aes2. |
-  f4 bes aes |
+  g4 fs g |
+  af2. |
+  f4 bf af |
   g2.  \breathe |
-  g4 bes bes |
+  g4 bf bf |
   g2
   
-  bes8 bes  |
-  a4 a ees' |
+  bf8 bf  |
+  a4 a ef' |
   d2. \breathe |
-  bes4 c d  |
-  ees4 bes bes |
+  bf4 c d  |
+  ef4 bf bf |
   
-  aes4 bes aes |
+  af4 bf af |
   c2. \breathe |
-  c4. d8 ees4  |
-  ees4 bes bes |
-  aes4 g aes   |
+  c4. d8 ef4  |
+  ef4 bf bf |
+  af4 g af   |
   g2. |
   
 }
 
 bass = \relative c {
   \global
-  ees4 ees ees |
-  aes,2. |
-  bes4 bes bes |
-  ees2.  |
-  ees4 ees d |
+  ef4 ef ef |
+  af,2. |
+  bf4 bf bf |
+  ef2.  |
+  ef4 ef d |
   c2 
   
   c8 c |
   f4 f f |
-  bes2.  |
-  ees,4 ees ees |
-  ees4 d ees |
+  bf2.  |
+  ef,4 ef ef |
+  ef4 d ef |
   
   s4 g f |
-  aes2. |
+  af2. |
   a4. a8 a4 |
-  bes4 d, ees |
-  aes,4 bes bes |
-  ees2. |
+  bf4 d, ef |
+  af,4 bf bf |
+  ef2. |
 }
 
 verseOne = \lyricmode {
@@ -220,6 +222,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}

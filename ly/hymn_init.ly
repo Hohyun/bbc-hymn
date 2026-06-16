@@ -4,6 +4,7 @@
 
 \paper {
    #(set-paper-size '(cons (* 155 mm) (* 220 mm)))
+   top-margin = 5\mm
    print-all-headers = ##t
    print-page-number = ##f
    %print-first-page-number = ##t
@@ -21,7 +22,7 @@ hymnOddScoreTitleMarkup = \markup {
     \fill-line { 
       ""
       \center-column { 
-        \huge \larger \larger \bold \fromproperty #'header:title
+        \huge \larger \larger \larger \bold \fromproperty #'header:title
         \smallCaps \fromproperty #'header:subtitle
       }
       { \number \fontsize #5 \fromproperty #'header:opus }
@@ -41,7 +42,7 @@ hymnEvenScoreTitleMarkup = \markup {
     \fill-line { 
       { \number \fontsize #5 \fromproperty #'header:opus }
       \center-column { 
-        \huge \larger \larger \bold \fromproperty #'header:title
+        \huge \larger \larger \larger \bold \fromproperty #'header:title
         \smallCaps \fromproperty #'header:subtitle
       }
       ""

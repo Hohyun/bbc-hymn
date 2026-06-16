@@ -28,33 +28,33 @@ soprano = \fixed c' {
    af8 bf af f4 df8 |
    ef8 f4( 4.) |
    gf8 af bf df'4 8 |
-   af4.( <f af>4) b8\rest | \break
+   af4.( <f af>4) b8\rest | %\break
    
    <f af>8 <ef gf> <d f> bf4 f8 |
    af8 gf4( 4.) |
    gf8 f ef af4 8 |
-   f4.( 4) af8 | \break
+   f4.( 4) af8 | %\break
    
    <f df'>4 <ef c'>8 ef'8[ <f df'>] <df f> |
    af8 4( 4) 8 |
    <f df'>4 <ef c'>8 \stemDown <gf ef'> \stemUp <f df'> <f af> |
-   bf4.( 4) 8 | \break
+   bf4.( 4) 8 | %\break
    
    <ef c'>4 q8 c'8[ bf] <ef c'> |
    df' af4( 4) f16 16 |
    af4 bf8 af4 bf8 |
-   af4.( 4) 8 | \break
+   af4.( 4) 8 | %\break
    
    df'4 8 4 8 |
    8 df4( 4) 16 16 |
    af4 f8 8 ef4 |
    df4.( 4) \break
    
-   <f af>8 |
+   <f af>8^\markup "(후렴)" |
    af4 <gf c'>8 \stemDown <gf ef'>4 \stemUp af8 |
    <f af>8 df'4( 4) <f af>8 |
    af4 <gf c'>8 \stemDown <gf ef'>4 \stemUp af8 |
-   f'4.( 4) \break
+   f'4.( 4) %\break
    
    <f df'>16 q |
    q4 q8 q4 q8 |
@@ -105,6 +105,42 @@ alto = \fixed c' {
 
 aligner = \fixed c {
   \global
+  af8 bf af f4 df8 |
+  ef8 f4( 4.) |
+  gf8 af bf df'4 8 |
+  af4.( <f af>4) b8\rest | 
+   
+  <f af>8 <ef gf> <d f> bf4 f8 |
+  af8 gf4( 4.) |
+  gf8 f ef af4 8 |
+  f4.( 4) af8 | 
+   
+  <f df'>4 <ef c'>8 ef'8[ <f df'>] <df f> |
+  af8 4 4 8 |
+  <f df'>4 <ef c'>8 <gf ef'> <f df'> <f af> |
+  bf4.( 4) 8 | 
+   
+  <ef c'>4 q8 c'8 bf <ef c'> |
+  df' af4( 4) f16 16 |
+  af4 bf8 af4 bf8 |
+  af4.( 4) 8 | 
+   
+  df'4 8 4 8 |
+  8 df4( 4) 16 16 |
+  af4 f8 8 ef4 |
+  df4.( 4) 
+   
+  <f af>8 |
+  af4 <gf c'>8 <gf ef'>4 af8 |
+  <f af>8 df'4( 4) <f af>8 |
+  af4 <gf c'>8 <gf ef'>4 af8 |
+  f'4.( 4) 
+   
+  <f df'>16 q |
+  q4 q8 q4 q8 |
+  <df df'>8 df4( 4) 16 16 |
+  <df af>4 <df f>8 <c f> <c ef>4 |
+  <af, df>4.^(_( 4^)_) b8\rest
 }
 
 tenor = \fixed c {
@@ -153,46 +189,58 @@ bass = \fixed c {
   <bf, gf>4. <bff, gf> |
   af,4.( 4.) |
   df4.( 4)
+  
+  <df df'>8 |
+  <af c'>4 <af ef'>8 <af c'>4 q8 |
+  <df df'> <df af> <df bf> <df af>16 q8. <df df'>8 |
+  <ef c'>4 <af ef'>8 <af, c'>4 <af c'>8 |
+  <df df'>4 q8 q4
+  
+  <df af>16 q |
+  <cf af>4 q8 q4 q8 |
+  <bf, gf>8 q4^(_( <bff, gf>^)_) q16 q |
+  \stemUp <af, f>4 \stemDown <af, af>8 q <af, gf>4 |
+  <df f>4.^(_( q4^)_) d8\rest |
 }
 
 verseOne = \lyricmode {
   \set stanza = "1."
-  어 려 운 일 당 할 때 
-  왜 실 망 느 끼 나
-  영 원 한 집 그 리 며
-  외 로 워 하 느 냐
+  어 려 운 일 당 할 때 __
+  왜 실 망 느 끼 나 __
+  영 원 한 집 그 리 며 __
+  외 로 워 하 느 냐 __
   주 님 은 나 "-" 의 구 주
-  주 님 은 나 의 친 구
+  주 님 은 나 의 친 구 __
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2."
-  주 의 음 성 들 을 때
-  너 근 심 말 아 라
-  영 원 한 평 안 줄 때
-  두 려 움 없 으 리
+  주 의 음 성 들 을 때 __
+  너 근 심 말 아 라 __
+  영 원 한 평 안 줄 때 __
+  두 려 움 없 으 리 __
   주 님 은 나 "-" 의 등 불
-  주 님 은 나 "-" 의 길
+  주 님 은 나 "-" 의 길 __
 
-  참 새 돌 보 시 는 주
-  나 를 늘 돌 보 시 네
-  참 새 돌 보 시 는 주
-  나 를 늘 돌 보 시 네
+  참 새 돌 보 "-" 시 는 주 __
+  나 를 늘 돌 보 시 네 __
+  참 새 돌 보 시 는 주 __
+  나 를 늘 돌 보 시 네 __
 
-  나 는 참 행 복 하 다
-  나 는 참 기 쁘 다
-  참 새 돌 보 시 는 주 님
-  나 를 늘 돌 보 시 네
+  나 는 참 행 복 하 다 __
+  나 는 참 기 쁘 다 __
+  참 새 돌 보 시 는 주 님 __
+  나 를 늘 돌 보 시 네 __
 }
 
 verseThree = \lyricmode {
   \set stanza = "3."
-  검 은 구 름 일 때 에
-  왜 시 험 받 느 냐
-  의 지 할 자 가 없 어
-  절 망 에 빠 질 때
+  검 은 구 름 일 때 에 __
+  왜 시 험 받 느 냐 __
+  의 지 할 자 가 없 어 __
+  절 망 에 빠 질 때 __
   주 님 이 나 를 이 끄 사
-  참 평 안 주 "-" 셨 네
+  참 평 안 주 "-" 셨 네 __
 }
 
 verseFour = \lyricmode {
@@ -312,9 +360,9 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    %page-breaking = #ly:minimal-breaking
+    page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##t

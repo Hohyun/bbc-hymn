@@ -1,6 +1,7 @@
 \version "2.24.0"
 
 \include "./hymn_init.ly"
+\language "english"
 
 % Hymn Info
 korTitle = "내 영혼 구하려"
@@ -32,8 +33,8 @@ soprano = \relative c'' {
     \new Voice {
       \voiceTwo
       \autoBeamOff 
-      g8. g16 g8 fis4.   |
-      g8. g16 g8 g8. fis16 g8 |
+      g8. g16 g8 fs4.   |
+      g8. g16 g8 g8. fs16 g8 |
     }
   >> 
   
@@ -45,20 +46,20 @@ soprano = \relative c'' {
   % temporary polyphonic passage
   << 
     { \voiceOne 
-      d,8^\markup{"(후렴)"} fis a d4 c8 |
+      d,8^\markup{"(후렴)"} fs a d4 c8 |
       b4.( g4) s8 |
-      d8 fis a c4 e8 |
+      d8 fs a c4 e8 |
       d4.( b4) b8\rest | %\break
       d8.^\fermata c16 b8 b8. a16 g8 |
     }
     \new Voice {
       \voiceTwo
       \autoBeamOff 
-      d8 d fis fis4 r8 |
+      d8 d fs fs4 r8 |
       g8 d d b4 r8 |
-      d8 d fis fis4 r8 |
+      d8 d fs fs4 r8 |
       g8 g g g4 s8 |
-      g8. g16 g8 g8. fis16 g8 |
+      g8. g16 g8 g8. fs16 g8 |
     }
   >> 
   
@@ -69,7 +70,7 @@ soprano = \relative c'' {
 
 alto = \relative c'' {
   \global
-  g8. g16 g8 g fis s |
+  g8. g16 g8 g fs s |
   e8. e16 c8 c4.   |
   b8. d16 d8 d d g | 
 
@@ -97,15 +98,15 @@ tenor = \relative c {
   c8. g16 g8 g4.   |
   g8. b16 b8 b c d |
   
-  cis8. cis16 cis8 d4.  |
+  cs8. cs16 cs8 d4.  |
   b8. e16 d8 d8. c16 b8 |
   c8 g g g4.   |
-  g8 b g fis4 g8 |
+  g8 b g fs4 g8 |
   
   g4.~ g4 r8 |
-  fis8 a a a4 r8 |
+  fs8 a a a4 r8 |
   g8 g g g4   r8 |
-  fis8 a a a4 r8 |
+  fs8 a a a4 r8 |
   b8 b b   d4 r8 |
   
   b8._\fermata e16 d8 d8. c16 b8 |
@@ -192,7 +193,7 @@ myChords = \chordmode {
   
   \paper {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##t
     ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
@@ -258,6 +259,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {}
