@@ -34,7 +34,7 @@ soprano = \fixed c' {
   ef4. 8 g bf |
   af4. c'8 bf af |
   g ef g4 f |
-  ef4.\fermata \break
+  ef4.\fermata %\break
   
   ef8^\markup "(후렴)" 8 8 |
   ef'4. c'8 ef' c' |
@@ -131,12 +131,6 @@ verseOne = \lyricmode {
   그 는 참 하 나 님 이 라
   네 모 든 생 사 화 복 을
   손 안 에 쥐 고 계 시 네
-
-  조 용 히 예 수 님 보 라
-  그 는 참 하 나 님 이 라
-  네 맘 에 깊 은 근 심 도
-  아 시 는 분 주 하 나 님
-  그 는 참 하 나 님 이 라
 }
 
 verseTwo = \lyricmode {
@@ -145,6 +139,12 @@ verseTwo = \lyricmode {
   가 는 길 들 험 하 여 도
   하 나 님 친 히 보 살 펴
   네 앞 길 인 도 하 시 네
+  
+  조 용 히 예 수 님 보 라
+  그 는 참 하 나 님 이 라
+  네 맘 에 깊 은 근 심 도
+  아 시 는 분 주 하 나 님
+  그 는 참 하 나 님 이 라
 }
 
 verseThree = \lyricmode {
@@ -169,11 +169,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    %page-breaking = #ly:one-page-breaking
+    top-margin = 4\mm
+    bottom-margin = 2\mm    
+    page-breaking = #ly:one-page-breaking
     system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    ragged-bottom = ##f
+    ragged-bottom = ##t
     ragged-last-bottom = ##t
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part

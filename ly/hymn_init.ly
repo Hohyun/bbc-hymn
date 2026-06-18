@@ -4,7 +4,8 @@
 
 \paper {
    #(set-paper-size '(cons (* 155 mm) (* 220 mm)))
-   top-margin = 5\mm
+   top-margin = 7\mm
+   bottom-margin = 7\mm
    print-all-headers = ##t
    print-page-number = ##f
    %print-first-page-number = ##t

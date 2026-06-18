@@ -59,12 +59,12 @@ soprano = \fixed c' {
   <d bf>4 <f a> <ef g> <d f> <cs e> <d f> |
   <ef g>2.^(_( <f g>^)_) \breathe |
   <e c'>4 <e bf> <e a> <e g> <ds fs> <e g> |
-  <f a>2.^(_( <g a>^)_) \breathe | \break
+  <f a>2.^(_( <g a>^)_) \breathe | %\break
   
   <fs d'>4 <fs c'> <fs bf> <fs a> <es gs> <fs a> |
   <d bf>2.^(_( <ef bf>^)_) \breathe |
   <f d'>4 q q <ef c'>^(_( q^)_) q |
-  bf2.( 2.) | \break
+  bf2.( 2.) | %\break
   
   <f, f>2.^\markup "(후렴)" <g, g>2 q4 |
   q2.^(_( q^)_) \breathe |
@@ -185,9 +185,9 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    ragged-bottom = ##f
+    ragged-bottom = ##t
     ragged-last-bottom = ##t
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
@@ -261,6 +261,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {

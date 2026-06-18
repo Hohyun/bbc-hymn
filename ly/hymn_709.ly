@@ -123,11 +123,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
+    top-margin = 7\mm
+    bottom-margin = 3\mm    
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -202,6 +204,7 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
+        \override LyricText.font-series = #'bold
       }
     }
     \midi {

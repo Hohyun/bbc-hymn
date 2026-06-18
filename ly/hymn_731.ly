@@ -2,6 +2,8 @@
 
 \include "./hymn_init.ly"
 
+\language "english"
+
 % Hymn Info
 korTitle = "나는 반석 위에 서있네"
 engTitle = "Build on the Rock"
@@ -49,7 +51,7 @@ alto = \relative c' {
 \global
 f4 |
 f8. f16 f8. f16 f4  e8. e16 |
-d4 bes s2 |
+d4 bf s2 |
 c8. c16 c8. c16 f4 f |
 f4 e2 e4 |
 f4 f f e8. e16 |
@@ -60,11 +62,11 @@ c2.
 % Chorus
 f4 |
 f4 f8. f16 f4 e8. e16 |
-d4 bes s4. s8 |
+d4 bf s4. s8 |
 c8. c16 c8. c16 f4. f8 |
 f4 f e e |
 f4 f8. f16  f4 e8. e16 |
-d4 bes s2 |
+d4 bf s2 |
 c8. c16 d8. d16 f4 e |
 c2. 
 }
@@ -72,25 +74,25 @@ c2.
 tenor = \relative c {
 \global
 a'4 |
-c8. c16 c8. c16 c4 bes8. bes16 |
-a4 bes a2 |
-a8. a16 a8. bes16 c4 c |
+c8. c16 c8. c16 c4 bf8. bf16 |
+a4 bf a2 |
+a8. a16 a8. bf16 c4 c |
 c4 c2 c4 |
-c4 c c bes8. bes16 |
-a8. a16 bes8. bes16 a2 |
-f8. f16 f8. f16 c'4 bes |
+c4 c c bf8. bf16 |
+a8. a16 bf8. bf16 a2 |
+f8. f16 f8. f16 c'4 bf |
 a2.
 
 
 % Chorus
 a4_\fermata |
-c4 c8. c16 c4 bes8. bes16 |
-a4 bes a4. a8 |
+c4 c8. c16 c4 bf8. bf16 |
+a4 bf a4. a8 |
 a8. a16 a8. a16 c4. c8 |
 c4 c c_\fermata c |
-c4 c8. c16 c4 bes8. bes16 |
-a4 bes a2 |
-f8. f16 f8. f16 c'4 bes |
+c4 c8. c16 c4 bf8. bf16 |
+a4 bf a2 |
+f8. f16 f8. f16 c'4 bf |
 a2.
 }
 
@@ -98,23 +100,23 @@ bass = \relative c {
 \global
 f4 |
 f8. f16 f8. f16 f4 c8. c16 |
-d4 bes4 f'2 |
+d4 bf4 f'2 |
 f8. f16 f8. f16 f4 f |
 c4 c2 c4 |
 f4 f f c8. c16 |
-d8. d16 bes8. bes16 f2 |
-a8. a16 bes8. bes16 c4 c |
+d8. d16 bf8. bf16 f2 |
+a8. a16 bf8. bf16 c4 c |
 f2.
 
 % Chorus
 f4 |
 f4 f8. f16 f4 c8. c16 |
-d4 bes f'4. f8 |
+d4 bf f'4. f8 |
 f8. f16 f8. f16 f4. f8 |
 f4 f c c |
 f4 f8. f16 f4 c8. c16 |
-d4 bes f'2 |
-a,8. a16 bes8. bes16 c4 c |
+d4 bf f'2 |
+a,8. a16 bf8. bf16 c4 c |
 f2. 
 }
 
@@ -158,9 +160,11 @@ verseFour = \lyricmode {
 \bookpart {
   
   \paper {
+    %page-breaking = #ly:one-page-breaking
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-%     ragged-bottom = ##f
-%     ragged-last-bottom = ##t
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
   }
   \header {
     tagline = ##f

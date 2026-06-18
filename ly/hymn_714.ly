@@ -36,7 +36,9 @@ soprano = \fixed c' {
   
   <fs a>4 \breathe <fs c'> |
   <fs a>2^(_( q8^)_) <fs c'> <fs b> <fs a> |
-  <d g>2. \bar "||" <d g>4^\markup "(후렴)" |
+  <d g>2. \bar "||" \break
+  
+  <d g>4^\markup "(후렴)" |
   <fs a>8 q q <fs b> <fs c'>4 <fs d'>8. <fs c'>16 | %\break
   
   <g b>8 q q <fs c'> <g d'>4 \breathe q |
@@ -146,7 +148,7 @@ myChords = \chordmode {
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -220,8 +222,6 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
-        %\override LyricText.font-name = "빛고을광주"
-        \override LyricText.font-name = "NanumSquare"
         \override LyricText.font-series = #'bold
       }
     }

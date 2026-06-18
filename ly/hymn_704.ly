@@ -50,7 +50,7 @@ soprano = \relative c'' {
   bf4( af) bf |
   af2. \breathe | %\break
   
-  ef'2 ef4 |
+  ef'2^\markup "(후렴)" ef4 |
   ef4( df) c |
   df2 df4 |
   df4( c) bf |

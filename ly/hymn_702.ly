@@ -23,7 +23,7 @@ soprano = \relative c'' {
   \global
   d8. c16 b8 b a g |
   a8. g16 e8 e4.   |
-  d8. g16 g8 g a b | %\break
+  d8. g16 g8 g a b | \break
 
   << 
     { \voiceOne 
@@ -39,7 +39,7 @@ soprano = \relative c'' {
   >> 
   
   a8 g e e4.   |
-  d8 g b a4 g8 | %\break
+  d8 g b a4 g8 | \break
   
   g4.~ g4 b8\rest |
   
@@ -49,7 +49,7 @@ soprano = \relative c'' {
       d,8^\markup{"(후렴)"} fs a d4 c8 |
       b4.( g4) s8 |
       d8 fs a c4 e8 |
-      d4.( b4) b8\rest | %\break
+      d4.( b4) b8\rest | \break
       d8.^\fermata c16 b8 b8. a16 g8 |
     }
     \new Voice {
@@ -192,8 +192,10 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
+    top-margin = 7\mm
+    bottom-margin = 7\mm     
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##t
     ragged-last-bottom = ##f
     oddFooterMarkup = \markup {

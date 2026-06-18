@@ -11,7 +11,7 @@ hymnNumber = "711"
 poet = "Geo. H. Carr"
 composer = "Geo. H. Carr"
 bibleInfo = "엡 6:13-15"
-oneOrTwo = #1  % odd page: 1, even page: 2
+oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
   \key df \major
@@ -262,11 +262,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
+    top-margin = 6\mm
+    bottom-margin = 4\mm    
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

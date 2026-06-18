@@ -36,7 +36,9 @@ soprano = \fixed c' {
   
   ef8 | 
   <df f>4 <f df'> <ef g>4. <ef af>8 |
-  <ef af>2. b8\rest \bar "||" <c ef>8^\markup "(후렴)" | 
+  <ef af>2. b8\rest \bar "||" \break 
+  
+  <c ef>8^\markup "(후렴)" | 
   ef8 <g df'>8 q8. q16 q4. %\break
   
   ef8 | <c ef>8 <ef c'> q8. q16 q4. q8 |
@@ -143,11 +145,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
+    top-margin = 7\mm
+    bottom-margin = 7\mm
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -221,7 +225,6 @@ myChords = \chordmode {
         % Adjusting font size to fit 4 verses comfortably
         %\override LyricText.font-size = #-1
         %\override LyricText.font-family = #'serif
-        \override LyricText.font-name = "NanumSquare"
         \override LyricText.font-series = #'bold
       }
     }
