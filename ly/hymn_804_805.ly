@@ -28,27 +28,27 @@ soprano = \fixed c' {
   <c e>8. q16 q8. <d f>16 <e g>4 <c e> |
   <e c'>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
   <d f>8. q16 <f a>8. q16 <d f>4 d |
-  <f b>8. <f a>16 < e g>8. <d f>16 <c e>2 \breathe | %\break
+  <f b>8. <f a>16 < e g>8. <d f>16 <c e>2 \breathe | \break
   
   <e c'>8. q16 q8. q16 q4 <e g> |
   <f a>8. <a c'>16 <g b>8. <f a>16 <e g>2 \breathe |
   \stemDown <g e'>8. q16 q8. <g d'>16 <a c'>4 \stemUp <f a> |
-  <e g>8. <e c'>16 <d b>8. <f d'>16 <e c'>2 \breathe | %\break
+  <e g>8. <e c'>16 <d b>8. <f d'>16 <e c'>2 \breathe | \break
   
   <e g>2.^\markup "(후렴)" <d f>8. <f a>16  |
   <e g>2. b4\rest |
   <f b>2 ^(_( q8.^)_) g16 <f a>8. <f b>16 |
-  c'2. b4\rest | %\break
+  c'2. b4\rest | \break
   
   <a c'>2^(_( q8.^)_) q16 <g b>8. <f a>16 |
   <e g>2 <c e> \breathe |
   <fs d'>2^(_( q8.^)_) <a c'>16 <g b>8. <fs a>16 |
-  g2( 4) b4\rest | %\break
+  g2( 4) b4\rest | \break
   
   <e g>2^(_( q8.^)_) q16 <f a>8. <e g>16 |
   <c e>2 <e g> \breathe |
   <f a>2^(_( q8.^)_) <a c'>16 <g b>8. <f a>16 |
-  \stemDown <g e'>2. \stemUp b4\rest | %\break
+  \stemDown <g e'>2. \stemUp b4\rest | \break
   
   <e g>2^(_( q8.^)_) <g e'>16 <g d'>8. <g c'>16 |
   <a c'>2 <f a> |
@@ -327,9 +327,12 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
+    top-margin = 7\mm
+    bottom-margin = 7\mm        
+    %page-count = #2
     %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    system-system-spacing = #'((basic-distance . 0.1) (padding . 0) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##t

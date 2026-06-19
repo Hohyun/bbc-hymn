@@ -210,6 +210,7 @@ myChords = \chordmode {
      scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
      ragged-bottom = ##f
      ragged-last-bottom = ##f
+     last-bottom-spacing.padding = #0
   }
   \header {
     tagline = ##f

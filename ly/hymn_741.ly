@@ -139,6 +139,7 @@ myChords = \chordmode {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##t
+    last-bottom-spacing.padding = #0
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

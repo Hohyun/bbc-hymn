@@ -8,10 +8,12 @@
    bottom-margin = 7\mm
    print-all-headers = ##t
    print-page-number = ##f
+   
    %print-first-page-number = ##t
    %ragged-bottom = ##f
    %ragged-last-bottom = ##f
    % page-breaking = #ly:one-page-breaking
+   last-bottom-spacing.padding = #2
    
    %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
    %#(define fonts (make-pango-font-tree "NamumSquare" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))

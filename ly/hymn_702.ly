@@ -192,12 +192,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 7\mm
-    bottom-margin = 7\mm     
+    top-margin = 2\mm
+    bottom-margin = 2\mm     
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##t
     ragged-last-bottom = ##f
+    last-bottom-spacing.padding = #0
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
