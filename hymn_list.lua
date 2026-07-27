@@ -44,6 +44,28 @@ end
 local pdfs = list_pdf_files() -- lists ./ly by default
 print("\\includepdfmerge{")
 for i, path in ipairs(pdfs) do
-    print("  " .. path .. (i < #pdfs and "," or ""))
+    -- 1. Remove the tailing ".pdf" from the path
+    -- 2. Split the remaining path by "__" to get the last part which is the number of pages if it exeed 1 page.
+    -- 3. Save the last page number if it exists, otherwise save 1.
+    local base = path:gsub("%.pdf$", "")
+    local parts = {}
+    for part in base:gmatch("[^/]+") do
+        table.insert(parts, part)
+    end
+    local last_part = parts[#parts]
+    local page_count = 1
+    if last_part:find("__") then
+        local page_info = last_part:match("__(%d+)$")
+        if page_info then
+            page_count = tonumber(page_info)
+        end
+    end
+    -- Print the path and page count if greater than 1
+    if page_count > 1 then
+        print("  " .. path .. ", 1-" .. page_count .. (i < #pdfs and "," or ""))
+    else    
+        print("  " .. path .. (i < #pdfs and "," or ""))
+    end 
+    -- print("  " .. path .. (i < #pdfs and "," or ""))
 end
 print("}")
