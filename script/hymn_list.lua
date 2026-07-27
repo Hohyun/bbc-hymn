@@ -3,7 +3,7 @@
 -- Returns a sorted list (array) of PDF file paths inside `dir` (non-recursive).
 -- Defaults to "./ly" if dir is not provided.
 local function list_pdf_files(dir)
-    dir = dir or "./ly"
+    dir = dir or "../ly"
     local results = {}
 
     -- Try using LuaFileSystem if available

@@ -3,5 +3,6 @@
 *.midi
 *.mid
 *.log
+*.out
 *~
 *lilypond-tmp*
