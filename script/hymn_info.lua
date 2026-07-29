@@ -1,6 +1,6 @@
 local sqlite3 = require("lsqlite3")
 
-local db = sqlite3.open("./bbc-hymn-meta_data.db")
+local db = sqlite3.open("../bbc-hymn-meta_data.db")
 
 local function k_word_range(phrase)
     if phrase <= "가" then
@@ -91,6 +91,25 @@ local function e_word_range(phrase)
     end
 end
 
+-- Korean First Phrase Order
+current_range = nil
+print("\\section*{가사 차례}")
+print("\\begin{supertabular}{c l}")
+for row in db:nrows("SELECT * FROM metadata ORDER BY first_phrase") do
+    local key = string.gsub(row.key_signature, " Maj", "")
+    if current_range ~= k_word_range(row.first_phrase) then
+        if current_range ~= nil then
+            print(" & \\\\")
+        end
+        current_range = k_word_range(row.first_phrase)
+        print(string.format("\\textbf{%3d} & \\textbf{%s} \\textbf{(%s)} \\\\", row.hymn_no, row.first_phrase, key))
+    else
+        print(string.format("%3d & %s (%s) \\\\", row.hymn_no, row.first_phrase, key))
+    end
+end
+print("\\end{supertabular}")
+print("\\clearpage\n\n")
+
 -- Korean Title Order
 local current_range = nil
 print("\\section*{제목 차례}")
@@ -111,21 +130,31 @@ end
 print("\\end{supertabular}")
 print("\\clearpage\n\n")
 
--- Korean First Phrase Order
-current_range = nil
-print("\\section*{가사 차례}")
+-- Category, SubCategory, Korean Title Order
+local current_category = nil
+local current_sub_category = nil
+print("\\section*{분류별 제목 차례}")
+
 print("\\begin{supertabular}{c l}")
-for row in db:nrows("SELECT * FROM metadata ORDER BY first_phrase") do
+for row in db:nrows("SELECT * FROM metadata ORDER BY category, sub_category, title_k") do
     local key = string.gsub(row.key_signature, " Maj", "")
-    if current_range ~= k_word_range(row.first_phrase) then
-        if current_range ~= nil then
+    if  row.category ~= current_category then
+        if current_category ~= nil then
             print(" & \\\\")
         end
-        current_range = k_word_range(row.first_phrase)
-        print(string.format("\\textbf{%3d} & \\textbf{%s} \\textbf{(%s)} \\\\", row.hymn_no, row.first_phrase, key))
-    else
-        print(string.format("%3d & %s (%s) \\\\", row.hymn_no, row.first_phrase, key))
+        print("\\multicolumn{2}{l}{\\textbf{\\large " .. row.category .. "}} \\\\")
     end
+    
+    if row.sub_category ~= "" and row.sub_category ~= current_sub_category then
+        -- if current_sub_category ~= nil then
+        --     print(" & \\\\")
+        -- end
+        print("\\multicolumn{2}{l}{\\textbf{" .. row.sub_category .. "}} \\\\")
+    end
+    
+    print(string.format("%3d & %s (%s) \\\\", row.hymn_no, row.title_k, key))
+    current_category = row.category
+    current_sub_category = row.sub_category
 end
 print("\\end{supertabular}")
 print("\\clearpage\n\n")
