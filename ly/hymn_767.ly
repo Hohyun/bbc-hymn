@@ -39,11 +39,11 @@ soprano = \fixed c' {
   
   d'8.^\markup "(후렴)" 16 |
   d'2^( 8.)  s16 <g d'>8. <d b>16 |
-  <d g>8 <d b>4.^(_( q4^)_) \breathe d'8. 16 \break
+  <d g>8 <d b>4.^(_( q4^)_) \breathe d'8. 16 %\break
   
   d'2^( 8.) s16 <g d'>8. <g b>16 |
   <fs a>2. \breathe <fs d'>8. q16 |
-  d'2^( \break
+  d'2^( %\break
   
   8.) s16 <g d'>8. <d b>16 |
   <d g>8 <d b>4.^(_( q4^)_) \breathe <e c'>8. q16 |
@@ -196,7 +196,7 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    %page-breaking = #ly:one-page-breaking
+    page-breaking = #ly:one-page-breaking
     system-system-spacing = #'((basic-distance . 0.1) (padding . 0.2) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)

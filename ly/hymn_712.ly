@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+}
+
 % Hymn Info
 korTitle = "온 세상에 충만한 말씀"
 engTitle = "An Open Bible for the World"
@@ -120,7 +126,7 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f

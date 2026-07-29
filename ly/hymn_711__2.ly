@@ -59,17 +59,17 @@ aligner = \fixed c' {
   <f af>4 <f df'> <gf df'> <gf ef'> | 
   <f df'>2.
  
-  af8. <ef af>16 |
-  <f df'>4 <gf ef'>4 <af f'> <af df'>8. q16 |
-  <gf ef'>4 <af f'> <bf gf'> <af f'>8. <gf ef'> 16 |
-  <gf ef'>4 q <gf ef'>4 q |
-  <f df'>2.
+%   af8. <ef af>16 |
+%   <f df'>4 <gf ef'>4 <af f'> <af df'>8. q16 |
+%   <gf ef'>4 <af f'> <bf gf'> <af f'>8. <gf ef'> 16 |
+%   <gf ef'>4 q <gf ef'>4 q |
+%   <f df'>2.
   
-  af8. <ef af>16 |
-  <f df'>4 <gf ef'> <af f'> <af df'>8. 16 |
-  <gf ef'>4 <af f'> <bf gf'>  <af f'>8. <gf ef'>16 |
-  <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16  |
-  <f df'>2.
+%   af8. <ef af>16 |
+%   <f df'>4 <gf ef'> <af f'> <af df'>8. 16 |
+%   <gf ef'>4 <af f'> <bf gf'>  <af f'>8. <gf ef'>16 |
+%   <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16  |
+%   <f df'>2.
 }
   
 soprano = \fixed c' {
@@ -107,19 +107,21 @@ soprano = \fixed c' {
   af4 | f'2 s2 |
   df'2 s4 \breathe <e c'>8. <e bf>16 |
   <f af>4 <f df'> <gf df'> <gf ef'> |
-  <f df'>2. \breathe \break
+  <f df'>2. \breathe  \bar "|."
   
-  af8.^\markup "(생략할 수도 있음)" <ef af>16 |
-  <f df'>4 s2. |
-  s1 |
-  <gf ef'>4 q s2 |
-  <f df'>2.\breathe \break
+  % af8.^\markup "(생략할 수도 있음)" <ef af>16 |
+%   <f df'>4 s2. |
+%   s1 |
+%   <gf ef'>4 q s2 |
+%   <f df'>2.\breathe \break
+%   
+%   af8. <ef af>16 |
+%   <f df'>4 \stemDown <gf ef'> <af f'> <af df'>8. 16 |
+%   <gf ef'>4 <af f'> <bf gf'>\fermata \breathe <af f'>8. <gf ef'>16^\markup "rit" |
+%   <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16 \stemUp |
+%   <f df'>2. 
   
-  af8. <ef af>16 |
-  <f df'>4 \stemDown <gf ef'> <af f'> <af df'>8. 16 |
-  <gf ef'>4 <af f'> <bf gf'>\fermata \breathe <af f'>8. <gf ef'>16^\markup "rit" |
-  <f df' af'>4.. q16 <gf c' af'>4.. <f df'>16 \stemUp |
-  <f df'>2. \bar "|."
+%  \bar "|."
   
   
 }
@@ -137,10 +139,10 @@ alto = \fixed c' {
   af4 | 4 4 <gf ef'>4 q8. <f f'>16 |
   f4 cf' <bf df'>^\fermata s4 | s1 | s2.
   
-  af8. s16 | 
-  s4 <gf ef'>4 <af f'> <af df'>8. q16  |
-  <gf ef'>4 <af f'> <bf gf'>\breathe <af f'>8. <gf ef'> 16|
-  s2 <gf ef'>4 q | s2.
+  % af8. s16 | 
+%   s4 <gf ef'>4 <af f'> <af df'>8. q16  |
+%   <gf ef'>4 <af f'> <bf gf'>\breathe <af f'>8. <gf ef'> 16|
+%   s2 <gf ef'>4 q | s2.
 }
 
 tenor = \fixed c {
@@ -154,8 +156,8 @@ tenor = \fixed c {
   s4 | s2. af4 | s1 | s2. g4 | s2 af4 
   s4 | s1 | s1 | s1 | s2. 
   
-  af8. 16 | s1 | s1 | s1 | s2.
-  af8. 16 | s1 | s1 | s1 | <df af>2.^\fermata
+ %  af8. 16 | s1 | s1 | s1 | s2.
+%   af8. 16 | s1 | s1 | s1 | <df af>2.^\fermata
 }
 
 bass = \fixed c {
@@ -196,17 +198,17 @@ bass = \fixed c {
   <af df'>4 <f af> <ef bf> <af c'> |
   <df df'>2. \breathe
   
-  af8. gf16 |
-  <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
-  <gf bf>4 <f bf> < ef ef'> \breathe <f df'>8. <gf df'>16 |
-  <af df'>4 <f af> <ef bf> <af c'> |
-  <df df'>2. \breathe
+  % af8. gf16 |
+%   <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
+%   <gf bf>4 <f bf> < ef ef'> \breathe <f df'>8. <gf df'>16 |
+%   <af df'>4 <f af> <ef bf> <af c'> |
+%   <df df'>2. \breathe
   
-  af8. gf16 |
-  <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
-  <gf bf>4 <f bf> <ef ef'>\fermata\breathe <f df'>8. <gf df'>16 |
-  <af df'>4.. q16 <af, af ef'>4.. <df af>16 |
-  df8[ bf, af, f,] df,4 \fermata
+%   af8. gf16 |
+%   <f af>4 <ef c'> <bf df'> <f df'>8. q16 |
+%   <gf bf>4 <f bf> <ef ef'>\fermata\breathe <f df'>8. <gf df'>16 |
+%   <af df'>4.. q16 <af, af ef'>4.. <df af>16 |
+%   df8[ bf, af, f,] df,4 \fermata
 }
 
 verseOne = \lyricmode {
@@ -226,10 +228,10 @@ verseOne = \lyricmode {
   그 말 씀 굳 게 믿 고 
   나 의 소 망 삼 겠 네
   
-  생 명 의 말 씀 내 가 믿 고 서
-  거 기 굳 게 서 겠 네
-  능 력 의 말 씀 굳 게 믿 어 서
-  나 의 소 망 삼 겠 네
+%   생 명 의 말 씀 내 가 믿 고 서
+%   거 기 굳 게 서 겠 네
+%   능 력 의 말 씀 굳 게 믿 어 서
+%   나 의 소 망 삼 겠 네
 }
 
 verseTwo = \lyricmode {
@@ -265,7 +267,7 @@ myChords = \chordmode {
     top-margin = 6\mm
     bottom-margin = 4\mm    
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f

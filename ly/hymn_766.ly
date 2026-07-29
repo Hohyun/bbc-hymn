@@ -11,7 +11,7 @@ hymnNumber = "766"
 poet = "Mary E. Maxwell, 20th Centry"
 composer = "Ada Rose Gibbs, 1865~1905"
 bibleInfo = "롬 12:1-4"
-oneOrTwo = #1  % odd page: 1, even page: 2
+oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
   \key a \major
@@ -168,7 +168,7 @@ myChords = \chordmode {
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

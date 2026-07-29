@@ -2,6 +2,24 @@
 
 \include "./hymn_init.ly"
 
+\paper {
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+   print-all-headers = ##t
+   print-page-number = ##f
+   
+   %print-first-page-number = ##t
+   %ragged-bottom = ##f
+   %ragged-last-bottom = ##f
+   % page-breaking = #ly:one-page-breaking
+   last-bottom-spacing.padding = #2
+   
+   %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
+   %#(define fonts (make-pango-font-tree "NamumSquare" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+   #(define fonts (make-pango-font-tree "Gowun Batang" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+}
+
 \language "english"
 
 % Hymn Info
@@ -275,11 +293,11 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

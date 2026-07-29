@@ -4,6 +4,26 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   %#(set-paper-size '(cons (* 201.5 mm) (* 286 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+   print-all-headers = ##t
+   print-page-number = ##f
+   
+   %print-first-page-number = ##t
+   %ragged-bottom = ##f
+   %ragged-last-bottom = ##f
+   % page-breaking = #ly:one-page-breaking
+   last-bottom-spacing.padding = #2
+   
+   %scoreTitleMarkup = #(hymnScoreTitleMarkup hymnNumber)
+   %#(define fonts (make-pango-font-tree "NamumSquare" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+   #(define fonts (make-pango-font-tree "Gowun Batang" "DejaVu Sans Mono" "DejaVu Sans Mono" (/ staff-height pt 20)))
+}
+
+
 % Hymn Info
 korTitle = "주 예수님과 매일 속삼임"
 engTitle = "Just a Little Talk With Jesus"
@@ -202,11 +222,11 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

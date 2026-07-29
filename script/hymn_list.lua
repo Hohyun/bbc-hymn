@@ -3,7 +3,7 @@
 -- Returns a sorted list (array) of PDF file paths inside `dir` (non-recursive).
 -- Defaults to "./ly" if dir is not provided.
 local function list_pdf_files(dir)
-    dir = dir or "../ly"
+    dir = dir or "../pdf"
     local results = {}
 
     -- Try using LuaFileSystem if available
@@ -61,11 +61,16 @@ for i, path in ipairs(pdfs) do
         end
     end
     -- Print the path and page count if greater than 1
+    -- if path include 'template' in the path, then skip it.
+    if path:find("template") then
+        goto continue
+    end
+
     if page_count > 1 then
         print("  " .. path .. ", 1-" .. page_count .. (i < #pdfs and "," or ""))
     else    
         print("  " .. path .. (i < #pdfs and "," or ""))
     end 
-    -- print("  " .. path .. (i < #pdfs and "," or ""))
+    ::continue::  
 end
 print("}")

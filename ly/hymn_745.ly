@@ -10,7 +10,7 @@ engTitle = "There's a Royal Banner"
 hymnNumber = "745"
 poet = "Daniel W. Whittle, 1840~1901"
 composer = "James McGranahan, 1840~1907"
-bibleInfo = "딤후 :3"
+bibleInfo = "딤후 2:3"
 oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {

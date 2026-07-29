@@ -4,6 +4,13 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   %#(set-paper-size '(cons (* 201.5 mm) (* 286 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+}
+
 % Hymn Info
 korTitle = "놀라워라 주님의 사랑"
 engTitle = "And Can It Be That I Should Gain?"
@@ -195,7 +202,7 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f

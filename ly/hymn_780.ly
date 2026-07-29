@@ -184,7 +184,7 @@ myChords = \chordmode {
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
