@@ -4,6 +4,13 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   %#(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "참새를 돌보시는 주님"
@@ -12,7 +19,7 @@ hymnNumber = "814"
 poet = "William K., 1939"
 composer = "Chas. H. Gabriel, 1856~1932"
 bibleInfo = "마 6:25-26"
-oneOrTwo = #2  % odd page: 1, even page: 2
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key df \major
@@ -360,11 +367,11 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 3\mm
-    bottom-margin = 3\mm     
-    page-breaking = #ly:minimal-breaking
+    %top-margin = 3\mm
+    %bottom-margin = 3\mm     
+    %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f

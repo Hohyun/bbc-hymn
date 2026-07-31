@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % Hymn Info
 korTitle = "담대한 주의 군사여"
 engTitle = "There's a Royal Banner"
@@ -163,15 +169,13 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 7\mm
-    bottom-margin = 4\mm    
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f
-    last-bottom-spacing.padding = #0
+    %last-bottom-spacing.padding = #0
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

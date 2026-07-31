@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % Hymn Info
 korTitle = "주가 나의 맘에 기쁨 주시네"
 engTitle = "You May Have the Joy Bells"
@@ -155,10 +161,10 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-   top-margin = 7\mm
-   bottom-margin = 2\mm    
+    %top-margin = 7\mm
+    %bottom-margin = 2\mm    
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f

@@ -12,7 +12,7 @@ hymnNumber = "794"
 poet = "E. M. Bartlett, 1885~1941"
 composer = "E. M. Bartlett, 1885~1941"
 bibleInfo = "골 1:13-15"
-oneOrTwo = #2  % odd page: 1, even page: 2
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key af \major
@@ -296,7 +296,7 @@ myChordsB = \chordmode {
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

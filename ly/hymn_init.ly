@@ -3,7 +3,7 @@
 #(set-global-staff-size 18)
 
 \paper {
-   #(set-paper-size '(cons (* 155 mm) (* 220 mm)))
+   #(set-paper-size '(cons (* 152 mm) (* 225 mm)))
    top-margin = 7\mm
    bottom-margin = 7\mm
    print-all-headers = ##t

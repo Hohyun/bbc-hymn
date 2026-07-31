@@ -3,6 +3,12 @@
 \include "./hymn_init.ly"
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % Hymn Info
 korTitle = "하늘 영광 버리고"
 engTitle = "I Will Sing the Wondrous Story"
@@ -239,9 +245,9 @@ myChords = \chordmode {
   
   \paper {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 30))
-    ragged-bottom = ##t
-    ragged-last-bottom = ##t
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 30))
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    
@@ -308,7 +314,9 @@ myChords = \chordmode {
         \override LyricText.font-series = #'bold
       }
     }
-    \midi {}
+    \midi {
+      \tempo 4 = 90
+    }
   }
 }
 

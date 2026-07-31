@@ -4,6 +4,14 @@
 
 \language "english"
 
+\paper {
+   %#(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   %#(set-paper-size '(cons (* 167.2 mm) (* 247.5 mm)))
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+}
+
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "내게 오라"
@@ -327,15 +335,15 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 7\mm
-    bottom-margin = 7\mm        
+    %top-margin = 7\mm
+    %bottom-margin = 7\mm        
     %page-count = #2
     %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

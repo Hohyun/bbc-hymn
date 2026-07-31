@@ -69,8 +69,16 @@ for i, path in ipairs(pdfs) do
     if page_count > 1 then
         print("  " .. path .. ", 1-" .. page_count .. (i < #pdfs and "," or ""))
     else    
-        print("  " .. path .. (i < #pdfs and "," or ""))
-    end 
+        -- if path include '_L', then print the path with '1' as the page count
+        -- if path include '_R', then print the path with '2' as the page count
+        if path:find("_L") then
+            print("  " .. path .. ", 1" .. (i < #pdfs and "," or ""))
+        elseif path:find("_R") then
+            print("  " .. path .. ", 2" .. (i < #pdfs and "," or ""))
+        else
+            print("  " .. path .. (i < #pdfs and "," or ""))
+        end
+    end
     ::continue::  
 end
 print("}")

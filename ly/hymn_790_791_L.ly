@@ -61,9 +61,9 @@ soprano = \fixed c' {
     \alternative {
       { <fs a>4 <d fs> \breathe <d a> <fs d'> |
         <e cs'>2 <e b> |
-        <e a>2.\fermata }
-      { <fs a>4 \stemDown <a fs'>2\fermata <a d'>8. \stemUp <g b>16 |
-        a2 <g cs'> |
+        <e a>2.\fermata } 
+      { <fs a>4 \stemDown <a fs'>2\fermata <a d'>8. \stemUp <g b>16 %|
+        a2 <g cs'> %|
         <fs d'>2. \bar "|." }
     }
   }
@@ -79,7 +79,9 @@ alto = \fixed c' {
     
     \alternative {
       { s1 | s1 | s2. }
-      { s1 | fs4( e) s2 | s2.}
+      { s1 %| 
+        fs4( e) s2 %| 
+        s2.}
     }
   } 
 }
@@ -122,8 +124,8 @@ aligner = \fixed c' {
       { <fs a>4 <d fs> <d a> <fs d'> |
         <e cs'>2 <e b> |
         <e a>2.\fermata }
-      { <fs a>4 \stemDown <a e'>2\fermata <a d'>8. \stemUp <g b>16 |
-        a2 <g cs'> |
+      { <fs a>4 \stemDown <a e'>2\fermata <a d'>8. \stemUp <g b>16 %|
+        a2 <g cs'> %|
         <fs d'>2. }
     }
   }
@@ -142,7 +144,9 @@ tenor = \fixed c {
     
     \alternative {
       { s1 | s2 gs4( d') | s2. }
-      { s1 | d'4( cs') b( a) | s2.}
+      { s1 %| 
+        d'4( cs') b( a) %| 
+        s2.}
     }
   } 
 }
@@ -186,8 +190,8 @@ bass = \fixed c {
       { <d d'>4 <d a> \breathe <d fs> <d a> | 
         <e a>2 e | 
         <a cs'>2.\fermata }
-      { <d d'>4 q2\fermata q8. q16 | 
-        a2 a, | 
+      { <d d'>4 q2\fermata q8. q16 %| 
+        a2 a, %| 
         <d a>2.}
     }
   } 
@@ -336,7 +340,7 @@ myChordsB = \chordmode {
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

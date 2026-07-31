@@ -12,7 +12,7 @@ hymnNumber = "771"
 poet = "Lucy E. Campbell, 1777~1843"
 composer = "Lucy E. Campbell, 1777~1843"
 bibleInfo = "마 25:21"
-oneOrTwo = #2  % odd page: 1, even page: 2
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key ef \major
@@ -314,7 +314,7 @@ myChordsB = \chordmode {
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

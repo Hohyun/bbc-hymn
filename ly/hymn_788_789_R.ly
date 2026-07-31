@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "주와 동행하는 것이 영광이로다"
@@ -12,7 +18,7 @@ hymnNumber = "788"
 poet = "Avis B.Christiansen, 1895"
 composer = "Haldor Lillenas, 1885~1959"
 bibleInfo = "히 13:4-5"
-oneOrTwo = #2  % odd page: 1, even page: 2
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key c \major
@@ -188,13 +194,13 @@ sopranoB = \fixed c' {
   <e g>2 <c e>4 q2.\breathe |
   d2. <d g>2 <d b>4 |
   <d a>2.^(_( q2^)_) b4\rest |
-  <d b>2. <c a>2 <b, g>4 | %break
+  <d b>2. <c a>2 <b, g>4 | \break
   
   <e g>2 <c e>4 q2. \breathe |
   <b, d>2^(_( <d g>4^)_) <d fs>2 <d a>4 |
   <d g>2.^(_( q2^)_) b4\rest |
   <g d'>2. s2 q4 |
-  q2 <g b>4 <g d'>2. \breathe | %break
+  q2 <g b>4 <g d'>2. \breathe | \break
   
   <g d'>2. s2 q4 |
   <d d'>2 <d b>4 <c a>2. \breathe |

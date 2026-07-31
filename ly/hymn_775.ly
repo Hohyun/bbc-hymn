@@ -11,7 +11,7 @@ hymnNumber = "775"
 poet = "M. J. Cartwright"
 composer = "Daniel B. Towner, 1850~1919"
 bibleInfo = "요 4:35"
-oneOrTwo = #1  % odd page: 1, even page: 2
+oneOrTwo = #2  % odd page: 1, even page: 2
 
 global = {
   \key c \major

@@ -43,7 +43,7 @@ soprano = \fixed c' {
   <e df'>4 <e c'>8. <e bf>16 <e df'>4 <e bf> |
   <f af>2 <e g> \breathe |
   <f af>2 <gf ef'> |
-  <f df'>2. b4\rest | %\break
+  <f df'>2. b4\rest | \break
    
   <df f>8.^\markup "(후렴)" q16 q8. q16 q8. q16 q8. q16 |
   <c gf>8. q16 q8. q16 q4 q \breathe |

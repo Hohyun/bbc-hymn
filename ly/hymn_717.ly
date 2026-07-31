@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % Hymn Info
 korTitle = "거듭나야 한다"
 engTitle = "Ye Must Be Born Again"
@@ -167,8 +173,8 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 7\mm
-    bottom-margin = 7\mm    
+    %top-margin = 7\mm
+    %bottom-margin = 7\mm    
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)

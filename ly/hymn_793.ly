@@ -4,6 +4,13 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
+
 % Hymn Info
 korTitle = "내 죄짐 벗었네"
 engTitle = "My Burdens Rolled Away"
@@ -36,8 +43,8 @@ soprano = \fixed c' {
   
   <c f>4 \breathe q8 q |
   <d g>4 q8 q <c e>8 q d8. <c e>16 |
-  <c f>2. \breathe \bar "||" 
-  \stemDown <a c'>8.^\markup "(후렴)" <bf d'>16 |
+  <c f>2. \breathe \bar "||" \break
+  \stemDown <a c'>8.^\markup "(후렴)" <bf d'>16 | 
   <a c'>2. \stemUp <f a>8. <g bf>16 | %\break
   
   <f a>2. \breathe q8 q |
@@ -155,10 +162,10 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 5\mm
-    bottom-margin = 2\mm        
+    %top-margin = 5\mm
+    %bottom-margin = 2\mm        
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f

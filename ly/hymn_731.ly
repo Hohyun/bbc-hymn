@@ -165,6 +165,14 @@ verseFour = \lyricmode {
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f
+    oddFooterMarkup = \markup {
+      \if \on-first-page-of-part
+      \fill-line {    
+        \smallCaps \smaller \bibleInfo
+        \smallCaps \smaller \engTitle
+      }
+    }
+    evenFooterMarkup = \oddFooterMarkup
   }
   \header {
     tagline = ##f
@@ -219,12 +227,5 @@ verseFour = \lyricmode {
       }
     }
     \midi {}
-  }
-  \noPageBreak
-  \markup {
-    \fill-line {
-      \bibleInfo
-      \smallCaps \smaller \engTitle
-    }
   }
 }

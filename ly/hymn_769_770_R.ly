@@ -14,7 +14,7 @@ hymnNumber = "769"
 poet = "Lelia N. Morris, 1862~1929"
 composer = "Lelia N. Morris, 1862~1929"
 bibleInfo = "엡 6:10-17"
-oneOrTwo = #2  % odd page: 1, even page: 2
+oneOrTwo = #1  % odd page: 1, even page: 2
 
 global = {
   \key bf \major
@@ -317,7 +317,7 @@ myChordsB = \chordmode {
   \paper {
     %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
     ragged-last-bottom = ##f

@@ -4,6 +4,14 @@
 
 \language "english"
 
+
+\paper {
+   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
+
 % Hymn Info
 korTitle = "조용히 예수님 보라"
 engTitle = "Be Still and Know"
@@ -34,7 +42,7 @@ soprano = \fixed c' {
   ef4. 8 g bf |
   af4. c'8 bf af |
   g ef g4 f |
-  ef4.\fermata %\break
+  ef4.\fermata \break
   
   ef8^\markup "(후렴)" 8 8 |
   ef'4. c'8 ef' c' |
@@ -169,14 +177,14 @@ myChords = \chordmode {
 \bookpart {
   
   \paper {
-    top-margin = 4\mm
-    bottom-margin = 2\mm    
-    page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    % top-margin = 4\mm
+%     bottom-margin = 2\mm    
+%     page-breaking = #ly:one-page-breaking
+%     system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     %% tip: adjust pading number and set ragged-last-bottom to ##f to fit one page 
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    ragged-bottom = ##t
-    ragged-last-bottom = ##t
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

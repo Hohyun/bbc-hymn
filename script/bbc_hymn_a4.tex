@@ -1,0 +1,19 @@
+\documentclass[a4paper]{oblivoir}
+\usepackage{fapapersize}
+\usefapapersize{*,*,10mm,*,15mm,*}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pdfpages}
+
+\pagestyle{empty}
+%\renewcommand{\arraystretch}{0.86}
+
+\begin{document}
+
+% \directlua {
+%  os.execute("lua hymn_list.lua  > hymn-list.tex")
+% }
+
+\input{hymn-list.tex}
+
+\end{document}

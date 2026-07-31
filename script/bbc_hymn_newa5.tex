@@ -1,0 +1,19 @@
+\documentclass[stock]{oblivoir}
+\usepackage[stock]{fapapersize}
+\usefastocksize{155mm,220mm}
+\usefapapersize{*,*,10mm,*,15mm,*}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pdfpages}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% \directlua {
+%  os.execute("lua hymn_list.lua  > hymn-list.tex")
+% }
+
+\input{hymn-list.tex}
+
+\end{document}

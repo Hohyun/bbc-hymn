@@ -21,8 +21,13 @@
 3. Generate hymn-list.tex.
    `lua hymn_list.lua > hymn-list.tex`
 
-4. Make final merged pdf file
-   `xelatex hymn_merge.tex`
+4. Make final hymn book
+   - 신국판, A4용지에 재단선 표시 (New_A5 size in A4 stock)
+     `xelatex bbc_hymn_newa5_in_a4.tex`
+   - 신국판 (New_A5 size)
+     `xelatex bbc_hymn_newa5.tex`
+   - 국배판 (A4 size)
+     `xelatex bbc_hymn_a4.tex`
 
 ## Hymns in the svg folder
 
@@ -31,12 +36,9 @@ If those svg file are changed, it should be converted to pdf files and copied in
 
 ## Custom page size
 
-- 711 --> 생략할 수도 있음 부분 삭제 (사유: 2 page 초과)
-- 712 --> 121% (187 mm \* 266 mm)
-- 773 --> 121% (187 mm \* 266 mm)
-- 774 --> 121% (187 mm \* 266 mm)
-- 763 --> 121% (187 mm \* 266 mm)
-- 801 --> 130% (187 mm \* 266 mm)
+- 702, 704, 713, 717, 739, 745, 793, 788_789, 798_799, 801, 814_815 --> 160 x 236 (105%)
+- 777_778 --> 167.2 x 247.5 (110%)
+- 708, 711, 712, 763, 773, 774, 792, 804_805 --> 184 x 272 (121%)
 
 ## 신국판
 

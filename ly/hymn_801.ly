@@ -5,10 +5,10 @@
 \language "english"
 
 \paper {
-   #(set-paper-size '(cons (* 187 mm) (* 266 mm)))
-   %#(set-paper-size '(cons (* 201.5 mm) (* 286 mm)))
-   top-margin = 9\mm
-   bottom-margin = 9\mm
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   %#(set-paper-size '(cons (* 187 mm) (* 266 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
 }
 
 % Hymn Info

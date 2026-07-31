@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 167.2 mm) (* 247.5 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % First Song placed on even page (left page) which will be printed on first and second page.
 % Hymn Info
 korTitle = "내 영혼의 고향"
@@ -26,26 +32,26 @@ soprano = \fixed c' {
   <d b>8 q q q <c a> <b, g> |
   <b, d>4. <b, g> \breathe |
   <c a>8 q q q <b, gs> <c a> |
-  <d b>4.^(_( q^)_) \breathe | %\break
+  <d b>4.^(_( q^)_) \breathe | \break
   
   <d b>8 q q q <d a> <d g> |
   <e g>4. < c e> \breathe |
   <b, d>8 <b, g> <d b> <c a>4 q8 |
-  <b, g>4.^(_( q^)_) \breathe | %\break
+  <b, g>4.^(_( q^)_) \breathe | \break
   
   b8^\markup "(후렴)" b b b d'8\rest d'8\rest |
-  b8 b b b d'8\rest d'8\rest |
+  b8 b b b d'8\rest d'8\rest | \break
   c'8 c' c' c' d'8\rest d'8\rest |
   b b b b4. \breathe | %\break
   
   c'8 c' c' c' d'8\rest d'8\rest |
-  b b b b d'8\rest d'8\rest |
+  b b b b d'8\rest d'8\rest | \break
   cs' cs' cs' cs' d'8\rest d'8\rest |
   d' d' d' d'4. | %\break
   
   b8 b b b d'8\rest d'8\rest |
   b b b b d'8\rest d'8\rest |
-  c' c' c' c' d'8\rest d'8\rest |
+  c' c' c' c' d'8\rest d'8\rest | \break
   b b b b4. | %\break
   
   <c e>8 <d fs> <e g> <e a> <e g> <c e> |
@@ -344,12 +350,12 @@ myChordsB = \chordmode {
 \bookpart {
   
   \paper {
-    page-breaking = #ly:minimal-breaking
+    %page-breaking = #ly:minimal-breaking
     %page-breaking = #ly:one-page-breaking
     %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.2) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

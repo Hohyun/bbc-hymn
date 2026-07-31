@@ -4,6 +4,12 @@
 
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 184 mm) (* 272 mm)))
+   top-margin = 9\mm
+   bottom-margin = 9\mm
+}
+
 % Hymn Info
 korTitle = "주 다시 오시네"
 engTitle = "Jesus is Coming Again"
@@ -64,7 +70,7 @@ soprano = \fixed c' {
   <fs d'>4 <fs c'> <fs bf> <fs a> <es gs> <fs a> |
   <d bf>2.^(_( <ef bf>^)_) \breathe |
   <f d'>4 q q <ef c'>^(_( q^)_) q |
-  bf2.( 2.) | %\break
+  bf2.( 2.) | \break
   
   <f, f>2.^\markup "(후렴)" <g, g>2 q4 |
   q2.^(_( q^)_) \breathe |
@@ -185,10 +191,10 @@ myChords = \chordmode {
   
   \paper {
     %page-breaking = #ly:one-page-breaking
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.3) (stretchability . 30))
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    ragged-bottom = ##t
-    ragged-last-bottom = ##t
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
     oddFooterMarkup = \markup {
       \if \on-first-page-of-part
       \fill-line {    

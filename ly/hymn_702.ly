@@ -3,6 +3,12 @@
 \include "./hymn_init.ly"
 \language "english"
 
+\paper {
+   #(set-paper-size '(cons (* 160 mm) (* 236 mm)))
+   top-margin = 7\mm
+   bottom-margin = 7\mm
+}
+
 % Hymn Info
 korTitle = "내 영혼 구하려"
 engTitle = "Seek for Me"
@@ -191,11 +197,9 @@ myChords = \chordmode {
 
 \bookpart {
   
-  \paper {
-    top-margin = 2\mm
-    bottom-margin = 2\mm     
+  \paper {  
     scoreTitleMarkup = #(hymnScoreTitleMarkup oneOrTwo)
-    system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
+    %system-system-spacing = #'((basic-distance . 0.1) (padding . 0.1) (stretchability . 60))
     ragged-bottom = ##t
     ragged-last-bottom = ##f
     last-bottom-spacing.padding = #0
